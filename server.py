@@ -382,8 +382,7 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         self.end_headers()
 
     def _handle_csv_upload(self):
-        """CSV 파일 업로드 처리 (multipart/form-data)"""
-        import cgi
+        """CSV 파일 업로드 처리 (multipart/form-data) - cgi 모듈 없이 수동 파싱"""
 
         if analysis_status['running']:
             self.send_response(409)
@@ -403,30 +402,64 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             return
 
         try:
-            form = cgi.FieldStorage(
-                fp=self.rfile,
-                headers=self.headers,
-                environ={
-                    'REQUEST_METHOD': 'POST',
-                    'CONTENT_TYPE': content_type,
-                }
-            )
+            # boundary 추출
+            boundary = None
+            for part in content_type.split(';'):
+                part = part.strip()
+                if part.startswith('boundary='):
+                    boundary = part[len('boundary='):]
+                    break
+
+            if not boundary:
+                raise ValueError('boundary not found in Content-Type')
+
+            content_length = int(self.headers.get('Content-Length', 0))
+            body = self.rfile.read(content_length)
+
+            # multipart 파싱
+            boundary_bytes = ('--' + boundary).encode()
+            parts = body.split(boundary_bytes)
 
             results = []
             total_new = 0
             total_dup = 0
 
-            # 'files' 필드에서 업로드된 파일들 처리
-            file_items = form['files']
-            if not isinstance(file_items, list):
-                file_items = [file_items]
-
-            for item in file_items:
-                if not item.filename:
+            for part in parts:
+                # 빈 파트나 종료 마커 건너뛰기
+                if not part or part.strip() == b'--' or part.strip() == b'':
                     continue
 
-                filename = os.path.basename(item.filename)
-                # 파일명에서 테이블명 추출 (예: chatdialog.csv, chatdialog_last_hour.csv)
+                # 헤더와 본문 분리 (빈 줄로 구분)
+                if b'\r\n\r\n' in part:
+                    header_section, file_data = part.split(b'\r\n\r\n', 1)
+                elif b'\n\n' in part:
+                    header_section, file_data = part.split(b'\n\n', 1)
+                else:
+                    continue
+
+                # 후행 CRLF 제거
+                if file_data.endswith(b'\r\n'):
+                    file_data = file_data[:-2]
+
+                header_text = header_section.decode('utf-8', errors='replace')
+
+                # filename 추출
+                filename = None
+                for line in header_text.split('\n'):
+                    if 'filename=' in line:
+                        # filename="xxx.csv" 또는 filename=xxx.csv
+                        import re
+                        m = re.search(r'filename="?([^";\r\n]+)"?', line)
+                        if m:
+                            filename = m.group(1).strip()
+                            break
+
+                if not filename:
+                    continue
+
+                filename = os.path.basename(filename)
+
+                # 테이블명 매칭
                 table_name = None
                 for name in CSV_TABLE_CONFIG:
                     if filename.startswith(name):
@@ -441,10 +474,7 @@ class Handler(http.server.SimpleHTTPRequestHandler):
                     })
                     continue
 
-                csv_content = item.file.read()
-                if isinstance(csv_content, bytes):
-                    csv_content = csv_content.decode('utf-8')
-
+                csv_content = file_data.decode('utf-8')
                 new_count, dup_count = merge_csv_data(table_name, csv_content)
                 total_new += new_count
                 total_dup += dup_count
@@ -457,7 +487,6 @@ class Handler(http.server.SimpleHTTPRequestHandler):
                 })
                 print(f"[업로드] {filename} -> {table_name}: {new_count}행 추가, {dup_count}행 중복 제외")
 
-            # 응답 먼저 보내기
             response = {
                 'message': f'업로드 완료: {total_new}행 추가, {total_dup}행 중복 제외',
                 'results': results,
@@ -480,6 +509,8 @@ class Handler(http.server.SimpleHTTPRequestHandler):
 
         except Exception as e:
             print(f"[업로드] 오류: {e}")
+            import traceback
+            traceback.print_exc()
             self.send_response(500)
             self.send_header('Content-Type', 'application/json')
             self.send_header('Access-Control-Allow-Origin', '*')
