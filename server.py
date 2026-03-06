@@ -129,7 +129,7 @@ def run_analysis_after_upload(results_summary):
 
     try:
         process = subprocess.Popen(
-            [PYTHON_PATH, 'data_processor.py', 'full'],
+            [PYTHON_PATH, 'data_processor.py', 'incremental'],
             cwd=DIRECTORY,
             stdout=subprocess.PIPE,
             stderr=subprocess.STDOUT,
