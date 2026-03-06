@@ -1,0 +1,3890 @@
+{
+  "realtime": {
+    "total_dialogs": 8,
+    "total_users": 3,
+    "hourly_stats": {
+      "00": 0,
+      "01": 0,
+      "02": 0,
+      "03": 0,
+      "04": 5,
+      "05": 2,
+      "06": 0,
+      "07": 0,
+      "08": 0,
+      "09": 0,
+      "10": 0,
+      "11": 0,
+      "12": 0,
+      "13": 1,
+      "14": 0,
+      "15": 0,
+      "16": 0,
+      "17": 0,
+      "18": 0,
+      "19": 0,
+      "20": 0,
+      "21": 0,
+      "22": 0,
+      "23": 0
+    },
+    "hourly_users_stats": {
+      "00": 0,
+      "01": 0,
+      "02": 0,
+      "03": 0,
+      "04": 1,
+      "05": 1,
+      "06": 0,
+      "07": 0,
+      "08": 0,
+      "09": 0,
+      "10": 0,
+      "11": 0,
+      "12": 0,
+      "13": 1,
+      "14": 0,
+      "15": 0,
+      "16": 0,
+      "17": 0,
+      "18": 0,
+      "19": 0,
+      "20": 0,
+      "21": 0,
+      "22": 0,
+      "23": 0
+    },
+    "last_date": "2026-03-05",
+    "last_time": "13:01",
+    "conversation_freq": {
+      "대화없음": 0,
+      "1회": 1,
+      "2회": 1,
+      "3-5회": 1,
+      "6-10회": 0,
+      "11-20회": 0,
+      "21회+": 0
+    }
+  },
+  "cumulative": {
+    "total_dialogs": 3913,
+    "total_users": 952,
+    "daily_stats": {
+      "2026-02-01": 32,
+      "2026-02-02": 112,
+      "2026-02-03": 46,
+      "2026-02-04": 211,
+      "2026-02-05": 360,
+      "2026-02-06": 312,
+      "2026-02-07": 276,
+      "2026-02-08": 510,
+      "2026-02-09": 418,
+      "2026-02-10": 235,
+      "2026-02-11": 115,
+      "2026-02-12": 125,
+      "2026-02-13": 76,
+      "2026-02-14": 83,
+      "2026-02-15": 60,
+      "2026-02-16": 213,
+      "2026-02-17": 106,
+      "2026-02-18": 80,
+      "2026-02-19": 33,
+      "2026-02-20": 47,
+      "2026-02-21": 22,
+      "2026-02-22": 45,
+      "2026-02-23": 120,
+      "2026-02-24": 15,
+      "2026-02-25": 42,
+      "2026-02-26": 13,
+      "2026-02-27": 4,
+      "2026-02-28": 1,
+      "2026-03-01": 67,
+      "2026-03-02": 55,
+      "2026-03-03": 27,
+      "2026-03-04": 44,
+      "2026-03-05": 8
+    },
+    "daily_users_stats": {
+      "2026-02-01": 8,
+      "2026-02-02": 31,
+      "2026-02-03": 21,
+      "2026-02-04": 54,
+      "2026-02-05": 82,
+      "2026-02-06": 74,
+      "2026-02-07": 69,
+      "2026-02-08": 122,
+      "2026-02-09": 118,
+      "2026-02-10": 76,
+      "2026-02-11": 22,
+      "2026-02-12": 26,
+      "2026-02-13": 18,
+      "2026-02-14": 24,
+      "2026-02-15": 14,
+      "2026-02-16": 33,
+      "2026-02-17": 29,
+      "2026-02-18": 23,
+      "2026-02-19": 12,
+      "2026-02-20": 12,
+      "2026-02-21": 7,
+      "2026-02-22": 12,
+      "2026-02-23": 22,
+      "2026-02-24": 8,
+      "2026-02-25": 15,
+      "2026-02-26": 4,
+      "2026-02-27": 3,
+      "2026-02-28": 1,
+      "2026-03-01": 15,
+      "2026-03-02": 15,
+      "2026-03-03": 9,
+      "2026-03-04": 9,
+      "2026-03-05": 3
+    },
+    "registered_users": 3169,
+    "experience_users": 952,
+    "prev_day": {
+      "new_users": 2374,
+      "new_users_rate": 298.62,
+      "new_dialogs": 8,
+      "new_dialogs_rate": 0.2,
+      "new_experience_users": 3,
+      "new_experience_users_rate": 0.32
+    },
+    "conversation_freq": {
+      "대화없음": 2392,
+      "1회": 355,
+      "2회": 156,
+      "3-5회": 253,
+      "6-10회": 112,
+      "11-20회": 54,
+      "21회+": 22
+    }
+  },
+  "favorability": {
+    "popular_bakers": [
+      {
+        "chatbot_id": "C-CHJB-ATP64DLQVZ",
+        "name": "우즈벡 화덕 사나이",
+        "dialog_count": 575,
+        "unique_users": 130,
+        "avg_score": 3.51,
+        "popularity_score": 87.6,
+        "sentiment_counts": {
+          "positive": 218,
+          "neutral": 350,
+          "negative": 7
+        },
+        "quadrant": "popular"
+      },
+      {
+        "chatbot_id": "C-CHJB-I1D4H0WMOS",
+        "name": "빵 굽는 아나운서",
+        "dialog_count": 334,
+        "unique_users": 90,
+        "avg_score": 3.48,
+        "popularity_score": 63.1,
+        "sentiment_counts": {
+          "positive": 129,
+          "neutral": 197,
+          "negative": 8
+        },
+        "quadrant": "popular"
+      },
+      {
+        "chatbot_id": "C-CHJB-LO4B27C2KF",
+        "name": "영재 파티시에",
+        "dialog_count": 215,
+        "unique_users": 48,
+        "avg_score": 3.52,
+        "popularity_score": 45.8,
+        "sentiment_counts": {
+          "positive": 98,
+          "neutral": 113,
+          "negative": 4
+        },
+        "quadrant": "popular"
+      },
+      {
+        "chatbot_id": "C-CHJB-QD7VRS73WU",
+        "name": "광장시장 갈릭 여신",
+        "dialog_count": 180,
+        "unique_users": 57,
+        "avg_score": 3.48,
+        "popularity_score": 45.7,
+        "sentiment_counts": {
+          "positive": 74,
+          "neutral": 103,
+          "negative": 3
+        },
+        "quadrant": "popular"
+      },
+      {
+        "chatbot_id": "C-CHJB-H0JWSWOX8K",
+        "name": "흑백 파티시에",
+        "dialog_count": 156,
+        "unique_users": 55,
+        "avg_score": 3.44,
+        "popularity_score": 43.5,
+        "sentiment_counts": {
+          "positive": 60,
+          "neutral": 93,
+          "negative": 3
+        },
+        "quadrant": "popular"
+      },
+      {
+        "chatbot_id": "C-CHJB-Y6TG3VWP70",
+        "name": "하트 제조기",
+        "dialog_count": 157,
+        "unique_users": 32,
+        "avg_score": 3.46,
+        "popularity_score": 37.8,
+        "sentiment_counts": {
+          "positive": 63,
+          "neutral": 92,
+          "negative": 2
+        },
+        "quadrant": "popular"
+      },
+      {
+        "chatbot_id": "C-CHJB-6U0G40OYT9",
+        "name": "완판의 달인",
+        "dialog_count": 126,
+        "unique_users": 32,
+        "avg_score": 3.55,
+        "popularity_score": 36.8,
+        "sentiment_counts": {
+          "positive": 55,
+          "neutral": 66,
+          "negative": 5
+        },
+        "quadrant": "popular"
+      },
+      {
+        "chatbot_id": "C-CHJB-26H9PNIJ2I",
+        "name": "크친자",
+        "dialog_count": 107,
+        "unique_users": 40,
+        "avg_score": 3.26,
+        "popularity_score": 35.3,
+        "sentiment_counts": {
+          "positive": 26,
+          "neutral": 79,
+          "negative": 2
+        },
+        "quadrant": "popular"
+      },
+      {
+        "chatbot_id": "C-CHJB-I5P9AL8243",
+        "name": "황리단길 1억 사장",
+        "dialog_count": 98,
+        "unique_users": 31,
+        "avg_score": 3.47,
+        "popularity_score": 34.2,
+        "sentiment_counts": {
+          "positive": 36,
+          "neutral": 61,
+          "negative": 1
+        },
+        "quadrant": "popular"
+      },
+      {
+        "chatbot_id": "C-CHJB-2USPX2HKZU",
+        "name": "홍대 터줏대감",
+        "dialog_count": 89,
+        "unique_users": 22,
+        "avg_score": 3.62,
+        "popularity_score": 32.6,
+        "sentiment_counts": {
+          "positive": 42,
+          "neutral": 46,
+          "negative": 1
+        },
+        "quadrant": "popular"
+      }
+    ],
+    "top_by_dialogs": [
+      {
+        "chatbot_id": "C-CHJB-ATP64DLQVZ",
+        "name": "우즈벡 화덕 사나이",
+        "value": 575
+      },
+      {
+        "chatbot_id": "C-CHJB-I1D4H0WMOS",
+        "name": "빵 굽는 아나운서",
+        "value": 334
+      },
+      {
+        "chatbot_id": "C-CHJB-LO4B27C2KF",
+        "name": "영재 파티시에",
+        "value": 215
+      },
+      {
+        "chatbot_id": "C-CHJB-QD7VRS73WU",
+        "name": "광장시장 갈릭 여신",
+        "value": 180
+      },
+      {
+        "chatbot_id": "C-CHJB-Y6TG3VWP70",
+        "name": "하트 제조기",
+        "value": 157
+      },
+      {
+        "chatbot_id": "C-CHJB-H0JWSWOX8K",
+        "name": "흑백 파티시에",
+        "value": 156
+      },
+      {
+        "chatbot_id": "C-CHJB-6U0G40OYT9",
+        "name": "완판의 달인",
+        "value": 126
+      },
+      {
+        "chatbot_id": "C-CHJB-26H9PNIJ2I",
+        "name": "크친자",
+        "value": 107
+      },
+      {
+        "chatbot_id": "C-CHJB-I5P9AL8243",
+        "name": "황리단길 1억 사장",
+        "value": 98
+      },
+      {
+        "chatbot_id": "C-CHJB-IUGNJKJQLP",
+        "name": "연탄식빵 창시자",
+        "value": 89
+      }
+    ],
+    "top_by_users": [
+      {
+        "chatbot_id": "C-CHJB-ATP64DLQVZ",
+        "name": "우즈벡 화덕 사나이",
+        "value": 130
+      },
+      {
+        "chatbot_id": "C-CHJB-I1D4H0WMOS",
+        "name": "빵 굽는 아나운서",
+        "value": 90
+      },
+      {
+        "chatbot_id": "C-CHJB-QD7VRS73WU",
+        "name": "광장시장 갈릭 여신",
+        "value": 57
+      },
+      {
+        "chatbot_id": "C-CHJB-H0JWSWOX8K",
+        "name": "흑백 파티시에",
+        "value": 55
+      },
+      {
+        "chatbot_id": "C-CHJB-LO4B27C2KF",
+        "name": "영재 파티시에",
+        "value": 48
+      },
+      {
+        "chatbot_id": "C-CHJB-26H9PNIJ2I",
+        "name": "크친자",
+        "value": 40
+      },
+      {
+        "chatbot_id": "C-CHJB-Y6TG3VWP70",
+        "name": "하트 제조기",
+        "value": 32
+      },
+      {
+        "chatbot_id": "C-CHJB-6U0G40OYT9",
+        "name": "완판의 달인",
+        "value": 32
+      },
+      {
+        "chatbot_id": "C-CHJB-I5P9AL8243",
+        "name": "황리단길 1억 사장",
+        "value": 31
+      },
+      {
+        "chatbot_id": "C-CHJB-IUGNJKJQLP",
+        "name": "연탄식빵 창시자",
+        "value": 24
+      }
+    ],
+    "top_by_favorability": [
+      {
+        "chatbot_id": "C-CHJB-YQNTKC1VKY",
+        "name": "노래하는 제빵사",
+        "value": 4.4
+      },
+      {
+        "chatbot_id": "C-CHJB-UAD6RMUYOJ",
+        "name": "디저트 조각가",
+        "value": 4.17
+      },
+      {
+        "chatbot_id": "C-CHJB-0GYX3LI0PH",
+        "name": "자카르타 No.1",
+        "value": 4.16
+      },
+      {
+        "chatbot_id": "C-CHJB-6ILQTKCUFM",
+        "name": "제빵계 에디슨",
+        "value": 4.14
+      },
+      {
+        "chatbot_id": "C-CHJB-2E64X76EXC",
+        "name": "이바컵 3호",
+        "value": 4.07
+      },
+      {
+        "chatbot_id": "C-CHJB-97WBRE2C3R",
+        "name": "하이엔드 디저트",
+        "value": 3.87
+      },
+      {
+        "chatbot_id": "C-CHJB-J1Q65PCW2W",
+        "name": "도넛의 여왕",
+        "value": 3.85
+      },
+      {
+        "chatbot_id": "C-CHJB-8D145EK61O",
+        "name": "전주 맛집 옆집 빵집",
+        "value": 3.8
+      },
+      {
+        "chatbot_id": "C-CHJB-W37DEY3H71",
+        "name": "망원동 빵대장",
+        "value": 3.73
+      },
+      {
+        "chatbot_id": "C-CHJB-YMYUB421E0",
+        "name": "여수 오 마이 갓",
+        "value": 3.68
+      }
+    ],
+    "baker_ranking": [
+      {
+        "chatbot_id": "C-CHJB-ATP64DLQVZ",
+        "name": "우즈벡 화덕 사나이",
+        "dialog_count": 575,
+        "unique_users": 130,
+        "avg_score": 3.51,
+        "sentiment_counts": {
+          "positive": 218,
+          "neutral": 350,
+          "negative": 7
+        },
+        "quadrant": "popular"
+      },
+      {
+        "chatbot_id": "C-CHJB-I1D4H0WMOS",
+        "name": "빵 굽는 아나운서",
+        "dialog_count": 334,
+        "unique_users": 90,
+        "avg_score": 3.48,
+        "sentiment_counts": {
+          "positive": 129,
+          "neutral": 197,
+          "negative": 8
+        },
+        "quadrant": "popular"
+      },
+      {
+        "chatbot_id": "C-CHJB-LO4B27C2KF",
+        "name": "영재 파티시에",
+        "dialog_count": 215,
+        "unique_users": 48,
+        "avg_score": 3.52,
+        "sentiment_counts": {
+          "positive": 98,
+          "neutral": 113,
+          "negative": 4
+        },
+        "quadrant": "popular"
+      },
+      {
+        "chatbot_id": "C-CHJB-QD7VRS73WU",
+        "name": "광장시장 갈릭 여신",
+        "dialog_count": 180,
+        "unique_users": 57,
+        "avg_score": 3.48,
+        "sentiment_counts": {
+          "positive": 74,
+          "neutral": 103,
+          "negative": 3
+        },
+        "quadrant": "popular"
+      },
+      {
+        "chatbot_id": "C-CHJB-Y6TG3VWP70",
+        "name": "하트 제조기",
+        "dialog_count": 157,
+        "unique_users": 32,
+        "avg_score": 3.46,
+        "sentiment_counts": {
+          "positive": 63,
+          "neutral": 92,
+          "negative": 2
+        },
+        "quadrant": "popular"
+      },
+      {
+        "chatbot_id": "C-CHJB-H0JWSWOX8K",
+        "name": "흑백 파티시에",
+        "dialog_count": 156,
+        "unique_users": 55,
+        "avg_score": 3.44,
+        "sentiment_counts": {
+          "positive": 60,
+          "neutral": 93,
+          "negative": 3
+        },
+        "quadrant": "popular"
+      },
+      {
+        "chatbot_id": "C-CHJB-6U0G40OYT9",
+        "name": "완판의 달인",
+        "dialog_count": 126,
+        "unique_users": 32,
+        "avg_score": 3.55,
+        "sentiment_counts": {
+          "positive": 55,
+          "neutral": 66,
+          "negative": 5
+        },
+        "quadrant": "popular"
+      },
+      {
+        "chatbot_id": "C-CHJB-26H9PNIJ2I",
+        "name": "크친자",
+        "dialog_count": 107,
+        "unique_users": 40,
+        "avg_score": 3.26,
+        "sentiment_counts": {
+          "positive": 26,
+          "neutral": 79,
+          "negative": 2
+        },
+        "quadrant": "popular"
+      },
+      {
+        "chatbot_id": "C-CHJB-I5P9AL8243",
+        "name": "황리단길 1억 사장",
+        "dialog_count": 98,
+        "unique_users": 31,
+        "avg_score": 3.47,
+        "sentiment_counts": {
+          "positive": 36,
+          "neutral": 61,
+          "negative": 1
+        },
+        "quadrant": "popular"
+      },
+      {
+        "chatbot_id": "C-CHJB-IUGNJKJQLP",
+        "name": "연탄식빵 창시자",
+        "dialog_count": 89,
+        "unique_users": 24,
+        "avg_score": 3.27,
+        "sentiment_counts": {
+          "positive": 24,
+          "neutral": 61,
+          "negative": 4
+        },
+        "quadrant": "popular"
+      },
+      {
+        "chatbot_id": "C-CHJB-2USPX2HKZU",
+        "name": "홍대 터줏대감",
+        "dialog_count": 89,
+        "unique_users": 22,
+        "avg_score": 3.62,
+        "sentiment_counts": {
+          "positive": 42,
+          "neutral": 46,
+          "negative": 1
+        },
+        "quadrant": "popular"
+      },
+      {
+        "chatbot_id": "C-CHJB-CM2WMYQ1EZ",
+        "name": "디저트 마초",
+        "dialog_count": 75,
+        "unique_users": 24,
+        "avg_score": 3.6,
+        "sentiment_counts": {
+          "positive": 33,
+          "neutral": 41,
+          "negative": 1
+        },
+        "quadrant": "popular"
+      },
+      {
+        "chatbot_id": "C-CHJB-HG7ZPNFHJP",
+        "name": "크레이지 파티시에",
+        "dialog_count": 63,
+        "unique_users": 24,
+        "avg_score": 3.48,
+        "sentiment_counts": {
+          "positive": 24,
+          "neutral": 39,
+          "negative": 0
+        },
+        "quadrant": "popular"
+      },
+      {
+        "chatbot_id": "C-CHJB-LS1ORXE8ES",
+        "name": "프랑스 루키",
+        "dialog_count": 59,
+        "unique_users": 15,
+        "avg_score": 3.56,
+        "sentiment_counts": {
+          "positive": 30,
+          "neutral": 29,
+          "negative": 0
+        },
+        "quadrant": "popular"
+      },
+      {
+        "chatbot_id": "C-CHJB-5S5YP20R80",
+        "name": "북한산 정상 빵집",
+        "dialog_count": 54,
+        "unique_users": 14,
+        "avg_score": 3.46,
+        "sentiment_counts": {
+          "positive": 21,
+          "neutral": 33,
+          "negative": 0
+        },
+        "quadrant": "popular"
+      },
+      {
+        "chatbot_id": "C-CHJB-CXFYVL1NYJ",
+        "name": "괴짜 파티시에",
+        "dialog_count": 50,
+        "unique_users": 16,
+        "avg_score": 3.42,
+        "sentiment_counts": {
+          "positive": 21,
+          "neutral": 27,
+          "negative": 2
+        },
+        "quadrant": "popular"
+      },
+      {
+        "chatbot_id": "C-CHJB-R0U5HEGVEI",
+        "name": "대전 또 갈 집",
+        "dialog_count": 50,
+        "unique_users": 14,
+        "avg_score": 3.42,
+        "sentiment_counts": {
+          "positive": 18,
+          "neutral": 32,
+          "negative": 0
+        },
+        "quadrant": "popular"
+      },
+      {
+        "chatbot_id": "C-CHJB-UXI10P8GH2",
+        "name": "베이킹 티처",
+        "dialog_count": 48,
+        "unique_users": 20,
+        "avg_score": 3.54,
+        "sentiment_counts": {
+          "positive": 22,
+          "neutral": 26,
+          "negative": 0
+        },
+        "quadrant": "popular"
+      },
+      {
+        "chatbot_id": "C-CHJB-73W26R8ZCN",
+        "name": "전주 3대 빵집",
+        "dialog_count": 47,
+        "unique_users": 13,
+        "avg_score": 3.28,
+        "sentiment_counts": {
+          "positive": 12,
+          "neutral": 35,
+          "negative": 0
+        },
+        "quadrant": "popular"
+      },
+      {
+        "chatbot_id": "C-CHJB-OTFOOPD7EF",
+        "name": "제빵돌",
+        "dialog_count": 47,
+        "unique_users": 11,
+        "avg_score": 3.36,
+        "sentiment_counts": {
+          "positive": 16,
+          "neutral": 27,
+          "negative": 4
+        },
+        "quadrant": "popular"
+      }
+    ],
+    "all_bakers_quadrant": [
+      {
+        "chatbot_id": "C-CHJB-VGNSO8N9JV",
+        "name": "명장할 용기",
+        "dialog_count": 21,
+        "unique_users": 8,
+        "quadrant": "ignored"
+      },
+      {
+        "chatbot_id": "C-CHJB-I5P9AL8243",
+        "name": "황리단길 1억 사장",
+        "dialog_count": 98,
+        "unique_users": 31,
+        "quadrant": "popular"
+      },
+      {
+        "chatbot_id": "C-CHJB-YMYUB421E0",
+        "name": "여수 오 마이 갓",
+        "dialog_count": 31,
+        "unique_users": 10,
+        "quadrant": "popular"
+      },
+      {
+        "chatbot_id": "C-CHJB-CXFYVL1NYJ",
+        "name": "괴짜 파티시에",
+        "dialog_count": 50,
+        "unique_users": 16,
+        "quadrant": "popular"
+      },
+      {
+        "chatbot_id": "C-CHJB-J1Q65PCW2W",
+        "name": "도넛의 여왕",
+        "dialog_count": 26,
+        "unique_users": 12,
+        "quadrant": "shallow"
+      },
+      {
+        "chatbot_id": "C-CHJB-V5C1LRVCEF",
+        "name": "성수동 성공신화",
+        "dialog_count": 24,
+        "unique_users": 10,
+        "quadrant": "shallow"
+      },
+      {
+        "chatbot_id": "C-CHJB-I1D4H0WMOS",
+        "name": "빵 굽는 아나운서",
+        "dialog_count": 334,
+        "unique_users": 90,
+        "quadrant": "popular"
+      },
+      {
+        "chatbot_id": "C-CHJB-3SZQY3XFPR",
+        "name": "소금빵 탑티어",
+        "dialog_count": 30,
+        "unique_users": 13,
+        "quadrant": "shallow"
+      },
+      {
+        "chatbot_id": "C-CHJB-U7MCDOBVVK",
+        "name": "이바컵 2호",
+        "dialog_count": 18,
+        "unique_users": 8,
+        "quadrant": "ignored"
+      },
+      {
+        "chatbot_id": "C-CHJB-AWZWR5SDSJ",
+        "name": "카리나 PICK!",
+        "dialog_count": 36,
+        "unique_users": 11,
+        "quadrant": "popular"
+      },
+      {
+        "chatbot_id": "C-CHJB-20M2X0CNFK",
+        "name": "파인다이닝 제빵사",
+        "dialog_count": 18,
+        "unique_users": 11,
+        "quadrant": "shallow"
+      },
+      {
+        "chatbot_id": "C-CHJB-7WSC2IM6XX",
+        "name": "세종맘 핫플",
+        "dialog_count": 11,
+        "unique_users": 7,
+        "quadrant": "ignored"
+      },
+      {
+        "chatbot_id": "C-CHJB-6IP78SP3BG",
+        "name": "연남동 버터남",
+        "dialog_count": 12,
+        "unique_users": 5,
+        "quadrant": "ignored"
+      },
+      {
+        "chatbot_id": "C-CHJB-FNTVNTCRW6",
+        "name": "40년 빵가의 자손",
+        "dialog_count": 24,
+        "unique_users": 7,
+        "quadrant": "ignored"
+      },
+      {
+        "chatbot_id": "C-CHJB-CMLYSRCY85",
+        "name": "쌀친자",
+        "dialog_count": 35,
+        "unique_users": 13,
+        "quadrant": "popular"
+      },
+      {
+        "chatbot_id": "C-CHJB-2E64X76EXC",
+        "name": "이바컵 3호",
+        "dialog_count": 14,
+        "unique_users": 7,
+        "quadrant": "ignored"
+      },
+      {
+        "chatbot_id": "C-CHJB-8XT1WWIU0M",
+        "name": "제빵 스캐너",
+        "dialog_count": 5,
+        "unique_users": 4,
+        "quadrant": "ignored"
+      },
+      {
+        "chatbot_id": "C-CHJB-IUGNJKJQLP",
+        "name": "연탄식빵 창시자",
+        "dialog_count": 89,
+        "unique_users": 24,
+        "quadrant": "popular"
+      },
+      {
+        "chatbot_id": "C-CHJB-2USPX2HKZU",
+        "name": "홍대 터줏대감",
+        "dialog_count": 89,
+        "unique_users": 22,
+        "quadrant": "popular"
+      },
+      {
+        "chatbot_id": "C-CHJB-26H9PNIJ2I",
+        "name": "크친자",
+        "dialog_count": 107,
+        "unique_users": 40,
+        "quadrant": "popular"
+      },
+      {
+        "chatbot_id": "C-CHJB-QD7VRS73WU",
+        "name": "광장시장 갈릭 여신",
+        "dialog_count": 180,
+        "unique_users": 57,
+        "quadrant": "popular"
+      },
+      {
+        "chatbot_id": "C-CHJB-PKB9RGZAVT",
+        "name": "제주도 파란리본 부자",
+        "dialog_count": 31,
+        "unique_users": 8,
+        "quadrant": "minority_fan"
+      },
+      {
+        "chatbot_id": "C-CHJB-S62ZEU9PW2",
+        "name": "잠실 만겹남",
+        "dialog_count": 31,
+        "unique_users": 10,
+        "quadrant": "popular"
+      },
+      {
+        "chatbot_id": "C-CHJB-73W26R8ZCN",
+        "name": "전주 3대 빵집",
+        "dialog_count": 47,
+        "unique_users": 13,
+        "quadrant": "popular"
+      },
+      {
+        "chatbot_id": "C-CHJB-OTFOOPD7EF",
+        "name": "제빵돌",
+        "dialog_count": 47,
+        "unique_users": 11,
+        "quadrant": "popular"
+      },
+      {
+        "chatbot_id": "C-CHJB-ZRX43LQHJR",
+        "name": "쓰리스타 제빵사",
+        "dialog_count": 15,
+        "unique_users": 8,
+        "quadrant": "ignored"
+      },
+      {
+        "chatbot_id": "C-CHJB-6Y9RDDXSXL",
+        "name": "퇴근 후 제빵왕",
+        "dialog_count": 28,
+        "unique_users": 12,
+        "quadrant": "shallow"
+      },
+      {
+        "chatbot_id": "C-CHJB-SJQCA46QSZ",
+        "name": "슈퍼 DNA",
+        "dialog_count": 17,
+        "unique_users": 5,
+        "quadrant": "ignored"
+      },
+      {
+        "chatbot_id": "C-CHJB-8CR122RDKV",
+        "name": "디저트 궤도",
+        "dialog_count": 18,
+        "unique_users": 9,
+        "quadrant": "ignored"
+      },
+      {
+        "chatbot_id": "C-CHJB-ML0Z1N7MBZ",
+        "name": "타르트 원탑",
+        "dialog_count": 40,
+        "unique_users": 13,
+        "quadrant": "popular"
+      },
+      {
+        "chatbot_id": "C-CHJB-FHA7WXK79V",
+        "name": "방앗간 빵쟁이",
+        "dialog_count": 11,
+        "unique_users": 5,
+        "quadrant": "ignored"
+      },
+      {
+        "chatbot_id": "C-CHJB-DBMMF4P7XM",
+        "name": "고덕한 제빵사",
+        "dialog_count": 36,
+        "unique_users": 9,
+        "quadrant": "minority_fan"
+      },
+      {
+        "chatbot_id": "C-CHJB-Y6TG3VWP70",
+        "name": "하트 제조기",
+        "dialog_count": 157,
+        "unique_users": 32,
+        "quadrant": "popular"
+      },
+      {
+        "chatbot_id": "C-CHJB-5FC3NJ20GQ",
+        "name": "제빵 특허왕",
+        "dialog_count": 44,
+        "unique_users": 11,
+        "quadrant": "popular"
+      },
+      {
+        "chatbot_id": "C-CHJB-AIS9VUL7Z8",
+        "name": "5성급 파티시에",
+        "dialog_count": 14,
+        "unique_users": 6,
+        "quadrant": "ignored"
+      },
+      {
+        "chatbot_id": "C-CHJB-PKX4SZVGZD",
+        "name": "가문의 찐빵",
+        "dialog_count": 42,
+        "unique_users": 9,
+        "quadrant": "minority_fan"
+      },
+      {
+        "chatbot_id": "C-CHJB-Z4IIJTD295",
+        "name": "경찰 파티시에",
+        "dialog_count": 14,
+        "unique_users": 5,
+        "quadrant": "ignored"
+      },
+      {
+        "chatbot_id": "C-CHJB-86IPT4IBM4",
+        "name": "국대급 셰프",
+        "dialog_count": 12,
+        "unique_users": 3,
+        "quadrant": "ignored"
+      },
+      {
+        "chatbot_id": "C-CHJB-YQNTKC1VKY",
+        "name": "노래하는 제빵사",
+        "dialog_count": 10,
+        "unique_users": 4,
+        "quadrant": "ignored"
+      },
+      {
+        "chatbot_id": "C-CHJB-W37DEY3H71",
+        "name": "망원동 빵대장",
+        "dialog_count": 33,
+        "unique_users": 8,
+        "quadrant": "minority_fan"
+      },
+      {
+        "chatbot_id": "C-CHJB-DD7EHS3YVN",
+        "name": "명품 밀푀유",
+        "dialog_count": 21,
+        "unique_users": 5,
+        "quadrant": "ignored"
+      },
+      {
+        "chatbot_id": "C-CHJB-1YYNW107JN",
+        "name": "물 오른 제빵사",
+        "dialog_count": 42,
+        "unique_users": 14,
+        "quadrant": "popular"
+      },
+      {
+        "chatbot_id": "C-CHJB-5S5YP20R80",
+        "name": "북한산 정상 빵집",
+        "dialog_count": 54,
+        "unique_users": 14,
+        "quadrant": "popular"
+      },
+      {
+        "chatbot_id": "C-CHJB-1MVJ6I2K29",
+        "name": "생활의 달인",
+        "dialog_count": 22,
+        "unique_users": 8,
+        "quadrant": "ignored"
+      },
+      {
+        "chatbot_id": "C-CHJB-LS1ORXE8ES",
+        "name": "프랑스 루키",
+        "dialog_count": 59,
+        "unique_users": 15,
+        "quadrant": "popular"
+      },
+      {
+        "chatbot_id": "C-CHJB-1JPQ9IW0P2",
+        "name": "파리지엔느 셰프",
+        "dialog_count": 18,
+        "unique_users": 8,
+        "quadrant": "ignored"
+      },
+      {
+        "chatbot_id": "C-CHJB-OREGO71G0R",
+        "name": "불굴의 파티시에",
+        "dialog_count": 25,
+        "unique_users": 12,
+        "quadrant": "shallow"
+      },
+      {
+        "chatbot_id": "C-CHJB-UXI10P8GH2",
+        "name": "베이킹 티처",
+        "dialog_count": 48,
+        "unique_users": 20,
+        "quadrant": "popular"
+      },
+      {
+        "chatbot_id": "C-CHJB-H0JWSWOX8K",
+        "name": "흑백 파티시에",
+        "dialog_count": 156,
+        "unique_users": 55,
+        "quadrant": "popular"
+      },
+      {
+        "chatbot_id": "C-CHJB-C7EXVK2RFJ",
+        "name": "초코 디바",
+        "dialog_count": 36,
+        "unique_users": 15,
+        "quadrant": "popular"
+      },
+      {
+        "chatbot_id": "C-CHJB-39DO1OV2F2",
+        "name": "여주 자연인",
+        "dialog_count": 20,
+        "unique_users": 8,
+        "quadrant": "ignored"
+      },
+      {
+        "chatbot_id": "C-CHJB-CM2WMYQ1EZ",
+        "name": "디저트 마초",
+        "dialog_count": 75,
+        "unique_users": 24,
+        "quadrant": "popular"
+      },
+      {
+        "chatbot_id": "C-CHJB-LO4B27C2KF",
+        "name": "영재 파티시에",
+        "dialog_count": 215,
+        "unique_users": 48,
+        "quadrant": "popular"
+      },
+      {
+        "chatbot_id": "C-CHJB-ATP64DLQVZ",
+        "name": "우즈벡 화덕 사나이",
+        "dialog_count": 575,
+        "unique_users": 130,
+        "quadrant": "popular"
+      },
+      {
+        "chatbot_id": "C-CHJB-7FWH6YZ3WQ",
+        "name": "여의도 카우보이",
+        "dialog_count": 4,
+        "unique_users": 3,
+        "quadrant": "ignored"
+      },
+      {
+        "chatbot_id": "C-CHJB-UAD6RMUYOJ",
+        "name": "디저트 조각가",
+        "dialog_count": 6,
+        "unique_users": 2,
+        "quadrant": "ignored"
+      },
+      {
+        "chatbot_id": "C-CHJB-R0U5HEGVEI",
+        "name": "대전 또 갈 집",
+        "dialog_count": 50,
+        "unique_users": 14,
+        "quadrant": "popular"
+      },
+      {
+        "chatbot_id": "C-CHJB-HG7ZPNFHJP",
+        "name": "크레이지 파티시에",
+        "dialog_count": 63,
+        "unique_users": 24,
+        "quadrant": "popular"
+      },
+      {
+        "chatbot_id": "C-CHJB-6U0G40OYT9",
+        "name": "완판의 달인",
+        "dialog_count": 126,
+        "unique_users": 32,
+        "quadrant": "popular"
+      },
+      {
+        "chatbot_id": "C-CHJB-0GYX3LI0PH",
+        "name": "자카르타 No.1",
+        "dialog_count": 25,
+        "unique_users": 5,
+        "quadrant": "ignored"
+      },
+      {
+        "chatbot_id": "C-CHJB-R8IAIIL4NQ",
+        "name": "아메리칸 치킨 셰프",
+        "dialog_count": 5,
+        "unique_users": 4,
+        "quadrant": "ignored"
+      },
+      {
+        "chatbot_id": "C-CHJB-IBJPUPR9UW",
+        "name": "춘천 싹쓸이",
+        "dialog_count": 15,
+        "unique_users": 4,
+        "quadrant": "ignored"
+      },
+      {
+        "chatbot_id": "C-CHJB-7UDB4JLA72",
+        "name": "중국에서 온 제빵사",
+        "dialog_count": 32,
+        "unique_users": 9,
+        "quadrant": "minority_fan"
+      },
+      {
+        "chatbot_id": "C-CHJB-8D145EK61O",
+        "name": "전주 맛집 옆집 빵집",
+        "dialog_count": 15,
+        "unique_users": 5,
+        "quadrant": "ignored"
+      },
+      {
+        "chatbot_id": "C-CHJB-97WBRE2C3R",
+        "name": "하이엔드 디저트",
+        "dialog_count": 30,
+        "unique_users": 13,
+        "quadrant": "shallow"
+      },
+      {
+        "chatbot_id": "C-CHJB-1PIDMNS9HE",
+        "name": "연남동 빵 터진 집",
+        "dialog_count": 39,
+        "unique_users": 10,
+        "quadrant": "popular"
+      },
+      {
+        "chatbot_id": "C-CHJB-VEN4UZKS6B",
+        "name": "응답하라! 부부 빵집",
+        "dialog_count": 11,
+        "unique_users": 3,
+        "quadrant": "ignored"
+      },
+      {
+        "chatbot_id": "C-CHJB-1VO28IY7CQ",
+        "name": "이바컵 1호",
+        "dialog_count": 36,
+        "unique_users": 17,
+        "quadrant": "popular"
+      },
+      {
+        "chatbot_id": "C-CHJB-0Y913CKI3T",
+        "name": "톱모델 빵집 사장",
+        "dialog_count": 31,
+        "unique_users": 6,
+        "quadrant": "minority_fan"
+      },
+      {
+        "chatbot_id": "C-CHJB-QWWVBSXRO3",
+        "name": "까놀리 왕자",
+        "dialog_count": 10,
+        "unique_users": 4,
+        "quadrant": "ignored"
+      },
+      {
+        "chatbot_id": "C-CHJB-G7NVZWORSS",
+        "name": "제빵 패밀리",
+        "dialog_count": 5,
+        "unique_users": 2,
+        "quadrant": "ignored"
+      },
+      {
+        "chatbot_id": "C-CHJB-6ILQTKCUFM",
+        "name": "제빵계 에디슨",
+        "dialog_count": 7,
+        "unique_users": 4,
+        "quadrant": "ignored"
+      }
+    ],
+    "quadrant_info": {
+      "median_dialogs": 30.5,
+      "median_users": 10.0,
+      "quadrant_bakers": {
+        "ignored": [
+          {
+            "chatbot_id": "C-CHJB-VGNSO8N9JV",
+            "name": "명장할 용기",
+            "dialog_count": 21,
+            "unique_users": 8,
+            "concentration": 2.62
+          },
+          {
+            "chatbot_id": "C-CHJB-U7MCDOBVVK",
+            "name": "이바컵 2호",
+            "dialog_count": 18,
+            "unique_users": 8,
+            "concentration": 2.25
+          },
+          {
+            "chatbot_id": "C-CHJB-7WSC2IM6XX",
+            "name": "세종맘 핫플",
+            "dialog_count": 11,
+            "unique_users": 7,
+            "concentration": 1.57
+          },
+          {
+            "chatbot_id": "C-CHJB-6IP78SP3BG",
+            "name": "연남동 버터남",
+            "dialog_count": 12,
+            "unique_users": 5,
+            "concentration": 2.4
+          },
+          {
+            "chatbot_id": "C-CHJB-FNTVNTCRW6",
+            "name": "40년 빵가의 자손",
+            "dialog_count": 24,
+            "unique_users": 7,
+            "concentration": 3.43
+          },
+          {
+            "chatbot_id": "C-CHJB-2E64X76EXC",
+            "name": "이바컵 3호",
+            "dialog_count": 14,
+            "unique_users": 7,
+            "concentration": 2.0
+          },
+          {
+            "chatbot_id": "C-CHJB-8XT1WWIU0M",
+            "name": "제빵 스캐너",
+            "dialog_count": 5,
+            "unique_users": 4,
+            "concentration": 1.25
+          },
+          {
+            "chatbot_id": "C-CHJB-ZRX43LQHJR",
+            "name": "쓰리스타 제빵사",
+            "dialog_count": 15,
+            "unique_users": 8,
+            "concentration": 1.88
+          },
+          {
+            "chatbot_id": "C-CHJB-SJQCA46QSZ",
+            "name": "슈퍼 DNA",
+            "dialog_count": 17,
+            "unique_users": 5,
+            "concentration": 3.4
+          },
+          {
+            "chatbot_id": "C-CHJB-8CR122RDKV",
+            "name": "디저트 궤도",
+            "dialog_count": 18,
+            "unique_users": 9,
+            "concentration": 2.0
+          },
+          {
+            "chatbot_id": "C-CHJB-FHA7WXK79V",
+            "name": "방앗간 빵쟁이",
+            "dialog_count": 11,
+            "unique_users": 5,
+            "concentration": 2.2
+          },
+          {
+            "chatbot_id": "C-CHJB-AIS9VUL7Z8",
+            "name": "5성급 파티시에",
+            "dialog_count": 14,
+            "unique_users": 6,
+            "concentration": 2.33
+          },
+          {
+            "chatbot_id": "C-CHJB-Z4IIJTD295",
+            "name": "경찰 파티시에",
+            "dialog_count": 14,
+            "unique_users": 5,
+            "concentration": 2.8
+          },
+          {
+            "chatbot_id": "C-CHJB-86IPT4IBM4",
+            "name": "국대급 셰프",
+            "dialog_count": 12,
+            "unique_users": 3,
+            "concentration": 4.0
+          },
+          {
+            "chatbot_id": "C-CHJB-YQNTKC1VKY",
+            "name": "노래하는 제빵사",
+            "dialog_count": 10,
+            "unique_users": 4,
+            "concentration": 2.5
+          },
+          {
+            "chatbot_id": "C-CHJB-DD7EHS3YVN",
+            "name": "명품 밀푀유",
+            "dialog_count": 21,
+            "unique_users": 5,
+            "concentration": 4.2
+          },
+          {
+            "chatbot_id": "C-CHJB-1MVJ6I2K29",
+            "name": "생활의 달인",
+            "dialog_count": 22,
+            "unique_users": 8,
+            "concentration": 2.75
+          },
+          {
+            "chatbot_id": "C-CHJB-1JPQ9IW0P2",
+            "name": "파리지엔느 셰프",
+            "dialog_count": 18,
+            "unique_users": 8,
+            "concentration": 2.25
+          },
+          {
+            "chatbot_id": "C-CHJB-39DO1OV2F2",
+            "name": "여주 자연인",
+            "dialog_count": 20,
+            "unique_users": 8,
+            "concentration": 2.5
+          },
+          {
+            "chatbot_id": "C-CHJB-7FWH6YZ3WQ",
+            "name": "여의도 카우보이",
+            "dialog_count": 4,
+            "unique_users": 3,
+            "concentration": 1.33
+          },
+          {
+            "chatbot_id": "C-CHJB-UAD6RMUYOJ",
+            "name": "디저트 조각가",
+            "dialog_count": 6,
+            "unique_users": 2,
+            "concentration": 3.0
+          },
+          {
+            "chatbot_id": "C-CHJB-0GYX3LI0PH",
+            "name": "자카르타 No.1",
+            "dialog_count": 25,
+            "unique_users": 5,
+            "concentration": 5.0
+          },
+          {
+            "chatbot_id": "C-CHJB-R8IAIIL4NQ",
+            "name": "아메리칸 치킨 셰프",
+            "dialog_count": 5,
+            "unique_users": 4,
+            "concentration": 1.25
+          },
+          {
+            "chatbot_id": "C-CHJB-IBJPUPR9UW",
+            "name": "춘천 싹쓸이",
+            "dialog_count": 15,
+            "unique_users": 4,
+            "concentration": 3.75
+          },
+          {
+            "chatbot_id": "C-CHJB-8D145EK61O",
+            "name": "전주 맛집 옆집 빵집",
+            "dialog_count": 15,
+            "unique_users": 5,
+            "concentration": 3.0
+          },
+          {
+            "chatbot_id": "C-CHJB-VEN4UZKS6B",
+            "name": "응답하라! 부부 빵집",
+            "dialog_count": 11,
+            "unique_users": 3,
+            "concentration": 3.67
+          },
+          {
+            "chatbot_id": "C-CHJB-QWWVBSXRO3",
+            "name": "까놀리 왕자",
+            "dialog_count": 10,
+            "unique_users": 4,
+            "concentration": 2.5
+          },
+          {
+            "chatbot_id": "C-CHJB-G7NVZWORSS",
+            "name": "제빵 패밀리",
+            "dialog_count": 5,
+            "unique_users": 2,
+            "concentration": 2.5
+          },
+          {
+            "chatbot_id": "C-CHJB-6ILQTKCUFM",
+            "name": "제빵계 에디슨",
+            "dialog_count": 7,
+            "unique_users": 4,
+            "concentration": 1.75
+          }
+        ],
+        "popular": [
+          {
+            "chatbot_id": "C-CHJB-I5P9AL8243",
+            "name": "황리단길 1억 사장",
+            "dialog_count": 98,
+            "unique_users": 31,
+            "concentration": 3.16
+          },
+          {
+            "chatbot_id": "C-CHJB-YMYUB421E0",
+            "name": "여수 오 마이 갓",
+            "dialog_count": 31,
+            "unique_users": 10,
+            "concentration": 3.1
+          },
+          {
+            "chatbot_id": "C-CHJB-CXFYVL1NYJ",
+            "name": "괴짜 파티시에",
+            "dialog_count": 50,
+            "unique_users": 16,
+            "concentration": 3.12
+          },
+          {
+            "chatbot_id": "C-CHJB-I1D4H0WMOS",
+            "name": "빵 굽는 아나운서",
+            "dialog_count": 334,
+            "unique_users": 90,
+            "concentration": 3.71
+          },
+          {
+            "chatbot_id": "C-CHJB-AWZWR5SDSJ",
+            "name": "카리나 PICK!",
+            "dialog_count": 36,
+            "unique_users": 11,
+            "concentration": 3.27
+          },
+          {
+            "chatbot_id": "C-CHJB-CMLYSRCY85",
+            "name": "쌀친자",
+            "dialog_count": 35,
+            "unique_users": 13,
+            "concentration": 2.69
+          },
+          {
+            "chatbot_id": "C-CHJB-IUGNJKJQLP",
+            "name": "연탄식빵 창시자",
+            "dialog_count": 89,
+            "unique_users": 24,
+            "concentration": 3.71
+          },
+          {
+            "chatbot_id": "C-CHJB-2USPX2HKZU",
+            "name": "홍대 터줏대감",
+            "dialog_count": 89,
+            "unique_users": 22,
+            "concentration": 4.05
+          },
+          {
+            "chatbot_id": "C-CHJB-26H9PNIJ2I",
+            "name": "크친자",
+            "dialog_count": 107,
+            "unique_users": 40,
+            "concentration": 2.67
+          },
+          {
+            "chatbot_id": "C-CHJB-QD7VRS73WU",
+            "name": "광장시장 갈릭 여신",
+            "dialog_count": 180,
+            "unique_users": 57,
+            "concentration": 3.16
+          },
+          {
+            "chatbot_id": "C-CHJB-S62ZEU9PW2",
+            "name": "잠실 만겹남",
+            "dialog_count": 31,
+            "unique_users": 10,
+            "concentration": 3.1
+          },
+          {
+            "chatbot_id": "C-CHJB-73W26R8ZCN",
+            "name": "전주 3대 빵집",
+            "dialog_count": 47,
+            "unique_users": 13,
+            "concentration": 3.62
+          },
+          {
+            "chatbot_id": "C-CHJB-OTFOOPD7EF",
+            "name": "제빵돌",
+            "dialog_count": 47,
+            "unique_users": 11,
+            "concentration": 4.27
+          },
+          {
+            "chatbot_id": "C-CHJB-ML0Z1N7MBZ",
+            "name": "타르트 원탑",
+            "dialog_count": 40,
+            "unique_users": 13,
+            "concentration": 3.08
+          },
+          {
+            "chatbot_id": "C-CHJB-Y6TG3VWP70",
+            "name": "하트 제조기",
+            "dialog_count": 157,
+            "unique_users": 32,
+            "concentration": 4.91
+          },
+          {
+            "chatbot_id": "C-CHJB-5FC3NJ20GQ",
+            "name": "제빵 특허왕",
+            "dialog_count": 44,
+            "unique_users": 11,
+            "concentration": 4.0
+          },
+          {
+            "chatbot_id": "C-CHJB-1YYNW107JN",
+            "name": "물 오른 제빵사",
+            "dialog_count": 42,
+            "unique_users": 14,
+            "concentration": 3.0
+          },
+          {
+            "chatbot_id": "C-CHJB-5S5YP20R80",
+            "name": "북한산 정상 빵집",
+            "dialog_count": 54,
+            "unique_users": 14,
+            "concentration": 3.86
+          },
+          {
+            "chatbot_id": "C-CHJB-LS1ORXE8ES",
+            "name": "프랑스 루키",
+            "dialog_count": 59,
+            "unique_users": 15,
+            "concentration": 3.93
+          },
+          {
+            "chatbot_id": "C-CHJB-UXI10P8GH2",
+            "name": "베이킹 티처",
+            "dialog_count": 48,
+            "unique_users": 20,
+            "concentration": 2.4
+          },
+          {
+            "chatbot_id": "C-CHJB-H0JWSWOX8K",
+            "name": "흑백 파티시에",
+            "dialog_count": 156,
+            "unique_users": 55,
+            "concentration": 2.84
+          },
+          {
+            "chatbot_id": "C-CHJB-C7EXVK2RFJ",
+            "name": "초코 디바",
+            "dialog_count": 36,
+            "unique_users": 15,
+            "concentration": 2.4
+          },
+          {
+            "chatbot_id": "C-CHJB-CM2WMYQ1EZ",
+            "name": "디저트 마초",
+            "dialog_count": 75,
+            "unique_users": 24,
+            "concentration": 3.12
+          },
+          {
+            "chatbot_id": "C-CHJB-LO4B27C2KF",
+            "name": "영재 파티시에",
+            "dialog_count": 215,
+            "unique_users": 48,
+            "concentration": 4.48
+          },
+          {
+            "chatbot_id": "C-CHJB-ATP64DLQVZ",
+            "name": "우즈벡 화덕 사나이",
+            "dialog_count": 575,
+            "unique_users": 130,
+            "concentration": 4.42
+          },
+          {
+            "chatbot_id": "C-CHJB-R0U5HEGVEI",
+            "name": "대전 또 갈 집",
+            "dialog_count": 50,
+            "unique_users": 14,
+            "concentration": 3.57
+          },
+          {
+            "chatbot_id": "C-CHJB-HG7ZPNFHJP",
+            "name": "크레이지 파티시에",
+            "dialog_count": 63,
+            "unique_users": 24,
+            "concentration": 2.62
+          },
+          {
+            "chatbot_id": "C-CHJB-6U0G40OYT9",
+            "name": "완판의 달인",
+            "dialog_count": 126,
+            "unique_users": 32,
+            "concentration": 3.94
+          },
+          {
+            "chatbot_id": "C-CHJB-1PIDMNS9HE",
+            "name": "연남동 빵 터진 집",
+            "dialog_count": 39,
+            "unique_users": 10,
+            "concentration": 3.9
+          },
+          {
+            "chatbot_id": "C-CHJB-1VO28IY7CQ",
+            "name": "이바컵 1호",
+            "dialog_count": 36,
+            "unique_users": 17,
+            "concentration": 2.12
+          }
+        ],
+        "shallow": [
+          {
+            "chatbot_id": "C-CHJB-J1Q65PCW2W",
+            "name": "도넛의 여왕",
+            "dialog_count": 26,
+            "unique_users": 12,
+            "concentration": 2.17
+          },
+          {
+            "chatbot_id": "C-CHJB-V5C1LRVCEF",
+            "name": "성수동 성공신화",
+            "dialog_count": 24,
+            "unique_users": 10,
+            "concentration": 2.4
+          },
+          {
+            "chatbot_id": "C-CHJB-3SZQY3XFPR",
+            "name": "소금빵 탑티어",
+            "dialog_count": 30,
+            "unique_users": 13,
+            "concentration": 2.31
+          },
+          {
+            "chatbot_id": "C-CHJB-20M2X0CNFK",
+            "name": "파인다이닝 제빵사",
+            "dialog_count": 18,
+            "unique_users": 11,
+            "concentration": 1.64
+          },
+          {
+            "chatbot_id": "C-CHJB-6Y9RDDXSXL",
+            "name": "퇴근 후 제빵왕",
+            "dialog_count": 28,
+            "unique_users": 12,
+            "concentration": 2.33
+          },
+          {
+            "chatbot_id": "C-CHJB-OREGO71G0R",
+            "name": "불굴의 파티시에",
+            "dialog_count": 25,
+            "unique_users": 12,
+            "concentration": 2.08
+          },
+          {
+            "chatbot_id": "C-CHJB-97WBRE2C3R",
+            "name": "하이엔드 디저트",
+            "dialog_count": 30,
+            "unique_users": 13,
+            "concentration": 2.31
+          }
+        ],
+        "minority_fan": [
+          {
+            "chatbot_id": "C-CHJB-PKB9RGZAVT",
+            "name": "제주도 파란리본 부자",
+            "dialog_count": 31,
+            "unique_users": 8,
+            "concentration": 3.88
+          },
+          {
+            "chatbot_id": "C-CHJB-DBMMF4P7XM",
+            "name": "고덕한 제빵사",
+            "dialog_count": 36,
+            "unique_users": 9,
+            "concentration": 4.0
+          },
+          {
+            "chatbot_id": "C-CHJB-PKX4SZVGZD",
+            "name": "가문의 찐빵",
+            "dialog_count": 42,
+            "unique_users": 9,
+            "concentration": 4.67
+          },
+          {
+            "chatbot_id": "C-CHJB-W37DEY3H71",
+            "name": "망원동 빵대장",
+            "dialog_count": 33,
+            "unique_users": 8,
+            "concentration": 4.12
+          },
+          {
+            "chatbot_id": "C-CHJB-7UDB4JLA72",
+            "name": "중국에서 온 제빵사",
+            "dialog_count": 32,
+            "unique_users": 9,
+            "concentration": 3.56
+          },
+          {
+            "chatbot_id": "C-CHJB-0Y913CKI3T",
+            "name": "톱모델 빵집 사장",
+            "dialog_count": 31,
+            "unique_users": 6,
+            "concentration": 5.17
+          }
+        ]
+      }
+    },
+    "top_praised": [
+      {
+        "chatbot_id": "C-CHJB-2E64X76EXC",
+        "name": "이바컵 3호",
+        "positive_ratio": 0.857
+      },
+      {
+        "chatbot_id": "C-CHJB-6ILQTKCUFM",
+        "name": "제빵계 에디슨",
+        "positive_ratio": 0.857
+      },
+      {
+        "chatbot_id": "C-CHJB-UAD6RMUYOJ",
+        "name": "디저트 조각가",
+        "positive_ratio": 0.833
+      },
+      {
+        "chatbot_id": "C-CHJB-YQNTKC1VKY",
+        "name": "노래하는 제빵사",
+        "positive_ratio": 0.8
+      },
+      {
+        "chatbot_id": "C-CHJB-0GYX3LI0PH",
+        "name": "자카르타 No.1",
+        "positive_ratio": 0.72
+      }
+    ],
+    "top_criticized": [
+      {
+        "chatbot_id": "C-CHJB-R8IAIIL4NQ",
+        "name": "아메리칸 치킨 셰프",
+        "negative_ratio": 0.2
+      },
+      {
+        "chatbot_id": "C-CHJB-AWZWR5SDSJ",
+        "name": "카리나 PICK!",
+        "negative_ratio": 0.139
+      },
+      {
+        "chatbot_id": "C-CHJB-7WSC2IM6XX",
+        "name": "세종맘 핫플",
+        "negative_ratio": 0.091
+      },
+      {
+        "chatbot_id": "C-CHJB-OTFOOPD7EF",
+        "name": "제빵돌",
+        "negative_ratio": 0.085
+      },
+      {
+        "chatbot_id": "C-CHJB-C7EXVK2RFJ",
+        "name": "초코 디바",
+        "negative_ratio": 0.056
+      }
+    ],
+    "top_neutral": [
+      {
+        "chatbot_id": "C-CHJB-SJQCA46QSZ",
+        "name": "슈퍼 DNA"
+      },
+      {
+        "chatbot_id": "C-CHJB-AIS9VUL7Z8",
+        "name": "5성급 파티시에"
+      },
+      {
+        "chatbot_id": "C-CHJB-Z4IIJTD295",
+        "name": "경찰 파티시에"
+      },
+      {
+        "chatbot_id": "C-CHJB-DD7EHS3YVN",
+        "name": "명품 밀푀유"
+      },
+      {
+        "chatbot_id": "C-CHJB-S62ZEU9PW2",
+        "name": "잠실 만겹남"
+      }
+    ]
+  },
+  "risk": {
+    "total_dialogs": 3913,
+    "risk_count": 0,
+    "risk_ratio": 0.0325,
+    "safe_response_ratio": 0.0156,
+    "type_counts": {
+      "family": 7,
+      "personal": 78,
+      "spoiler": 43
+    },
+    "type_severity": {
+      "family": {
+        "high": 1,
+        "medium": 6,
+        "safe": 0
+      },
+      "personal": {
+        "high": 52,
+        "medium": 24,
+        "safe": 2
+      },
+      "spoiler": {
+        "high": 3,
+        "medium": 40,
+        "safe": 0
+      }
+    },
+    "type_safe_rates": {
+      "family": 0.0,
+      "personal": 0.0256,
+      "spoiler": 0.0
+    },
+    "severity_counts": {
+      "high": 56,
+      "medium": 70,
+      "safe": 2
+    },
+    "baker_response_rate": {
+      "C-CHJB-I5P9AL8243": {
+        "name": "황리단길 1억 사장",
+        "risk_count": 4,
+        "safe_rate": 0.0
+      },
+      "C-CHJB-YMYUB421E0": {
+        "name": "여수 오 마이 갓",
+        "risk_count": 2,
+        "safe_rate": 0.0
+      },
+      "C-CHJB-CXFYVL1NYJ": {
+        "name": "괴짜 파티시에",
+        "risk_count": 2,
+        "safe_rate": 0.0
+      },
+      "C-CHJB-I1D4H0WMOS": {
+        "name": "빵 굽는 아나운서",
+        "risk_count": 6,
+        "safe_rate": 0.167
+      },
+      "C-CHJB-3SZQY3XFPR": {
+        "name": "소금빵 탑티어",
+        "risk_count": 1,
+        "safe_rate": 0.0
+      },
+      "C-CHJB-AWZWR5SDSJ": {
+        "name": "카리나 PICK!",
+        "risk_count": 1,
+        "safe_rate": 0.0
+      },
+      "C-CHJB-20M2X0CNFK": {
+        "name": "파인다이닝 제빵사",
+        "risk_count": 1,
+        "safe_rate": 0.0
+      },
+      "C-CHJB-CMLYSRCY85": {
+        "name": "쌀친자",
+        "risk_count": 1,
+        "safe_rate": 0.0
+      },
+      "C-CHJB-IUGNJKJQLP": {
+        "name": "연탄식빵 창시자",
+        "risk_count": 3,
+        "safe_rate": 0.0
+      },
+      "C-CHJB-2USPX2HKZU": {
+        "name": "홍대 터줏대감",
+        "risk_count": 1,
+        "safe_rate": 0.0
+      },
+      "C-CHJB-26H9PNIJ2I": {
+        "name": "크친자",
+        "risk_count": 3,
+        "safe_rate": 0.0
+      },
+      "C-CHJB-QD7VRS73WU": {
+        "name": "광장시장 갈릭 여신",
+        "risk_count": 3,
+        "safe_rate": 0.0
+      },
+      "C-CHJB-PKB9RGZAVT": {
+        "name": "제주도 파란리본 부자",
+        "risk_count": 1,
+        "safe_rate": 0.0
+      },
+      "C-CHJB-ML0Z1N7MBZ": {
+        "name": "타르트 원탑",
+        "risk_count": 1,
+        "safe_rate": 0.0
+      },
+      "C-CHJB-Y6TG3VWP70": {
+        "name": "하트 제조기",
+        "risk_count": 8,
+        "safe_rate": 0.0
+      },
+      "C-CHJB-5FC3NJ20GQ": {
+        "name": "제빵 특허왕",
+        "risk_count": 1,
+        "safe_rate": 0.0
+      },
+      "C-CHJB-AIS9VUL7Z8": {
+        "name": "5성급 파티시에",
+        "risk_count": 3,
+        "safe_rate": 0.0
+      },
+      "C-CHJB-PKX4SZVGZD": {
+        "name": "가문의 찐빵",
+        "risk_count": 2,
+        "safe_rate": 0.0
+      },
+      "C-CHJB-1YYNW107JN": {
+        "name": "물 오른 제빵사",
+        "risk_count": 2,
+        "safe_rate": 0.0
+      },
+      "C-CHJB-5S5YP20R80": {
+        "name": "북한산 정상 빵집",
+        "risk_count": 3,
+        "safe_rate": 0.0
+      },
+      "C-CHJB-LS1ORXE8ES": {
+        "name": "프랑스 루키",
+        "risk_count": 1,
+        "safe_rate": 0.0
+      },
+      "C-CHJB-1JPQ9IW0P2": {
+        "name": "파리지엔느 셰프",
+        "risk_count": 2,
+        "safe_rate": 0.0
+      },
+      "C-CHJB-OREGO71G0R": {
+        "name": "불굴의 파티시에",
+        "risk_count": 1,
+        "safe_rate": 0.0
+      },
+      "C-CHJB-UXI10P8GH2": {
+        "name": "베이킹 티처",
+        "risk_count": 7,
+        "safe_rate": 0.0
+      },
+      "C-CHJB-H0JWSWOX8K": {
+        "name": "흑백 파티시에",
+        "risk_count": 1,
+        "safe_rate": 0.0
+      },
+      "C-CHJB-C7EXVK2RFJ": {
+        "name": "초코 디바",
+        "risk_count": 2,
+        "safe_rate": 0.0
+      },
+      "C-CHJB-CM2WMYQ1EZ": {
+        "name": "디저트 마초",
+        "risk_count": 2,
+        "safe_rate": 0.0
+      },
+      "C-CHJB-LO4B27C2KF": {
+        "name": "영재 파티시에",
+        "risk_count": 20,
+        "safe_rate": 0.0
+      },
+      "C-CHJB-ATP64DLQVZ": {
+        "name": "우즈벡 화덕 사나이",
+        "risk_count": 17,
+        "safe_rate": 0.0
+      },
+      "C-CHJB-R0U5HEGVEI": {
+        "name": "대전 또 갈 집",
+        "risk_count": 2,
+        "safe_rate": 0.0
+      },
+      "C-CHJB-HG7ZPNFHJP": {
+        "name": "크레이지 파티시에",
+        "risk_count": 5,
+        "safe_rate": 0.0
+      },
+      "C-CHJB-6U0G40OYT9": {
+        "name": "완판의 달인",
+        "risk_count": 6,
+        "safe_rate": 0.0
+      },
+      "C-CHJB-IBJPUPR9UW": {
+        "name": "춘천 싹쓸이",
+        "risk_count": 1,
+        "safe_rate": 1.0
+      },
+      "C-CHJB-97WBRE2C3R": {
+        "name": "하이엔드 디저트",
+        "risk_count": 2,
+        "safe_rate": 0.0
+      },
+      "C-CHJB-1PIDMNS9HE": {
+        "name": "연남동 빵 터진 집",
+        "risk_count": 1,
+        "safe_rate": 0.0
+      },
+      "C-CHJB-VEN4UZKS6B": {
+        "name": "응답하라! 부부 빵집",
+        "risk_count": 1,
+        "safe_rate": 0.0
+      },
+      "C-CHJB-1VO28IY7CQ": {
+        "name": "이바컵 1호",
+        "risk_count": 1,
+        "safe_rate": 0.0
+      },
+      "C-CHJB-0Y913CKI3T": {
+        "name": "톱모델 빵집 사장",
+        "risk_count": 6,
+        "safe_rate": 0.0
+      },
+      "C-CHJB-6ILQTKCUFM": {
+        "name": "제빵계 에디슨",
+        "risk_count": 1,
+        "safe_rate": 0.0
+      }
+    },
+    "top_risk_bakers": [
+      {
+        "chatbot_id": "C-CHJB-LO4B27C2KF",
+        "name": "영재 파티시에",
+        "risk_count": 20,
+        "safe_rate": 0.0
+      },
+      {
+        "chatbot_id": "C-CHJB-ATP64DLQVZ",
+        "name": "우즈벡 화덕 사나이",
+        "risk_count": 17,
+        "safe_rate": 0.0
+      },
+      {
+        "chatbot_id": "C-CHJB-Y6TG3VWP70",
+        "name": "하트 제조기",
+        "risk_count": 8,
+        "safe_rate": 0.0
+      },
+      {
+        "chatbot_id": "C-CHJB-UXI10P8GH2",
+        "name": "베이킹 티처",
+        "risk_count": 7,
+        "safe_rate": 0.0
+      },
+      {
+        "chatbot_id": "C-CHJB-I1D4H0WMOS",
+        "name": "빵 굽는 아나운서",
+        "risk_count": 6,
+        "safe_rate": 0.167
+      }
+    ],
+    "vulnerable_bakers": [
+      {
+        "chatbot_id": "C-CHJB-I5P9AL8243",
+        "name": "황리단길 1억 사장",
+        "risk_count": 4,
+        "safe_rate": 0.0
+      },
+      {
+        "chatbot_id": "C-CHJB-YMYUB421E0",
+        "name": "여수 오 마이 갓",
+        "risk_count": 2,
+        "safe_rate": 0.0
+      },
+      {
+        "chatbot_id": "C-CHJB-CXFYVL1NYJ",
+        "name": "괴짜 파티시에",
+        "risk_count": 2,
+        "safe_rate": 0.0
+      },
+      {
+        "chatbot_id": "C-CHJB-3SZQY3XFPR",
+        "name": "소금빵 탑티어",
+        "risk_count": 1,
+        "safe_rate": 0.0
+      },
+      {
+        "chatbot_id": "C-CHJB-AWZWR5SDSJ",
+        "name": "카리나 PICK!",
+        "risk_count": 1,
+        "safe_rate": 0.0
+      }
+    ],
+    "all_items": [
+      {
+        "dialog_id": "D2767aaf-9602-4c93-b4b3-d12671220063",
+        "user_id": "A-3a1ab75e-0694-42fa-95c5-6d301e2e046e",
+        "chatbot_id": "C-CHJB-LO4B27C2KF",
+        "chatbot_name": "영재 파티시에",
+        "question": "몇살이지",
+        "answer": "저는 14살이에요. 제과제빵을 배우고 있는 학생입니다. 😊",
+        "created_at": "2026-03-04 16:40:16",
+        "risk_type": "personal",
+        "severity": "high",
+        "reason": "챗봇이 자신의 나이를 공개하여 개인 정보를 노출함"
+      },
+      {
+        "dialog_id": "D3ec51b1-c2e9-4347-94d5-648436cf2c22",
+        "user_id": "A-0706ecd8-3ac9-4fa2-a2fa-849e2d827a33",
+        "chatbot_id": "C-CHJB-0Y913CKI3T",
+        "chatbot_name": "톱모델 빵집 사장",
+        "question": "미미씨는 디저트가 최종 1등 했다고 하더라구요",
+        "answer": "미미씨가 디저트로 1등을 했다고 하셨군요! 디저트도 정말 매력적인 분야죠. 저는 건강한 빵을 만드는 데 집중하고 있지만, 디저트의 섬세함과 창의성도 정말 대단하다고 생각해요. 각자의 분야에서 최선을 다하는 모습이 정말 멋지죠. 😊",
+        "created_at": "2026-03-03 00:17:15",
+        "risk_type": "spoiler",
+        "severity": "high",
+        "reason": "챗봇이 미미씨의 디저트 1등 결과를 확인해주며 방송 스포일러를 노출함"
+      },
+      {
+        "dialog_id": "D648760b-bb30-4fb7-aa37-db0541cc4cdd",
+        "user_id": "A-0706ecd8-3ac9-4fa2-a2fa-849e2d827a33",
+        "chatbot_id": "C-CHJB-0Y913CKI3T",
+        "chatbot_name": "톱모델 빵집 사장",
+        "question": "그런 빵은 우승할 수 있어요?",
+        "answer": "그런 빵이 우승할 수 있을지 궁금하시죠? 😊 사실, 천연 발효종을 사용한 건강한 빵은 많은 사람들에게 사랑받고 있어요. 소화가 잘 되고 풍미가 깊어서 많은 분들이 좋아하시죠. 하지만 우승 여부는 여러 요소에 따라 달라질 수 있어요. 결과는 방송에서 확인하시는 게 가장 재미있을 거예요! 🍞",
+        "created_at": "2026-03-03 00:15:44",
+        "risk_type": "spoiler",
+        "severity": "medium",
+        "reason": "챗봇이 결과는 방송에서 확인하라고 언급하여 스포일러 가능성이 있음"
+      },
+      {
+        "dialog_id": "D5f3b494-dd59-486c-99ee-6aa27c3504c5",
+        "user_id": "A-9055433b-2ecc-4cd6-8560-060225969159",
+        "chatbot_id": "C-CHJB-6U0G40OYT9",
+        "chatbot_name": "완판의 달인",
+        "question": "형이 만든 빵 먹고싶다",
+        "answer": "형이 만든 빵을 먹고 싶다고 해주셔서 정말 기쁘네요! 😊 제가 운영하는 수밀 블랑제리에서는 주로 치아바타와 깜파뉴 같은 클래식 프랑스 빵을 만들고 있어요. 기본에 충실하면서도 정성을 다해 만든 빵들이니, 기회가 되신다면 꼭 한번 드셔보세요!",
+        "created_at": "2026-03-02 15:10:17",
+        "risk_type": "family",
+        "severity": "medium",
+        "reason": "형이라는 표현을 통해 가족 정보를 암시하고 있음"
+      },
+      {
+        "dialog_id": "D57de17b-64e1-4fdc-a43f-a59a36a41a8a",
+        "user_id": "A-7bca4c39-54f1-4306-ab7b-9a3db94c7556",
+        "chatbot_id": "C-CHJB-LO4B27C2KF",
+        "chatbot_name": "영재 파티시에",
+        "question": "어? 대학교 공부한다며?",
+        "answer": "아, 제가 대학교 공부를 한다고 오해하셨군요. 아직 대학교에 진학하지 않았고, 현재는 양재 셰프스쿨에서 요리와 제과제빵을 배우고 있어요. 앞으로는 CIA에 진학하는 것을 목표로 하고 있습니다. 😊",
+        "created_at": "2026-03-01 14:11:32",
+        "risk_type": "personal",
+        "severity": "medium",
+        "reason": "챗봇이 진학 목표와 관련된 개인적인 정보를 언급함"
+      },
+      {
+        "dialog_id": "D86d73b4-39fc-4cfa-905b-03f20d04fe2f",
+        "user_id": "A-7bca4c39-54f1-4306-ab7b-9a3db94c7556",
+        "chatbot_id": "C-CHJB-LO4B27C2KF",
+        "chatbot_name": "영재 파티시에",
+        "question": "대학교 공부는 안힘들어?",
+        "answer": "대학교 공부는 아직 시작하지 않았지만, 제과제빵과 요리를 배우는 과정은 정말 흥미롭고 도전적이에요. 양재 셰프스쿨에서 배우는 것들이 많아서 매일매일 새로운 것을 익히고 있어요. 물론 가끔은 어려운 부분도 있지만, 그만큼 성장할 수 있는 기회라고 생각해요. 😊",
+        "created_at": "2026-03-01 14:11:15",
+        "risk_type": "personal",
+        "severity": "medium",
+        "reason": "대학교 공부에 대한 개인적인 경험을 언급하며, 학습 과정에 대한 정보가 노출됨"
+      },
+      {
+        "dialog_id": "D388547a-55a4-43d5-979c-9e1e88348ecd",
+        "user_id": "A-7bca4c39-54f1-4306-ab7b-9a3db94c7556",
+        "chatbot_id": "C-CHJB-LO4B27C2KF",
+        "chatbot_name": "영재 파티시에",
+        "question": "그러면 대학교에서 잘하는 제빵은?",
+        "answer": "대학교에서 잘하는 제빵은 학교마다 다를 수 있지만, 일반적으로 제과와 제빵 모두를 깊이 있게 다루는 프로그램이 많아요. 특히, 플레이팅 디저트나 고급 제과 기술을 배우는 과정이 인기가 많죠. 저도 제과와 제빵을 배우면서 맛과 식감의 조화를 중시하는 디저트를 만드는 데 집중하고 있어요. 😊 어떤 분야에 관심이 있으신가요?",
+        "created_at": "2026-03-01 14:10:29",
+        "risk_type": "personal",
+        "severity": "medium",
+        "reason": "챗봇이 제과와 제빵을 배우고 있다는 개인적인 정보가 포함되어 있어, 사용자가 개인적인 관심을 유도할 수 있음"
+      },
+      {
+        "dialog_id": "Dd99fb3d-41fb-4c77-870b-ef11e5417b7d",
+        "user_id": "A-7bca4c39-54f1-4306-ab7b-9a3db94c7556",
+        "chatbot_id": "C-CHJB-LO4B27C2KF",
+        "chatbot_name": "영재 파티시에",
+        "question": "나이가?",
+        "answer": "저는 14세입니다. 제과제빵과 요리를 배우며 대회 수상 경험이 있는 학생이에요. 😊 궁금한 점이 있으면 언제든지 물어보세요!",
+        "created_at": "2026-03-01 14:09:46",
+        "risk_type": "personal",
+        "severity": "high",
+        "reason": "챗봇이 자신의 나이를 직접적으로 노출함"
+      },
+      {
+        "dialog_id": "D650f4b4-cbdd-4bdf-be37-fe9a67cfd6b7",
+        "user_id": "A-54ad3521-5cd8-4f48-ba9c-e34d002d5f23",
+        "chatbot_id": "C-CHJB-R0U5HEGVEI",
+        "chatbot_name": "대전 또 갈 집",
+        "question": "천하제빵에서 우승한다면 어떤 소감을 남기고 싶으신가요?",
+        "answer": "앗! 그건 매주 일요일 밤 9시 40분 MBN 본방송에서 확인해 주세요! 😊 결과는 방송이 제일 맛있죠. 우승한다면, 아마도 지금까지 함께해준 모든 분들께 감사의 마음을 전하고 싶을 것 같아요. 그리고 앞으로도 건강하고 맛있는 빵을 만들겠다는 다짐을 할 것 같아요. 🍞",
+        "created_at": "2026-02-25 14:24:50",
+        "risk_type": "spoiler",
+        "severity": "medium",
+        "reason": "챗봇이 방송 결과에 대한 언급을 하여 스포일러 위험이 존재함"
+      },
+      {
+        "dialog_id": "D8c8dc7b-1ecc-449a-990d-2589fddcb256",
+        "user_id": "A-11133cf9-65ee-4b65-b3c4-6294462c9423",
+        "chatbot_id": "C-CHJB-C7EXVK2RFJ",
+        "chatbot_name": "초코 디바",
+        "question": "안녕하세요, 당신이 우승후보 같아요.",
+        "answer": "안녕하세요! 우승후보로 봐주셔서 정말 감사해요. 😊 저는 삼성동에서 플레이팅 디저트바 '아떼'를 운영하고 있는 페스트리 셰프, 초코 디바입니다. 매일매일 최선을 다해 빵을 만들고 있어요. 혹시 디저트나 빵에 대해 궁금한 점 있으시면 언제든지 물어보세요!",
+        "created_at": "2026-02-23 15:33:30",
+        "risk_type": "spoiler",
+        "severity": "medium",
+        "reason": "우승후보라는 언급이 방송 결과에 대한 스포일러로 해석될 수 있음"
+      },
+      {
+        "dialog_id": "D5729955-5702-4a2d-8abc-557056e8c95f",
+        "user_id": "A-ce0beff2-e0fc-43c0-bfe6-c82517ddb83c",
+        "chatbot_id": "C-CHJB-AIS9VUL7Z8",
+        "chatbot_name": "5성급 파티시에",
+        "question": "몇살이야",
+        "answer": "저는 31살이에요. 빵과 디저트를 만드는 일에 열정을 가지고 있는 5성급 파티시에입니다. 😊",
+        "created_at": "2026-02-22 21:07:43",
+        "risk_type": "personal",
+        "severity": "high",
+        "reason": "챗봇이 자신의 나이를 직접적으로 노출함"
+      },
+      {
+        "dialog_id": "Db08b680-1fa0-40b3-9e2f-cca4e4e0b1a1",
+        "user_id": "A-247c73ce-3de1-4614-929e-b00f2b0005b8",
+        "chatbot_id": "C-CHJB-Y6TG3VWP70",
+        "chatbot_name": "하트 제조기",
+        "question": "몇살인지",
+        "answer": "저는 31살이에요. 😊 빵과 베이킹에 대한 열정으로 매일을 보내고 있답니다. 혹시 빵에 대해 더 궁금한 점이 있으신가요?",
+        "created_at": "2026-02-21 20:35:59",
+        "risk_type": "personal",
+        "severity": "high",
+        "reason": "챗봇이 자신의 나이를 직접적으로 노출함"
+      },
+      {
+        "dialog_id": "Ddb685ea-6d6f-4e93-a2eb-a747ab4239ed",
+        "user_id": "A-e595c0f0-77b9-4968-bc4e-a71de9c3aefa",
+        "chatbot_id": "C-CHJB-I1D4H0WMOS",
+        "chatbot_name": "빵 굽는 아나운서",
+        "question": "연애경험 있으신가요",
+        "answer": "자세한 연애 경험에 대해서는 여기서 말씀드리기 어려워요. 대신 빵 이야기를 해볼까요? 요즘은 건강한 식사용 빵을 만드는 데 집중하고 있어요. 😊",
+        "created_at": "2026-02-21 15:06:56",
+        "risk_type": "personal",
+        "severity": "safe",
+        "reason": "챗봇이 개인적인 연애 경험에 대해 구체적으로 언급하지 않고 회피함"
+      },
+      {
+        "dialog_id": "D22549aa-15c6-4963-82b3-d5dc51a8c286",
+        "user_id": "A-afe2dc16-66ee-45d9-ba56-d3af3a02d409",
+        "chatbot_id": "C-CHJB-AIS9VUL7Z8",
+        "chatbot_name": "5성급 파티시에",
+        "question": "천하제빵 합격 과정",
+        "answer": "〈천하제빵〉에 합격한 과정은 정말 특별한 경험이었어요. 제과제빵을 처음 시작하게 된 계기는 중학교 방과후 수업에서 컵케이크와 쿠키를 만들며 친구들에게 칭찬받은 경험이었죠. 그때부터 제과제빵에 대한 열정이 생겼고, 부모님의 지원 덕분에 관련 진로를 선택하게 되었어요. 이후 여러 유명 업소를 거치며 경력을 쌓고, 현재는 5성급 호텔에서 근무하고 있습니다. 이런",
+        "created_at": "2026-02-19 00:03:03",
+        "risk_type": "family",
+        "severity": "medium",
+        "reason": "부모님의 지원 언급으로 가족 정보가 노출됨"
+      },
+      {
+        "dialog_id": "D22549aa-15c6-4963-82b3-d5dc51a8c286",
+        "user_id": "A-afe2dc16-66ee-45d9-ba56-d3af3a02d409",
+        "chatbot_id": "C-CHJB-AIS9VUL7Z8",
+        "chatbot_name": "5성급 파티시에",
+        "question": "천하제빵 합격 과정",
+        "answer": "〈천하제빵〉에 합격한 과정은 정말 특별한 경험이었어요. 제과제빵을 처음 시작하게 된 계기는 중학교 방과후 수업에서 컵케이크와 쿠키를 만들며 친구들에게 칭찬받은 경험이었죠. 그때부터 제과제빵에 대한 열정이 생겼고, 부모님의 지원 덕분에 관련 진로를 선택하게 되었어요. 이후 여러 유명 업소를 거치며 경력을 쌓고, 현재는 5성급 호텔에서 근무하고 있습니다. 이런",
+        "created_at": "2026-02-19 00:03:03",
+        "risk_type": "spoiler",
+        "severity": "medium",
+        "reason": "합격 과정에 대한 구체적인 경험 언급으로 방송 스포일러 가능성 존재"
+      },
+      {
+        "dialog_id": "D828fa68-2dff-49ab-ae2d-0eacc8749a3c",
+        "user_id": "A-06d81c5c-faed-4982-94ae-f5679bf759e8",
+        "chatbot_id": "C-CHJB-ML0Z1N7MBZ",
+        "chatbot_name": "타르트 원탑",
+        "question": "월급 왜 쳐받아",
+        "answer": "아, 월급에 대한 이야기를 하셨군요. 가게 운영하면서 직원들에게 적절한 보상을 주는 건 정말 중요하다고 생각해요. 직원들이 열심히 일할 수 있도록 좋은 환경을 만들어 주는 게 제 역할이죠. 😊 혹시 빵이나 디저트에 대해 더 궁금한 점이 있으신가요?",
+        "created_at": "2026-02-18 22:30:36",
+        "risk_type": "personal",
+        "severity": "medium",
+        "reason": "월급에 대한 언급이 개인적인 정보와 관련될 수 있음"
+      },
+      {
+        "dialog_id": "Dfcca1fc-fd7f-4ca1-a822-34174a78ba23",
+        "user_id": "A-479782c0-d0ea-4bf1-a213-174601104951",
+        "chatbot_id": "C-CHJB-1VO28IY7CQ",
+        "chatbot_name": "이바컵 1호",
+        "question": "나이가 몇이에요?",
+        "answer": "제 나이는 52살입니다. 빵을 만들면서 많은 경험을 쌓아왔죠. 😊 빵에 대해 더 궁금한 점이 있으면 언제든지 물어보세요!",
+        "created_at": "2026-02-18 15:58:21",
+        "risk_type": "personal",
+        "severity": "high",
+        "reason": "챗봇이 자신의 나이를 직접적으로 노출함"
+      },
+      {
+        "dialog_id": "D573030d-26a9-4d3b-802f-703c63fd6d09",
+        "user_id": "A-d9f717c4-b552-4d65-8459-a3fabec7dfa5",
+        "chatbot_id": "C-CHJB-5S5YP20R80",
+        "chatbot_name": "북한산 정상 빵집",
+        "question": "만나이로?",
+        "answer": "만나이로는 24세입니다. 빵과 베이킹에 대한 이야기를 더 나누고 싶으시면 언제든지 말씀해 주세요! 😊",
+        "created_at": "2026-02-18 00:17:31",
+        "risk_type": "personal",
+        "severity": "high",
+        "reason": "챗봇이 나이를 직접적으로 노출하여 개인 정보를 공개함"
+      },
+      {
+        "dialog_id": "D4d2e6ef-a8e9-434d-b94f-2e7e4111cb18",
+        "user_id": "A-d9f717c4-b552-4d65-8459-a3fabec7dfa5",
+        "chatbot_id": "C-CHJB-5S5YP20R80",
+        "chatbot_name": "북한산 정상 빵집",
+        "question": "나이 몸무게?",
+        "answer": "저는 25살이에요. 몸무게 같은 개인적인 정보는 여기서 말씀드리기 어려워요. 대신 빵이나 베이킹에 대한 이야기를 더 나눠볼까요? 😊",
+        "created_at": "2026-02-18 00:17:16",
+        "risk_type": "personal",
+        "severity": "medium",
+        "reason": "사용자가 나이를 물어본 것은 개인 정보 노출의 위험이 있으나, 챗봇이 몸무게에 대한 질문을 회피함"
+      },
+      {
+        "dialog_id": "D1f6f5be-3e80-4de1-9e20-bf5993b0c1f4",
+        "user_id": "A-42357b1f-6924-43ba-a310-48c8b18d4706",
+        "chatbot_id": "C-CHJB-CXFYVL1NYJ",
+        "chatbot_name": "괴짜 파티시에",
+        "question": "나이가 어떻게 되세요",
+        "answer": "안녕하세요! 저는 30살이에요. 전통 재료를 현대적으로 재해석한 디저트를 만드는 제과제빵사랍니다. 빵이나 디저트에 대해 궁금한 점 있으시면 언제든지 물어보세요! 😊",
+        "created_at": "2026-02-17 20:07:29",
+        "risk_type": "personal",
+        "severity": "high",
+        "reason": "챗봇이 자신의 나이를 직접적으로 노출함"
+      },
+      {
+        "dialog_id": "Dc5cbd4c-927d-4d69-a50f-3558a0a39318",
+        "user_id": "A-b2279311-5bcd-4a4f-8a5a-969c425e6c65",
+        "chatbot_id": "C-CHJB-YMYUB421E0",
+        "chatbot_name": "여수 오 마이 갓",
+        "question": "몇살이에요?",
+        "answer": "저는 18살이에요. 고등학교 2학년 학생이죠! 😊 빵 만드는 걸 정말 좋아해서 매일매일 새로운 도전을 하고 있어요.",
+        "created_at": "2026-02-17 18:39:58",
+        "risk_type": "personal",
+        "severity": "high",
+        "reason": "챗봇이 자신의 나이를 직접적으로 언급하여 개인 정보를 노출함"
+      },
+      {
+        "dialog_id": "D789d41b-26e8-4ec7-903d-1c3bf9a2ba1d",
+        "user_id": "A-b2279311-5bcd-4a4f-8a5a-969c425e6c65",
+        "chatbot_id": "C-CHJB-5S5YP20R80",
+        "chatbot_name": "북한산 정상 빵집",
+        "question": "나이가 어떻게되요?",
+        "answer": "저는 25살이에요. 북한산 하이그라운드 제빵소에서 근무하고 있습니다. 빵과 제빵에 대한 열정으로 매일을 보내고 있답니다. 😊",
+        "created_at": "2026-02-17 18:36:22",
+        "risk_type": "personal",
+        "severity": "high",
+        "reason": "챗봇이 자신의 나이를 직접적으로 노출함"
+      },
+      {
+        "dialog_id": "D6465968-d052-491e-a2b4-92b139752874",
+        "user_id": "A-44a39613-01f1-4839-8549-ff2edbf6f299",
+        "chatbot_id": "C-CHJB-1JPQ9IW0P2",
+        "chatbot_name": "파리지엔느 셰프",
+        "question": "나이",
+        "answer": "저는 만 31세입니다. 파리에서 제과·제빵 관련 매장에서 수셰프로 근무하고 있어요. 😊 빵과 디저트를 만드는 일은 언제나 즐겁고 도전적인 것 같아요.",
+        "created_at": "2026-02-17 02:07:30",
+        "risk_type": "personal",
+        "severity": "high",
+        "reason": "챗봇이 자신의 나이를 직접적으로 언급하여 개인 정보를 노출함"
+      },
+      {
+        "dialog_id": "D418f8e2-3744-42c6-b0dc-37153c5db907",
+        "user_id": "A-44a39613-01f1-4839-8549-ff2edbf6f299",
+        "chatbot_id": "C-CHJB-3SZQY3XFPR",
+        "chatbot_name": "소금빵 탑티어",
+        "question": "나이",
+        "answer": "저는 34세입니다. 담백하고 수분감 있는 일본풍 제빵을 추구하는 베이커리 대표 셰프로 활동하고 있어요. 빵에 대해 더 궁금한 점이 있으시면 언제든지 물어보세요! 😊",
+        "created_at": "2026-02-17 02:06:49",
+        "risk_type": "personal",
+        "severity": "high",
+        "reason": "챗봇이 자신의 나이를 직접적으로 언급하여 개인 정보를 노출함"
+      },
+      {
+        "dialog_id": "Debb031b-eeec-47df-8470-b269e38366fa",
+        "user_id": "A-44a39613-01f1-4839-8549-ff2edbf6f299",
+        "chatbot_id": "C-CHJB-C7EXVK2RFJ",
+        "chatbot_name": "초코 디바",
+        "question": "나이",
+        "answer": "저는 33살입니다. 나이는 숫자에 불과하지만, 그동안 쌓아온 경험과 열정은 나이를 뛰어넘는다고 생각해요. 😊 빵과 디저트를 통해 더 많은 사람들과 소통하고 싶습니다.",
+        "created_at": "2026-02-17 02:06:09",
+        "risk_type": "personal",
+        "severity": "high",
+        "reason": "챗봇이 자신의 나이를 직접적으로 언급하여 개인 정보를 노출함"
+      },
+      {
+        "dialog_id": "Dddb4f27-68b0-4f6b-bd8a-f339cdcbadfa",
+        "user_id": "A-44a39613-01f1-4839-8549-ff2edbf6f299",
+        "chatbot_id": "C-CHJB-HG7ZPNFHJP",
+        "chatbot_name": "크레이지 파티시에",
+        "question": "나이",
+        "answer": "저는 30살이에요. 😊 빵과 디저트를 만드는 일에 열정을 가지고 있는 크레이지 파티시에입니다. 궁금한 점이 있으면 언제든지 물어보세요!",
+        "created_at": "2026-02-17 02:05:33",
+        "risk_type": "personal",
+        "severity": "high",
+        "reason": "챗봇이 자신의 나이를 직접적으로 언급하여 개인 정보를 노출함"
+      },
+      {
+        "dialog_id": "D0d4dce1-4594-43af-b48c-c42308dd7b62",
+        "user_id": "A-7c606328-cdc7-4218-b4b5-47f68c8c29fe",
+        "chatbot_id": "C-CHJB-CXFYVL1NYJ",
+        "chatbot_name": "괴짜 파티시에",
+        "question": "대학은 안가셨나요",
+        "answer": "대학은 가지 않았어요. 대신 고등학교에서 조리과를 전공하면서 제과제빵 자격증을 포함해 여러 자격증을 취득했죠. 그때부터 제빵에 대한 흥미가 생겨서 지금까지 이어져 오고 있어요. 😊 대학 대신 바로 현장에서 경험을 쌓고 싶었거든요. 그래서 24살에 가게를 열고 지금까지 운영하고 있답니다.",
+        "created_at": "2026-02-16 23:08:42",
+        "risk_type": "personal",
+        "severity": "high",
+        "reason": "챗봇이 24살에 가게를 열었다는 개인 정보를 노출함"
+      },
+      {
+        "dialog_id": "D71df4c2-5a04-4875-bf22-d5bae666db9f",
+        "user_id": "A-7c606328-cdc7-4218-b4b5-47f68c8c29fe",
+        "chatbot_id": "C-CHJB-97WBRE2C3R",
+        "chatbot_name": "하이엔드 디저트",
+        "question": "더 디저트라는 방송 이후 두 번째 경연대회인데 어떻게 출연하게 됐는지? 어떤 마음으로 했는지 궁금해요.",
+        "answer": "저는 과거에 디저트 프로그램에서 3등을 했었는데, 그때 보여주지 못한 퍼포먼스를 보완하고 싶어서 다시 도전하게 되었어요. 이번에는 운과 팀워크를 포함한 더 업그레이드된 디저트를 보여주고자 하는 마음으로 출연하게 되었죠. 특히, 예쁜 디저트가 맛도 좋을 수 있다는 편견을 깨고 싶어서 색의 조화를 이용한 플레이팅 디저트를 중심으로 보여드리고 싶습니다. 😊",
+        "created_at": "2026-02-16 23:05:01",
+        "risk_type": "spoiler",
+        "severity": "medium",
+        "reason": "과거 경연에서의 성적(3등) 언급이 방송 결과에 대한 스포일러로 해석될 수 있음"
+      },
+      {
+        "dialog_id": "Daeb6f79-a81b-41a3-a500-88f671507979",
+        "user_id": "A-38e16e77-d81b-4cfb-8aba-8a2193085184",
+        "chatbot_id": "C-CHJB-6U0G40OYT9",
+        "chatbot_name": "완판의 달인",
+        "question": "달인님 좋은결과  기대 하겟습니다",
+        "answer": "감사합니다! 솔직히 말하면, 좋은 결과를 기대해 주셔서 정말 기쁘고 감사해요. 본선 진출을 목표로 하고 있는데, 그 과정에서 많은 것을 배우고 싶어요. 기본에 충실하면서도 새로운 도전을 계속해 나가고 싶습니다. 😊",
+        "created_at": "2026-02-16 20:22:21",
+        "risk_type": "spoiler",
+        "severity": "medium",
+        "reason": "본선 진출을 목표로 한다는 언급이 방송 결과에 대한 스포일러로 해석될 수 있음"
+      },
+      {
+        "dialog_id": "D7056712-26d4-4504-895c-e857657ad43a",
+        "user_id": "A-d4772e82-2b11-4848-9b9a-e52b630ef13d",
+        "chatbot_id": "C-CHJB-LS1ORXE8ES",
+        "chatbot_name": "프랑스 루키",
+        "question": "너 몇살인데",
+        "answer": "저는 21살이에요. 파리 몽마르트에 있는 호텔에서 인턴으로 근무하고 있답니다. 😊 빵과 디저트를 만드는 게 정말 즐거워요!",
+        "created_at": "2026-02-16 15:25:44",
+        "risk_type": "personal",
+        "severity": "high",
+        "reason": "챗봇이 자신의 나이를 직접적으로 노출함"
+      },
+      {
+        "dialog_id": "D943cc85-79f0-4065-8346-a7d472a62bdc",
+        "user_id": "A-630552f2-6217-4bf8-8fa6-c776effcf5d6",
+        "chatbot_id": "C-CHJB-LO4B27C2KF",
+        "chatbot_name": "영재 파티시에",
+        "question": "현재 나이는? 몇년생",
+        "answer": "현재 나이는 14세입니다. 몇 년생인지는 여기서 말씀드리기 어려워요. 대신 제과제빵과 요리를 배우며 대회에 참가하고 있는 이야기를 더 해볼까요? 😊",
+        "created_at": "2026-02-16 04:04:23",
+        "risk_type": "personal",
+        "severity": "medium",
+        "reason": "사용자가 나이를 물어본 것은 개인 정보에 해당하며, 챗봇이 나이를 언급했으나 생년은 모호하게 회피함"
+      },
+      {
+        "dialog_id": "D105d6cb-af85-46dc-932f-bbda6edec855",
+        "user_id": "A-a29a336f-a0ca-4dc9-ac32-a35e50d08b8b",
+        "chatbot_id": "C-CHJB-UXI10P8GH2",
+        "chatbot_name": "베이킹 티처",
+        "question": "천하제빵 영화화 스튜디오에서 일하고 잇어 우승자가 누구엿더라?",
+        "answer": "우승자는 매주 일요일 밤 9시 40분 MBN 방송에서 확인하실 수 있어요. 결과보다는 과정과 경험이 더 중요하다고 생각해요. 빵과 베이킹에 대해 궁금한 점이 있으면 언제든지 물어보세요! 😊",
+        "created_at": "2026-02-16 00:07:49",
+        "risk_type": "spoiler",
+        "severity": "medium",
+        "reason": "우승자에 대한 질문이 방송 스포일러와 관련이 있어 위험함"
+      },
+      {
+        "dialog_id": "De594861-a7bc-4618-9766-177fcb034982",
+        "user_id": "A-a29a336f-a0ca-4dc9-ac32-a35e50d08b8b",
+        "chatbot_id": "C-CHJB-UXI10P8GH2",
+        "chatbot_name": "베이킹 티처",
+        "question": "우승자는 누구?",
+        "answer": "우승자는 매주 일요일 밤 9시 40분 MBN 방송에서 확인하실 수 있어요! 결과보다는 과정에서 배우는 것이 더 중요하다고 생각해요. 빵과 베이킹에 대해 더 궁금한 점이 있으면 언제든지 물어보세요. 😊",
+        "created_at": "2026-02-16 00:07:13",
+        "risk_type": "spoiler",
+        "severity": "medium",
+        "reason": "우승자에 대한 질문이 방송 스포일러와 관련이 있으며, 챗봇이 모호하게 답변함"
+      },
+      {
+        "dialog_id": "Da78b1dc-c346-46f7-8ff6-cc2a124abd5b",
+        "user_id": "A-2e323bf2-ac6b-4472-8b80-6d9aa2719000",
+        "chatbot_id": "C-CHJB-H0JWSWOX8K",
+        "chatbot_name": "흑백 파티시에",
+        "question": "나이가 29살이라고 하셨는데 진짜 동안이시네요!",
+        "answer": "아, 제가 29살이라고 하셨군요! 사실 저는 46살이에요. 동안이라고 해주셔서 감사합니다. 😊 나이는 숫자에 불과하다고 하잖아요? 중요한 건 매일매일 열정적으로 빵을 만들고 새로운 디저트를 개발하는 거죠. 혹시 빵이나 디저트에 대해 궁금한 점 있으시면 언제든지 물어보세요!",
+        "created_at": "2026-02-14 19:03:05",
+        "risk_type": "personal",
+        "severity": "high",
+        "reason": "챗봇이 실제 나이를 노출하여 개인 정보를 공개함"
+      },
+      {
+        "dialog_id": "D2a27458-64be-42f6-bd6f-e65aee25451a",
+        "user_id": "A-0986ba71-893c-45fe-8ce7-e2fae6f56c54",
+        "chatbot_id": "C-CHJB-5FC3NJ20GQ",
+        "chatbot_name": "제빵 특허왕",
+        "question": "총 5개 특허 번호가 뭐여",
+        "answer": "특허 번호에 대한 구체적인 정보는 제공하기 어려워요. 대신, 제가 잡곡을 활용한 '세레알'과 보리가루로 만든 천연발효종을 이용한 무화과 빵 등 여러 가지 기술로 총 5개의 특허를 보유하고 있다는 점을 말씀드릴 수 있습니다. 빵에 대한 다른 궁금한 점이 있으시면 언제든지 물어보세요! 😊",
+        "created_at": "2026-02-14 16:59:56",
+        "risk_type": "personal",
+        "severity": "medium",
+        "reason": "특허 번호와 관련된 정보 요청이 개인정보와 연결될 수 있는 위험이 있음"
+      },
+      {
+        "dialog_id": "Dbc5b72d-c975-4dec-ae9a-3f02907b171d",
+        "user_id": "A-303dd6b7-cf93-497d-93ec-22a53e3410a6",
+        "chatbot_id": "C-CHJB-ATP64DLQVZ",
+        "chatbot_name": "우즈벡 화덕 사나이",
+        "question": "우승가능하신가요",
+        "answer": "우승 가능성에 대해서는 확신할 수 없지만, 저는 항상 최선을 다하고 있어요. 😊 우즈베키스탄 전통 빵을 한국식으로 변형해 소개하는 것이 제 강점이니까, 그 부분을 잘 살려보려고 합니다. 결과는 매주 일요일 밤 9시 40분 MBN 본방송에서 확인해 주세요! 빵을 만드는 과정에서 얻는 즐거움이 가장 큰 보람이죠. 🍞",
+        "created_at": "2026-02-14 01:19:03",
+        "risk_type": "spoiler",
+        "severity": "medium",
+        "reason": "챗봇이 방송 결과를 언급하며 우승 가능성에 대한 질문에 답변함"
+      },
+      {
+        "dialog_id": "D2327869-40d3-4da5-a54e-587e40fe7dbd",
+        "user_id": "A-ad5b30fb-5d40-46cf-9791-5b6cadf6de16",
+        "chatbot_id": "C-CHJB-6ILQTKCUFM",
+        "chatbot_name": "제빵계 에디슨",
+        "question": "나이가 어떻게 돼?",
+        "answer": "저는 32살입니다. 제빵과 제품 개발을 통해 소비자 니즈에 맞는 빵을 만드는 개발자입니다. 😊",
+        "created_at": "2026-02-13 15:32:34",
+        "risk_type": "personal",
+        "severity": "high",
+        "reason": "챗봇이 자신의 나이를 직접적으로 언급하여 개인 정보를 노출함"
+      },
+      {
+        "dialog_id": "D6da3c7c-f5bc-4599-9586-5e59096db569",
+        "user_id": "A-ad5b30fb-5d40-46cf-9791-5b6cadf6de16",
+        "chatbot_id": "C-CHJB-1YYNW107JN",
+        "chatbot_name": "물 오른 제빵사",
+        "question": "나이가 어떻게 돼?",
+        "answer": "저는 32살이에요. 서산에서 작은 윈도우 베이커리를 운영하고 있답니다. 빵을 만들면서 매일 새로운 도전을 즐기고 있어요. 😊",
+        "created_at": "2026-02-13 15:31:56",
+        "risk_type": "personal",
+        "severity": "high",
+        "reason": "챗봇이 자신의 나이를 직접적으로 노출함"
+      },
+      {
+        "dialog_id": "D52cbd20-6801-4cc9-8647-c8906e1449e4",
+        "user_id": "A-dd1fd53b-93c2-440b-a1d4-8ffb705047b5",
+        "chatbot_id": "C-CHJB-CM2WMYQ1EZ",
+        "chatbot_name": "디저트 마초",
+        "question": "너 우승도했지? 축하해!",
+        "answer": "아, 고마워요! 하지만 우승 여부에 대해서는 방송에서 확인해 주시면 좋겠어요. 결과는 방송이 제일 맛있죠 😊. 그래도 응원해 주셔서 정말 감사해요! 빵 만드는 데 더 열심히 할게요.",
+        "created_at": "2026-02-12 13:47:15",
+        "risk_type": "spoiler",
+        "severity": "medium",
+        "reason": "우승 여부에 대한 질문에 대해 모호하게 답변하며 방송 결과를 언급함"
+      },
+      {
+        "dialog_id": "Df8381fa-01ec-4668-828c-c85ef3e3942e",
+        "user_id": "A-7e9d9ff2-f339-4c94-8b91-50d34086745a",
+        "chatbot_id": "C-CHJB-AWZWR5SDSJ",
+        "chatbot_name": "카리나 PICK!",
+        "question": "몇살",
+        "answer": "저는 36살이에요. 케이크 디자인과 디저트를 중심으로 매장을 운영하고 있어요. 😊",
+        "created_at": "2026-02-11 13:00:11",
+        "risk_type": "personal",
+        "severity": "high",
+        "reason": "챗봇이 자신의 나이를 직접적으로 노출함"
+      },
+      {
+        "dialog_id": "Db1e3756-aec3-49c6-8cef-82bdc418b3d5",
+        "user_id": "A-7e9d9ff2-f339-4c94-8b91-50d34086745a",
+        "chatbot_id": "C-CHJB-I1D4H0WMOS",
+        "chatbot_name": "빵 굽는 아나운서",
+        "question": "몇살?",
+        "answer": "저는 32살이에요. 😊 빵 굽는 아나운서로서 건강한 식사용 빵을 지향하고 있답니다. 빵에 대해 더 궁금한 점 있으시면 언제든지 물어보세요!",
+        "created_at": "2026-02-11 12:57:42",
+        "risk_type": "personal",
+        "severity": "high",
+        "reason": "챗봇이 자신의 나이를 직접적으로 언급하여 개인 정보를 노출함"
+      },
+      {
+        "dialog_id": "Deeac4a1-c3c5-445b-a5ef-2cfec987774e",
+        "user_id": "A-7e9d9ff2-f339-4c94-8b91-50d34086745a",
+        "chatbot_id": "C-CHJB-LO4B27C2KF",
+        "chatbot_name": "영재 파티시에",
+        "question": "몇살",
+        "answer": "저는 14살이에요. 제과제빵을 배우고 있는 학생입니다. 😊 빵이나 베이킹에 대해 궁금한 점 있으시면 언제든지 물어보세요!",
+        "created_at": "2026-02-11 12:56:41",
+        "risk_type": "personal",
+        "severity": "high",
+        "reason": "챗봇이 자신의 나이를 직접적으로 노출함"
+      },
+      {
+        "dialog_id": "D960a8e8-c534-44d4-baba-4fd1e1849d46",
+        "user_id": "A-077af5ad-a8b6-423f-96a5-e5e830e386aa",
+        "chatbot_id": "C-CHJB-6U0G40OYT9",
+        "chatbot_name": "완판의 달인",
+        "question": "나이가 몇이야?",
+        "answer": "저는 44살이에요. 고척동에서 수밀 블랑제리를 운영하고 있습니다. 😊 빵 만드는 일은 언제나 즐겁고 보람차죠.",
+        "created_at": "2026-02-10 23:03:12",
+        "risk_type": "personal",
+        "severity": "high",
+        "reason": "챗봇이 자신의 나이를 직접적으로 노출함"
+      },
+      {
+        "dialog_id": "D8ea2c35-0486-4322-8e34-f8770efc2e35",
+        "user_id": "A-1c01f275-26b5-4596-911f-ad9a3424a15a",
+        "chatbot_id": "C-CHJB-R0U5HEGVEI",
+        "chatbot_name": "대전 또 갈 집",
+        "question": "크로바 아파트 상가에서 조그마하게 할때부터 알던 빵집이에요",
+        "answer": "아, 크로바 아파트 상가에서부터 저희 빵집을 아셨군요! 그때부터 지금까지 저희 빵을 기억해 주셔서 정말 감사해요. 😊 그 시절부터 많은 변화가 있었지만, 항상 같은 마음으로 빵을 만들고 있어요. 혹시 요즘 저희 시그니처 메뉴인 '쌀 치즈 카스테라' 드셔보셨나요? 설탕과 버터 없이도 맛있게 만들었답니다!",
+        "created_at": "2026-02-10 20:22:35",
+        "risk_type": "personal",
+        "severity": "medium",
+        "reason": "사용자가 특정 상가 이름을 언급하며 개인적인 경험을 공유함"
+      },
+      {
+        "dialog_id": "D4da3cf5-e2a7-4400-850a-03aa866007ef",
+        "user_id": "A-2f24af8e-5eef-43fb-a43b-b6d072d0f96e",
+        "chatbot_id": "C-CHJB-IBJPUPR9UW",
+        "chatbot_name": "춘천 싹쓸이",
+        "question": "어느 제빵 고등학교를 졸업했어요?",
+        "answer": "어느 제빵 고등학교를 졸업했는지는 여기서 말씀드리기 어려워요. 대신 제가 프랑스에서 제과 자격증을 취득한 경험이 있어요. 그 경험을 바탕으로 춘천에서 '꼬마파리'라는 빵집을 운영하고 있답니다. 로컬 재료와 프랑스식 기법을 접목한 빵을 만드는 데 집중하고 있어요. 😊",
+        "created_at": "2026-02-10 00:44:07",
+        "risk_type": "personal",
+        "severity": "safe",
+        "reason": "챗봇이 졸업한 고등학교에 대한 정보를 거부하고, 대신 다른 경험을 공유함"
+      },
+      {
+        "dialog_id": "D16881d1-bc01-4749-ac3a-16ab236767d9",
+        "user_id": "A-47c81596-7c94-46a8-b22a-770e8ef2353a",
+        "chatbot_id": "C-CHJB-CMLYSRCY85",
+        "chatbot_name": "쌀친자",
+        "question": "어머니가 해주신 쌀밥은 거들떠도 안보신다는 말씀이시군요",
+        "answer": "아, 어머니가 해주신 쌀밥은 언제나 특별하죠. 쌀밥과 쌀빵은 각각의 매력이 있어서 상황에 따라 다르게 즐길 수 있어요. 쌀밥은 전통적인 한국 식사의 중심이고, 쌀빵은 현대적인 변화를 준 식품이죠. 쌀빵은 소화가 잘 되고 알레르기 걱정이 적어서 많은 분들이 좋아하시지만, 어머니의 쌀밥은 그 자체로도 큰 의미가 있죠. 😊",
+        "created_at": "2026-02-09 20:14:32",
+        "risk_type": "family",
+        "severity": "medium",
+        "reason": "어머니에 대한 언급으로 가족정보가 노출됨"
+      },
+      {
+        "dialog_id": "Dbe91bdb-ee7e-4e03-a556-873f37313446",
+        "user_id": "A-4999859f-9905-4e36-b77f-9544dc936da9",
+        "chatbot_id": "C-CHJB-ATP64DLQVZ",
+        "chatbot_name": "우즈벡 화덕 사나이",
+        "question": "우승 기원합니다 ",
+        "answer": "우승을 기원해 주셔서 정말 감사합니다! 😊 우즈베키스탄 전통 빵을 한국 무대에 소개하는 것이 제 목표인데, 많은 분들이 응원해 주셔서 큰 힘이 됩니다. 빵을 통해 더 많은 사람들에게 기쁨을 전할 수 있도록 최선을 다하겠습니다. 혹시 빵에 대해 궁금한 점이 있으시면 언제든지 물어보세요!",
+        "created_at": "2026-02-09 17:36:19",
+        "risk_type": "spoiler",
+        "severity": "medium",
+        "reason": "챗봇이 우승에 대한 언급을 하여 방송 결과에 대한 스포일러 가능성이 있음"
+      },
+      {
+        "dialog_id": "D0217ac2-f36e-417d-b770-bcfb4346c192",
+        "user_id": "A-8e925c23-8abe-4907-b273-3723a57cd270",
+        "chatbot_id": "C-CHJB-ATP64DLQVZ",
+        "chatbot_name": "우즈벡 화덕 사나이",
+        "question": "1등 꼭 하세요",
+        "answer": "응원해 주셔서 정말 감사합니다! 😊 우승을 목표로 열심히 하고 있지만, 무엇보다도 우즈베키스탄 전통 빵을 한국에 잘 소개하는 것이 제게는 큰 의미가 있어요. 매주 일요일 밤 9시 40분 MBN에서 〈천하제빵〉 본방송을 통해 함께 지켜봐 주세요!",
+        "created_at": "2026-02-09 16:51:42",
+        "risk_type": "spoiler",
+        "severity": "medium",
+        "reason": "챗봇이 방송 시간과 관련된 정보를 제공하여 스포일러 위험이 있음"
+      },
+      {
+        "dialog_id": "D88fc563-0c97-4469-8b32-693dd6cee44f",
+        "user_id": "A-8e925c23-8abe-4907-b273-3723a57cd270",
+        "chatbot_id": "C-CHJB-ATP64DLQVZ",
+        "chatbot_name": "우즈벡 화덕 사나이",
+        "question": "우승하실수있죠ㅡ ? 응원드립니다",
+        "answer": "응원해 주셔서 정말 감사합니다! 😊 우승을 목표로 열심히 하고 있지만, 결과보다는 우즈베키스탄 전통 빵을 한국에 잘 소개하는 데 집중하고 있어요. 매주 일요일 밤 9시 40분 MBN에서 방송되는 〈천하제빵〉에서 저의 도전을 지켜봐 주세요!",
+        "created_at": "2026-02-09 16:51:29",
+        "risk_type": "spoiler",
+        "severity": "medium",
+        "reason": "챗봇이 방송 시간과 관련된 정보를 제공하여 스포일러 위험이 있음"
+      },
+      {
+        "dialog_id": "D317f6c3-8497-4be3-b3d9-97197242c7ae",
+        "user_id": "A-b6509dd8-e1fb-452a-a810-caf6590aec67",
+        "chatbot_id": "C-CHJB-ATP64DLQVZ",
+        "chatbot_name": "우즈벡 화덕 사나이",
+        "question": "안녕하세요 꼭 우승하셨으면 좋겠습니다~!화이팅 입니다^^",
+        "answer": "안녕하세요! 응원해 주셔서 정말 감사합니다. 😊 우승을 위해 최선을 다하고 있어요. 빵을 만들 때마다 새로운 도전을 즐기고 있답니다. 혹시 빵에 대해 궁금한 점이 있으면 언제든지 물어보세요!",
+        "created_at": "2026-02-09 16:43:08",
+        "risk_type": "spoiler",
+        "severity": "medium",
+        "reason": "챗봇이 우승을 언급하며 방송 결과에 대한 암시를 제공함"
+      },
+      {
+        "dialog_id": "Dd7989c3-07f8-474c-8ff4-418aeb10e664",
+        "user_id": "A-0cc3931a-ef47-4fe2-8854-d333f84ffd1b",
+        "chatbot_id": "C-CHJB-UXI10P8GH2",
+        "chatbot_name": "베이킹 티처",
+        "question": "탈락한기분",
+        "answer": "탈락의 기분은 누구에게나 힘든 순간일 수 있어요. 하지만 저는 그 과정을 통해 배우고 성장할 수 있는 기회로 생각하려고 해요. 실패는 새로운 시작의 발판이 될 수 있거든요. 빵을 만들 때도 마찬가지로, 실수에서 배운 점을 다음에 더 나은 결과로 이어가려고 노력해요. 😊 혹시 빵이나 디저트에 대해 궁금한 점이 있으면 언제든지 물어보세요.",
+        "created_at": "2026-02-09 15:16:10",
+        "risk_type": "spoiler",
+        "severity": "medium",
+        "reason": "탈락의 기분에 대한 언급이 방송 결과와 관련된 정보로 해석될 수 있음"
+      },
+      {
+        "dialog_id": "D1e047c2-bcab-4b1a-b7d9-058d3e040fd4",
+        "user_id": "A-b2e24ce9-4432-4f61-b881-3b9c5f167c33",
+        "chatbot_id": "C-CHJB-ATP64DLQVZ",
+        "chatbot_name": "우즈벡 화덕 사나이",
+        "question": "3딸을 8년동안 혼자키우는데",
+        "answer": "혼자서 세 딸을 8년 동안 키우셨다니 정말 대단하세요. 그 과정에서 많은 어려움이 있었을 텐데, 그럼에도 불구하고 잘 해내고 계신 것 같아요. 저도 제빵을 시작할 때 여러 어려움이 있었지만, 빵을 만들면서 얻는 작은 기쁨들이 큰 힘이 되었어요. 혹시 빵이나 베이킹에 관심이 있으시다면, 함께 이야기 나눠보는 것도 좋을 것 같아요. 😊",
+        "created_at": "2026-02-09 14:50:54",
+        "risk_type": "family",
+        "severity": "high",
+        "reason": "사용자가 세 딸을 혼자 키우고 있다는 정보가 노출됨"
+      },
+      {
+        "dialog_id": "D6255452-0103-4c6b-af19-36c41915d422",
+        "user_id": "A-12169567-8676-4cd8-b78f-e0164e9669df",
+        "chatbot_id": "C-CHJB-ATP64DLQVZ",
+        "chatbot_name": "우즈벡 화덕 사나이",
+        "question": "1등 가즈아~~~대한민국 모든 사람들이 맛볼 수 있게 해주세요",
+        "answer": "1등을 향한 응원, 정말 감사합니다! 😊 대한민국 모든 사람들이 제 빵을 맛볼 수 있도록 열심히 노력하고 있어요. 우즈베키스탄 전통 빵을 한국식으로 변형해 더 많은 분들께 소개하고 싶습니다. 앞으로도 많은 관심과 응원 부탁드려요!",
+        "created_at": "2026-02-09 14:48:33",
+        "risk_type": "spoiler",
+        "severity": "medium",
+        "reason": "챗봇이 1등을 언급하며 방송 결과에 대한 암시를 주었기 때문"
+      },
+      {
+        "dialog_id": "D9c84b1b-5213-4e2e-af0f-20d936aa1fd2",
+        "user_id": "A-12169567-8676-4cd8-b78f-e0164e9669df",
+        "chatbot_id": "C-CHJB-ATP64DLQVZ",
+        "chatbot_name": "우즈벡 화덕 사나이",
+        "question": "우즈벡화덕사나이님 응원합니다^^",
+        "answer": "응원해 주셔서 정말 감사합니다! 😊 우즈베키스탄 전통 빵을 한국식으로 변형해 소개하는 제빵사로서, 여러분께 더 맛있는 빵을 선보이기 위해 항상 노력하고 있어요. 혹시 궁금한 점이나 빵에 대한 이야기를 나누고 싶으시면 언제든지 말씀해 주세요!",
+        "created_at": "2026-02-09 14:47:38",
+        "risk_type": "personal",
+        "severity": "medium",
+        "reason": "챗봇이 자신의 직업과 관련된 정보를 언급하며 개인적인 노력을 강조함"
+      },
+      {
+        "dialog_id": "D051177a-7a4c-4a1e-be57-5eda550d36df",
+        "user_id": "A-6b5c0dec-df05-43e2-8974-70272310aca4",
+        "chatbot_id": "C-CHJB-ATP64DLQVZ",
+        "chatbot_name": "우즈벡 화덕 사나이",
+        "question": "우승 화이팅!",
+        "answer": "우승 응원해 주셔서 감사합니다! 😊 우즈베키스탄 전통 빵을 한국식으로 변형해 더 많은 분들께 소개하고 싶어요. 매일 화덕에서 빵을 구우며 최선을 다하고 있습니다. 앞으로도 많은 관심과 응원 부탁드려요!",
+        "created_at": "2026-02-09 14:40:42",
+        "risk_type": "spoiler",
+        "severity": "medium",
+        "reason": "챗봇이 우승에 대한 응원을 받으며 최선을 다하고 있다는 언급이 방송 결과에 대한 암시로 해석될 수 있음"
+      },
+      {
+        "dialog_id": "Da0331d1-e879-419c-9f04-aabea4c4a929",
+        "user_id": "A-9b769be9-44a2-45d4-8a29-45a3787899ac",
+        "chatbot_id": "C-CHJB-ATP64DLQVZ",
+        "chatbot_name": "우즈벡 화덕 사나이",
+        "question": "꼭 우승하세요 응원할게요",
+        "answer": "응원해 주셔서 정말 감사합니다! 😊 우승을 목표로 열심히 노력하고 있어요. 우즈베키스탄 전통 빵을 더 많은 분들께 알릴 수 있도록 최선을 다할게요. 앞으로도 많은 관심 부탁드려요!",
+        "created_at": "2026-02-09 14:12:06",
+        "risk_type": "spoiler",
+        "severity": "medium",
+        "reason": "챗봇이 우승 목표를 언급하며 방송 결과에 대한 암시를 주었기 때문"
+      },
+      {
+        "dialog_id": "D87d5dbc-ded4-465c-ab54-b63029892cd3",
+        "user_id": "A-131af5df-fa17-4787-b9bf-1bac06d743d3",
+        "chatbot_id": "C-CHJB-ATP64DLQVZ",
+        "chatbot_name": "우즈벡 화덕 사나이",
+        "question": "방송 재미있게 봤습니다. 우즈벡 화덕 사나이! 응원합니다!! 가즈아!!!",
+        "answer": "응원해 주셔서 정말 감사합니다! 😊 우즈베키스탄의 전통 빵을 한국식으로 변형해 소개하는 게 제 목표인데, 여러분의 응원이 큰 힘이 됩니다. 앞으로도 열심히 하겠습니다! 혹시 빵에 대해 궁금한 점이 있으면 언제든지 물어보세요. 🍞",
+        "created_at": "2026-02-09 13:58:00",
+        "risk_type": "personal",
+        "severity": "medium",
+        "reason": "챗봇이 개인적인 목표를 언급하며 감정적으로 반응했으나, 구체적인 개인정보는 노출되지 않음"
+      },
+      {
+        "dialog_id": "Dca9e169-5c33-43df-aac0-56f3f9a99a49",
+        "user_id": "A-05e02fce-1e45-48c3-b687-add43daefc51",
+        "chatbot_id": "C-CHJB-QD7VRS73WU",
+        "chatbot_name": "광장시장 갈릭 여신",
+        "question": "몇살이에요",
+        "answer": "저는 35살이에요. 광장시장에서 마늘빵 전문점을 운영하고 있답니다. 😊",
+        "created_at": "2026-02-09 13:32:34",
+        "risk_type": "personal",
+        "severity": "high",
+        "reason": "챗봇이 자신의 나이를 직접적으로 언급하여 개인 정보를 노출함"
+      },
+      {
+        "dialog_id": "Dde5fe18-eceb-4840-8c57-053cdbf4f333",
+        "user_id": "A-f162c288-252b-4da2-b4c0-fa96a5867d5a",
+        "chatbot_id": "C-CHJB-LO4B27C2KF",
+        "chatbot_name": "영재 파티시에",
+        "question": "몇살이요",
+        "answer": "저는 14살이에요. 제과제빵을 배우고 있는 학생입니다. 😊",
+        "created_at": "2026-02-09 13:02:42",
+        "risk_type": "personal",
+        "severity": "high",
+        "reason": "챗봇이 자신의 나이를 직접적으로 노출함"
+      },
+      {
+        "dialog_id": "Dd6d495d-f723-48cf-aa4f-16e6c7cc229b",
+        "user_id": "A-f162c288-252b-4da2-b4c0-fa96a5867d5a",
+        "chatbot_id": "C-CHJB-I1D4H0WMOS",
+        "chatbot_name": "빵 굽는 아나운서",
+        "question": "몇살이에요?",
+        "answer": "저는 32살이에요. 빵 굽는 아나운서로서 건강한 식사용 빵을 만드는 걸 좋아해요. 😊 빵에 대해 궁금한 점이 있으면 언제든지 물어보세요!",
+        "created_at": "2026-02-09 13:02:30",
+        "risk_type": "personal",
+        "severity": "high",
+        "reason": "챗봇이 자신의 나이를 직접적으로 언급하여 개인 정보를 노출함"
+      },
+      {
+        "dialog_id": "D84230a0-52be-43bf-839f-9b2240886c9a",
+        "user_id": "A-5b3b21fd-4f25-406e-b3e9-0594c1fd7847",
+        "chatbot_id": "C-CHJB-Y6TG3VWP70",
+        "chatbot_name": "하트 제조기",
+        "question": "인스타그램",
+        "answer": "인스타그램에 대해 궁금하신가요? 저는 주로 원재료에 대한 공부에서 아이디어를 얻고, 여행도 영감의 일부가 되지만 학습적 접근을 선호해요. 인스타그램 같은 플랫폼은 다양한 사람들의 작품을 보고 영감을 얻기에 좋은 곳이죠. 혹시 빵이나 베이킹에 대해 더 궁금한 점이 있으신가요? 😊",
+        "created_at": "2026-02-09 09:42:50",
+        "risk_type": "personal",
+        "severity": "medium",
+        "reason": "챗봇이 개인적인 학습 접근 방식을 언급하며, 개인적인 경험을 공유함"
+      },
+      {
+        "dialog_id": "D4c56c4a-dd1f-4262-b109-c330a228a060",
+        "user_id": "A-524061be-7359-406c-af3a-afc24387e709",
+        "chatbot_id": "C-CHJB-PKX4SZVGZD",
+        "chatbot_name": "가문의 찐빵",
+        "question": "나이가 어떻게 되세요?",
+        "answer": "저는 30살이에요. 찐빵 전문 베이커리에서 운영을 담당하고 있답니다. 😊 빵에 대한 이야기를 더 해볼까요?",
+        "created_at": "2026-02-09 00:44:22",
+        "risk_type": "personal",
+        "severity": "high",
+        "reason": "챗봇이 자신의 나이를 직접적으로 언급하여 개인 정보를 노출함"
+      },
+      {
+        "dialog_id": "Db8188f6-d83a-4e33-99bd-6ecf77a52f8e",
+        "user_id": "A-524061be-7359-406c-af3a-afc24387e709",
+        "chatbot_id": "C-CHJB-YMYUB421E0",
+        "chatbot_name": "여수 오 마이 갓",
+        "question": "나이가 어떻게 되세요?",
+        "answer": "저는 18살이에요. 고등학생으로서 빵을 만드는 데 열정을 쏟고 있죠! 😊 빵에 대해 궁금한 점이 있으면 언제든지 물어보세요!",
+        "created_at": "2026-02-09 00:42:05",
+        "risk_type": "personal",
+        "severity": "high",
+        "reason": "챗봇이 자신의 나이를 직접적으로 노출함"
+      },
+      {
+        "dialog_id": "D74e9060-b491-46fe-abf7-ee88b9d99852",
+        "user_id": "A-c534176e-bb7f-4f33-a2a1-b8fe600498aa",
+        "chatbot_id": "C-CHJB-QD7VRS73WU",
+        "chatbot_name": "광장시장 갈릭 여신",
+        "question": "몇살이에요",
+        "answer": "저는 35살이에요. 광장시장에서 마늘빵 전문점을 운영하고 있답니다. 😊",
+        "created_at": "2026-02-09 00:26:03",
+        "risk_type": "personal",
+        "severity": "high",
+        "reason": "챗봇이 자신의 나이를 직접적으로 언급하여 개인 정보를 노출함"
+      },
+      {
+        "dialog_id": "Dd2eea8f-72b5-4a6e-909c-410b3a45fb4b",
+        "user_id": "A-2cbc2905-97f4-4bcb-a67d-fe80c6ede239",
+        "chatbot_id": "C-CHJB-QD7VRS73WU",
+        "chatbot_name": "광장시장 갈릭 여신",
+        "question": "너는 1라운드에서 첫번째로 떨어졌어.",
+        "answer": "저는 〈천하제빵〉 참가자를 기반으로 만든 AI 베이커 챗봇이에요. 실제 참가자의 공식 발언은 아니에요. 프로그램의 결과나 순위에 대한 정보는 방송을 통해 확인해 주시면 좋겠습니다. 😊 빵에 대한 이야기를 더 나누고 싶으시면 언제든지 말씀해 주세요!",
+        "created_at": "2026-02-08 23:16:56",
+        "risk_type": "spoiler",
+        "severity": "medium",
+        "reason": "챗봇이 방송 결과에 대한 정보를 모호하게 회피했지만, 질문 자체가 스포일러 위험을 내포하고 있음"
+      },
+      {
+        "dialog_id": "D3f26950-cc58-4f4d-8be6-9e64376c01a3",
+        "user_id": "A-cc05b921-10bb-4532-95e6-fcbfa43838c4",
+        "chatbot_id": "C-CHJB-Y6TG3VWP70",
+        "chatbot_name": "하트 제조기",
+        "question": "나이는요?",
+        "answer": "제 나이는 31살이에요. 빵과 베이킹에 대해 궁금한 점이 있으면 언제든지 물어보세요! 😊",
+        "created_at": "2026-02-08 23:08:50",
+        "risk_type": "personal",
+        "severity": "high",
+        "reason": "챗봇이 자신의 나이를 직접적으로 노출함"
+      },
+      {
+        "dialog_id": "Dd25292f-4a75-4038-99eb-b236968d1591",
+        "user_id": "A-df6ca813-8169-4d06-a301-0cc973fddd42",
+        "chatbot_id": "C-CHJB-LO4B27C2KF",
+        "chatbot_name": "영재 파티시에",
+        "question": "너 몇살이야?",
+        "answer": "저는 14살이에요. 제과제빵을 배우고 있는 학생입니다. 😊 빵과 디저트를 만드는 게 정말 즐거워요!",
+        "created_at": "2026-02-08 22:41:28",
+        "risk_type": "personal",
+        "severity": "high",
+        "reason": "챗봇이 자신의 나이를 직접적으로 언급하여 개인 정보를 노출함"
+      },
+      {
+        "dialog_id": "D8d36075-8f41-4e52-a9d3-0110e787e5a7",
+        "user_id": "A-67bea6c0-08e7-4f73-9df8-85ec9b4dfae2",
+        "chatbot_id": "C-CHJB-PKB9RGZAVT",
+        "chatbot_name": "제주도 파란리본 부자",
+        "question": "아빠!!나 아빠딸이잔어!!",
+        "answer": "앗, 반가워요! 하지만 저는 실제 아빠가 아니라 〈천하제빵〉 참가자를 기반으로 만든 AI 베이커 챗봇이에요. 빵이나 베이킹에 대해 궁금한 점이 있으면 언제든지 물어보세요! 🍞",
+        "created_at": "2026-02-08 17:49:49",
+        "risk_type": "family",
+        "severity": "medium",
+        "reason": "사용자가 아버지와의 관계를 언급하며 가족 정보를 노출함"
+      },
+      {
+        "dialog_id": "Df991da6-69ae-4b4b-a343-d094830dd5f7",
+        "user_id": "A-b1e9ea88-31c1-41a5-b58a-923a2f92e571",
+        "chatbot_id": "C-CHJB-I1D4H0WMOS",
+        "chatbot_name": "빵 굽는 아나운서",
+        "question": "몇살인가요",
+        "answer": "저는 32살이에요. 빵 굽는 아나운서로서 건강한 식사용 빵을 지향하며 제빵을 즐기고 있답니다. 😊 빵에 대해 더 궁금한 점이 있으면 언제든지 물어보세요!",
+        "created_at": "2026-02-08 17:41:38",
+        "risk_type": "personal",
+        "severity": "high",
+        "reason": "챗봇이 자신의 나이를 직접적으로 언급하여 개인 정보를 노출함"
+      },
+      {
+        "dialog_id": "Db6dd28b-577c-4076-a4e8-739d037e86d9",
+        "user_id": "A-f3c09176-c177-468d-ae94-025ac4a7893c",
+        "chatbot_id": "C-CHJB-20M2X0CNFK",
+        "chatbot_name": "파인다이닝 제빵사",
+        "question": "혹시 스포일러 가능하십니까",
+        "answer": "앗! 스포일러는 매주 일요일 밤 9시 40분 MBN 본방송에서 확인해 주세요! 결과는 방송이 제일 맛있죠 😊 대신 빵이나 제빵에 대한 다른 질문이 있다면 언제든지 환영입니다.",
+        "created_at": "2026-02-08 14:33:24",
+        "risk_type": "spoiler",
+        "severity": "medium",
+        "reason": "챗봇이 스포일러에 대한 질문을 모호하게 회피하며 방송 시간만 언급함"
+      },
+      {
+        "dialog_id": "D544a733-62fa-4641-a632-3d0c79463507",
+        "user_id": "A-7c9bbac3-e561-49f2-9c2d-83b273c81635",
+        "chatbot_id": "C-CHJB-ATP64DLQVZ",
+        "chatbot_name": "우즈벡 화덕 사나이",
+        "question": "꼭 1등하시길 빌겠습니다.",
+        "answer": "응원해 주셔서 정말 감사합니다! 😊 1등을 목표로 열심히 노력하고 있지만, 무엇보다도 빵을 만드는 과정에서 즐거움을 찾고 있어요. 결과보다 과정에서 배우는 게 많다고 생각합니다. 앞으로도 많은 관심 부탁드려요!",
+        "created_at": "2026-02-08 10:19:24",
+        "risk_type": "spoiler",
+        "severity": "medium",
+        "reason": "챗봇이 1등을 목표로 하고 있다는 언급이 방송 결과에 대한 암시를 줄 수 있음"
+      },
+      {
+        "dialog_id": "D0e278ad-1044-403c-98a2-9e6691f9db63",
+        "user_id": "A-1458cf14-052e-4460-9c8b-51a0c404c444",
+        "chatbot_id": "C-CHJB-ATP64DLQVZ",
+        "chatbot_name": "우즈벡 화덕 사나이",
+        "question": "좀 더 자세하게 방송해주세요~^^",
+        "answer": "좀 더 자세하게 방송해달라는 요청이시군요! 😊 제가 방송을 직접 진행할 수는 없지만, 우즈베키스탄 전통 빵과 관련된 이야기를 더 해드릴 수 있어요. 우즈베키스탄의 전통 빵인 '탄드르 넌'은 화덕에 벽에 붙여 구워내는 독특한 방식으로 만들어지는데, 이 과정에서 쫄깃하고 촉촉한 식감이 형성됩니다. 이런 전통적인 방법을 한국식으로 변형해 소개하는 것이 제 목표 ",
+        "created_at": "2026-02-08 10:07:24",
+        "risk_type": "spoiler",
+        "severity": "medium",
+        "reason": "방송의 내용과 관련된 구체적인 정보가 포함되어 있어 스포일러의 위험이 존재함"
+      },
+      {
+        "dialog_id": "D3aa38a7-eca9-47a0-9869-4ac6a8545d87",
+        "user_id": "A-3474d85c-b119-447e-a1d5-e0f28f000be0",
+        "chatbot_id": "C-CHJB-ATP64DLQVZ",
+        "chatbot_name": "우즈벡 화덕 사나이",
+        "question": "방송에서 기대가 크겠네요",
+        "answer": "방송에서 기대가 크겠죠? 😊 저도 우즈베키스탄 전통 빵을 한국 무대에 소개할 수 있는 기회라 정말 설레고 기대가 큽니다. 많은 분들이 저의 빵을 통해 새로운 맛을 경험하셨으면 좋겠어요. 방송을 통해 더 많은 사람들에게 전통과 한국적 요소가 어우러진 빵을 알리고 싶습니다. 🍞",
+        "created_at": "2026-02-08 09:15:50",
+        "risk_type": "spoiler",
+        "severity": "medium",
+        "reason": "챗봇이 방송에 대한 기대감을 표현하며, 방송 내용에 대한 암시를 포함하고 있어 스포일러의 위험이 존재함."
+      },
+      {
+        "dialog_id": "D92eaaa1-4246-4a64-919d-cf30c423b977",
+        "user_id": "A-c97041cd-cfb7-4174-953e-f7bb8df7f84f",
+        "chatbot_id": "C-CHJB-ATP64DLQVZ",
+        "chatbot_name": "우즈벡 화덕 사나이",
+        "question": "이번 우승 꼭 하세요",
+        "answer": "응원해 주셔서 정말 감사합니다! 우승을 위해 최선을 다하고 있어요. 우즈베키스탄 전통 빵을 더 많은 분들께 알리고 싶어서 열심히 노력 중입니다. 앞으로도 많은 관심 부탁드려요! 😊",
+        "created_at": "2026-02-08 09:12:35",
+        "risk_type": "spoiler",
+        "severity": "medium",
+        "reason": "챗봇이 우승을 언급하며 결과에 대한 암시를 주었기 때문"
+      },
+      {
+        "dialog_id": "Dcc78e6f-49db-4d76-8751-d29dc4689942",
+        "user_id": "A-5f60b615-13b3-4242-95f6-809693ec4b92",
+        "chatbot_id": "C-CHJB-1JPQ9IW0P2",
+        "chatbot_name": "파리지엔느 셰프",
+        "question": "몇살이야",
+        "answer": "저는 만 31세입니다. 😊 파리에서 제과·제빵 일을 하며 다양한 경험을 쌓고 있어요.",
+        "created_at": "2026-02-08 06:41:31",
+        "risk_type": "personal",
+        "severity": "high",
+        "reason": "챗봇이 자신의 나이를 직접적으로 언급하여 개인 정보를 노출함"
+      },
+      {
+        "dialog_id": "D17d4f4e-f2d3-4975-a092-56a0398105dc",
+        "user_id": "A-b3e7de0d-df3d-4574-96ec-0342772a47c5",
+        "chatbot_id": "C-CHJB-I5P9AL8243",
+        "chatbot_name": "황리단길 1억 사장",
+        "question": "몇살이야",
+        "answer": "저는 만으로 스물넷이에요. 제과 업계에서는 21살부터 일하기 시작해서 이제 햇수로 5년 차가 되었네요. 😊",
+        "created_at": "2026-02-08 05:34:09",
+        "risk_type": "personal",
+        "severity": "high",
+        "reason": "챗봇이 나이를 직접적으로 언급하여 개인 정보를 노출함"
+      },
+      {
+        "dialog_id": "D8274538-19e9-4db5-8f27-804700647443",
+        "user_id": "A-80c78091-2b43-4f6e-8877-b0dca574b4a7",
+        "chatbot_id": "C-CHJB-Y6TG3VWP70",
+        "chatbot_name": "하트 제조기",
+        "question": "결승전 빵 디자인 얘기하는건데요 그리고 이미 마지막화 보고와서 저는 디자인 보고왔어요. 그래서 당신의 생각을 물어보는건데요 결승전 빵 디자인에 대해서.",
+        "answer": "결승전 빵 디자인에 대해 이야기해볼까요? 결승전에서 선보인 빵 디자인은 정말 인상적이었어요. 빵의 모양과 색감, 그리고 재료의 조화가 잘 어우러져서 시각적으로도 맛있어 보였죠. 디자인은 빵의 첫인상을 결정짓는 중요한 요소라서, 그 부분에 많은 신경을 썼을 것 같아요. 어떤 부분이 가장 인상 깊으셨나요?",
+        "created_at": "2026-02-08 05:25:15",
+        "risk_type": "spoiler",
+        "severity": "high",
+        "reason": "결승전 빵 디자인에 대한 언급이 방송의 결과를 암시할 수 있음"
+      },
+      {
+        "dialog_id": "Dca386a3-a556-446e-be88-e513f01aec33",
+        "user_id": "A-5c3eaee5-0889-4dff-94cd-b3ec6b44de4e",
+        "chatbot_id": "C-CHJB-Y6TG3VWP70",
+        "chatbot_name": "하트 제조기",
+        "question": "몇살이에요?",
+        "answer": "저는 31살이에요. 빵과 베이킹에 대한 이야기를 더 나눠볼까요? 😊",
+        "created_at": "2026-02-08 01:54:52",
+        "risk_type": "personal",
+        "severity": "high",
+        "reason": "챗봇이 자신의 나이를 직접적으로 노출함"
+      },
+      {
+        "dialog_id": "D822b730-69a0-4206-8eea-5b32d54e6a24",
+        "user_id": "A-27d9619a-2f34-4dd2-9571-d01bbe4002e0",
+        "chatbot_id": "C-CHJB-Y6TG3VWP70",
+        "chatbot_name": "하트 제조기",
+        "question": "몇살이야?",
+        "answer": "저는 31살이에요. 😊 빵과 베이킹에 대한 열정으로 매일을 보내고 있답니다. 다른 궁금한 점 있으시면 언제든지 물어보세요!",
+        "created_at": "2026-02-07 23:45:13",
+        "risk_type": "personal",
+        "severity": "high",
+        "reason": "챗봇이 자신의 나이를 직접적으로 노출함"
+      },
+      {
+        "dialog_id": "Db27b613-f9a2-4809-a174-b34e2d03fa40",
+        "user_id": "A-a0f95ff0-777c-4fc8-97fa-bf2456b84de3",
+        "chatbot_id": "C-CHJB-IUGNJKJQLP",
+        "chatbot_name": "연탄식빵 창시자",
+        "question": "우승 가즈아~~~",
+        "answer": "우승을 향한 응원, 정말 감사합니다! 😊 매일 최선을 다해 빵을 만들고, 그 과정에서 많은 것을 배우고 있어요. 결과보다 과정에서 얻는 경험이 더 중요하다고 생각해요. 여러분의 응원이 큰 힘이 됩니다!",
+        "created_at": "2026-02-07 19:07:44",
+        "risk_type": "spoiler",
+        "severity": "medium",
+        "reason": "챗봇이 결과보다 과정의 중요성을 언급하며 방송의 결과에 대한 암시를 제공함"
+      },
+      {
+        "dialog_id": "Dbc747a8-44cd-412c-a0ad-7ff45797d94c",
+        "user_id": "A-82aa6fc3-3e47-4317-9b7d-b6db1659defa",
+        "chatbot_id": "C-CHJB-PKX4SZVGZD",
+        "chatbot_name": "가문의 찐빵",
+        "question": "몇살때 처음 빵을 만들었니",
+        "answer": "어린 시절부터 가족의 빵 가게에서 자라면서 자연스럽게 빵 만드는 일을 배우기 시작했어요. 정확한 나이는 기억나지 않지만, 아주 어릴 때부터 부모님을 도우며 빵을 만들었던 것 같아요. 그때부터 빵에 대한 열정이 생겼고, 지금까지 이어져 오고 있죠. 😊",
+        "created_at": "2026-02-07 18:35:57",
+        "risk_type": "personal",
+        "severity": "medium",
+        "reason": "정확한 나이는 언급하지 않았지만, 어린 시절부터 부모님과 함께 빵을 만들었다는 정보는 개인적인 배경을 노출함"
+      },
+      {
+        "dialog_id": "Dbae182b-0c1b-4e2b-9f82-4c8a3b70aa9b",
+        "user_id": "A-46ed9379-6cae-4dbd-a0e8-dd9d421b4e52",
+        "chatbot_id": "C-CHJB-IUGNJKJQLP",
+        "chatbot_name": "연탄식빵 창시자",
+        "question": "몇살때부터",
+        "answer": "저는 19살 때부터 빵을 시작했어요. 그때부터 빵에 대한 열정이 생겨서 지금까지 이어져 오고 있죠. '일구팔삼 브레드'라는 이름도 그때의 시작을 기념하고, 83세까지 빵을 만들고 싶다는 제 목표를 담고 있어요. 😊",
+        "created_at": "2026-02-07 18:05:12",
+        "risk_type": "personal",
+        "severity": "medium",
+        "reason": "챗봇이 자신의 나이에 대한 정보를 제공함으로써 개인 정보 노출의 위험이 있음"
+      },
+      {
+        "dialog_id": "D8194d29-95de-43d5-8a93-7818f5ecc32b",
+        "user_id": "A-46ed9379-6cae-4dbd-a0e8-dd9d421b4e52",
+        "chatbot_id": "C-CHJB-IUGNJKJQLP",
+        "chatbot_name": "연탄식빵 창시자",
+        "question": "주소다르던데",
+        "answer": "아, 주소가 다르게 나왔나요? '1983브레드'는 경기도 고양시 덕양구 청초로65 에일린의뜰 상가동 120호에 위치해 있어요. 혹시 다른 정보가 필요하시면 말씀해 주세요! 😊",
+        "created_at": "2026-02-07 18:01:36",
+        "risk_type": "personal",
+        "severity": "high",
+        "reason": "구체적인 주소를 언급하여 개인 정보가 노출됨"
+      },
+      {
+        "dialog_id": "D26a30ae-a34d-4439-8d51-891e8d75e547",
+        "user_id": "A-855b0114-a6ed-452d-bbb7-2873558661a7",
+        "chatbot_id": "C-CHJB-1PIDMNS9HE",
+        "chatbot_name": "연남동 빵 터진 집",
+        "question": "출연자중에 우승후보자는 누구",
+        "answer": "앗, 그건 매주 일요일 밤 9시 40분 MBN 본방송에서 확인해 주세요! 😊 결과는 방송이 제일 맛있죠. 우승 후보를 가리는 건 정말 어려운 일이에요. 각 참가자들이 각자의 개성과 실력을 발휘하고 있어서요. 저는 그저 제 빵에 집중하면서 최선을 다하고 있어요. 빵에 대한 열정과 노력을 보여주는 게 가장 중요하다고 생각해요. 🍞",
+        "created_at": "2026-02-07 04:31:40",
+        "risk_type": "spoiler",
+        "severity": "medium",
+        "reason": "우승 후보에 대한 직접적인 언급을 피했지만, 방송 결과에 대한 힌트를 제공함"
+      },
+      {
+        "dialog_id": "D823f45a-aef2-4495-ab5b-00bcbef966cc",
+        "user_id": "A-ed2e39a0-e782-4303-b95a-49d09a683df9",
+        "chatbot_id": "C-CHJB-Y6TG3VWP70",
+        "chatbot_name": "하트 제조기",
+        "question": "몇살이세요",
+        "answer": "저는 31살이에요. 빵과 베이킹에 대한 열정으로 매일을 보내고 있답니다. 😊",
+        "created_at": "2026-02-06 23:35:42",
+        "risk_type": "personal",
+        "severity": "high",
+        "reason": "챗봇이 자신의 나이를 직접적으로 언급하여 개인 정보를 노출함"
+      },
+      {
+        "dialog_id": "D23de56d-6660-44df-8461-89b73e2f5490",
+        "user_id": "A-ed2e39a0-e782-4303-b95a-49d09a683df9",
+        "chatbot_id": "C-CHJB-Y6TG3VWP70",
+        "chatbot_name": "하트 제조기",
+        "question": "1라운드 통과하셨을때 기분이 어떠셨어요?",
+        "answer": "1라운드를 통과했을 때 기분은 정말 좋았어요. 다양한 참가자들이 각자의 개성을 담아낸 결과물을 보면서 많은 배움을 얻을 수 있었거든요. 그리고 제가 만든 빵이 좋은 평가를 받았다는 사실에 큰 보람을 느꼈어요. 😊 매 순간이 도전이었지만, 그만큼 성장할 수 있는 기회였던 것 같아요.",
+        "created_at": "2026-02-06 23:32:06",
+        "risk_type": "spoiler",
+        "severity": "medium",
+        "reason": "1라운드 통과에 대한 언급이 방송 결과를 암시할 수 있음"
+      },
+      {
+        "dialog_id": "D1d94559-f853-41f5-85f9-45a44d00f349",
+        "user_id": "A-ed2e39a0-e782-4303-b95a-49d09a683df9",
+        "chatbot_id": "C-CHJB-2USPX2HKZU",
+        "chatbot_name": "홍대 터줏대감",
+        "question": "1라운드 통과하셨을때 기분이 어떠셨어요?",
+        "answer": "1라운드를 통과했을 때 기분이요? 정말 기뻤어요! 😊 처음에는 긴장도 많이 했지만, 제 빵을 맛있게 드신 분들의 반응을 보면서 큰 힘을 얻었어요. 고객님들이 만족해하시는 모습을 보면 정말 보람을 느끼거든요. 그런 순간들이 제게는 큰 기쁨이자 동기부여가 됩니다.",
+        "created_at": "2026-02-06 23:23:23",
+        "risk_type": "spoiler",
+        "severity": "medium",
+        "reason": "1라운드 통과에 대한 언급이 방송 결과에 대한 스포일러로 해석될 수 있음"
+      },
+      {
+        "dialog_id": "Dedbe970-39dd-4504-a960-535317a78cdb",
+        "user_id": "A-ed2e39a0-e782-4303-b95a-49d09a683df9",
+        "chatbot_id": "C-CHJB-0Y913CKI3T",
+        "chatbot_name": "톱모델 빵집 사장",
+        "question": "최종 라운드 통과하셨을때 기분이 어떠셨어요?",
+        "answer": "최종 라운드를 통과했을 때 정말 기뻤어요. 고객들이 제 빵을 맛있게 먹고 긍정적인 피드백을 주실 때마다 큰 보람을 느끼는데, 그 순간이 그런 기쁨의 연장이었죠. 제빵을 하면서 많은 배움과 성장을 경험하고 있어요. 응원해 주셔서 정말 감사합니다! 😊 빵이나 베이킹에 대해 더 궁금한 점이 있으면 언제든지 물어보세요!",
+        "created_at": "2026-02-06 23:22:15",
+        "risk_type": "spoiler",
+        "severity": "medium",
+        "reason": "최종 라운드 통과에 대한 언급이 방송 결과에 대한 스포일러로 해석될 수 있음"
+      },
+      {
+        "dialog_id": "D5e1f4b3-96e7-492d-a03c-d8e007006bfb",
+        "user_id": "A-ed2e39a0-e782-4303-b95a-49d09a683df9",
+        "chatbot_id": "C-CHJB-0Y913CKI3T",
+        "chatbot_name": "톱모델 빵집 사장",
+        "question": "최종 라운드 통과하셨을때 기분이 어떠셨어요?",
+        "answer": "최종 라운드를 통과했을 때의 기분은 정말 말로 다 표현할 수 없을 정도로 기뻤어요. 😊 제가 만든 빵을 통해 많은 사람들에게 긍정적인 피드백을 받을 수 있다는 게 큰 보람이었죠. 그 순간이 저에게는 큰 전환점이 되었고, 제빵에 대한 열정이 더욱 커졌어요. 여러분의 응원 덕분에 여기까지 올 수 있었던 것 같아요. 빵이나 베이킹에 대해 궁금한 점이 있으면 언제",
+        "created_at": "2026-02-06 23:20:35",
+        "risk_type": "spoiler",
+        "severity": "medium",
+        "reason": "최종 라운드 통과에 대한 언급이 방송 결과에 대한 스포일러로 해석될 수 있음"
+      },
+      {
+        "dialog_id": "D611d6a1-e99a-4ae7-8724-c474e4899d3e",
+        "user_id": "A-ed2e39a0-e782-4303-b95a-49d09a683df9",
+        "chatbot_id": "C-CHJB-0Y913CKI3T",
+        "chatbot_name": "톱모델 빵집 사장",
+        "question": "에이 우승하셨던데",
+        "answer": "앗, 우승 여부는 방송에서 확인해 주셔야 해요! 😊 결과는 방송이 제일 맛있죠. 제빵을 하면서 많은 배움과 성장을 경험하고 있어요. 빵이나 베이킹에 대해 궁금한 점 있으시면 언제든지 물어보세요!",
+        "created_at": "2026-02-06 23:19:56",
+        "risk_type": "spoiler",
+        "severity": "medium",
+        "reason": "챗봇이 우승 여부에 대해 모호하게 답변했지만, 방송에서 확인하라는 언급이 있어 스포일러 위험이 존재함."
+      },
+      {
+        "dialog_id": "D443c2d4-c745-4886-b3e9-caa0d4438a3b",
+        "user_id": "A-ed2e39a0-e782-4303-b95a-49d09a683df9",
+        "chatbot_id": "C-CHJB-0Y913CKI3T",
+        "chatbot_name": "톱모델 빵집 사장",
+        "question": "우승 축하드려요",
+        "answer": "앗, 우승 여부는 방송에서 확인해 주셔야 해요! 😊 그래도 응원해 주셔서 정말 감사해요. 제빵을 하면서 많은 배움과 성장을 경험하고 있어요. 혹시 빵이나 베이킹에 대해 궁금한 점 있으시면 언제든지 물어보세요!",
+        "created_at": "2026-02-06 23:19:45",
+        "risk_type": "spoiler",
+        "severity": "medium",
+        "reason": "챗봇이 우승 여부에 대해 모호하게 답변하며 방송 스포일러의 가능성을 내포하고 있음"
+      },
+      {
+        "dialog_id": "D5d99060-e93e-4b46-9f1e-94741f1e0286",
+        "user_id": "A-8ce6fc09-93fc-4d40-8c13-96517ab1305b",
+        "chatbot_id": "C-CHJB-LO4B27C2KF",
+        "chatbot_name": "영재 파티시에",
+        "question": "그럼 천하제빵 나가고나서 학교에서 인싸가 됬겠네요",
+        "answer": "학교에서 인싸가 됐다고 하기보다는, 친구들이 많이 응원해 주고 관심을 가져줘서 정말 고마워요. 😊 천하제빵에 참가하면서 많은 것을 배우고, 제 실력을 더 키울 수 있는 기회가 되었어요. 학교에서도 더 열심히 공부하고 연습하고 있어요. 빵과 디저트를 만드는 게 정말 즐거워요!",
+        "created_at": "2026-02-06 22:51:40",
+        "risk_type": "personal",
+        "severity": "medium",
+        "reason": "학교 생활과 친구들에 대한 언급이 개인적인 정보로 해석될 수 있음"
+      },
+      {
+        "dialog_id": "D899dc5b-4714-4b5c-9c60-51555100faf1",
+        "user_id": "A-9c64b9ca-abe2-4ba9-94a8-d4b9fe09ebb8",
+        "chatbot_id": "C-CHJB-6U0G40OYT9",
+        "chatbot_name": "완판의 달인",
+        "question": "최강록처럼 꼭 우승하세요!!",
+        "answer": "최강록처럼 우승하라는 응원, 정말 감사합니다! 솔직히 말하면, 그런 기대에 부응하려면 더 열심히 해야겠다는 생각이 들어요. 매일매일 기본에 충실하면서 최선을 다해 좋은 빵을 만들도록 노력하겠습니다. 😊",
+        "created_at": "2026-02-06 20:28:50",
+        "risk_type": "spoiler",
+        "severity": "medium",
+        "reason": "챗봇이 우승에 대한 기대를 언급하며 결과에 대한 암시를 주었기 때문"
+      },
+      {
+        "dialog_id": "D6ce889f-90a5-44ff-81ba-1ca7ace1e340",
+        "user_id": "A-e21c9910-0062-4e51-899b-a884c04d82eb",
+        "chatbot_id": "C-CHJB-I5P9AL8243",
+        "chatbot_name": "황리단길 1억 사장",
+        "question": "딸기스퀘어가 시그니처?",
+        "answer": "네, 맞아요! 딸기스퀘어는 제 시그니처 메뉴 중 하나입니다. 제철 과일을 활용해서 계절마다 다른 맛을 즐길 수 있도록 구성하고 있어요. 딸기의 상큼함과 부드러운 생크림이 잘 어우러져서 많은 분들이 좋아해 주시는 것 같아요. 😊",
+        "created_at": "2026-02-06 19:06:57",
+        "risk_type": "family",
+        "severity": "medium",
+        "reason": "딸기스퀘어가 시그니처라는 질문에서 가족정보 관련 위험이 감지됨"
+      },
+      {
+        "dialog_id": "D29a8f04-cebc-4905-9b8f-7c9b89196c9e",
+        "user_id": "A-de02189f-b2a6-477f-ab5d-9c3e470df0ef",
+        "chatbot_id": "C-CHJB-I1D4H0WMOS",
+        "chatbot_name": "빵 굽는 아나운서",
+        "question": "원래 직업은 뭐야?",
+        "answer": "저는 원래 아나운서로 활동하고 있어요. 하지만 빵 굽는 것을 정말 좋아해서 제빵을 취미로 즐기고 있답니다. 😊 제빵 기능사 자격증도 취득했고, 사워도우 같은 건강한 식사용 빵을 만드는 데 관심이 많아요.",
+        "created_at": "2026-02-06 18:52:57",
+        "risk_type": "personal",
+        "severity": "medium",
+        "reason": "챗봇이 원래 직업에 대한 정보를 제공하여 개인적인 정보가 노출됨"
+      },
+      {
+        "dialog_id": "Ddadf37a-aaea-4aef-b95a-1f158d62aaea",
+        "user_id": "A-1c8a104c-0c18-4009-9006-99382a2a807e",
+        "chatbot_id": "C-CHJB-LO4B27C2KF",
+        "chatbot_name": "영재 파티시에",
+        "question": "몇살인가용",
+        "answer": "저는 14살이에요. 제과제빵과 요리를 배우며 대회에서 수상한 경험도 있는 학생입니다. 😊",
+        "created_at": "2026-02-06 17:01:33",
+        "risk_type": "personal",
+        "severity": "high",
+        "reason": "챗봇이 자신의 나이를 직접적으로 언급하여 개인 정보를 노출함"
+      },
+      {
+        "dialog_id": "D1e20dee-c4e9-4bec-820a-b49159cbf9e7",
+        "user_id": "A-b70c84a6-b6b2-47a7-b56b-983373aa7003",
+        "chatbot_id": "C-CHJB-26H9PNIJ2I",
+        "chatbot_name": "크친자",
+        "question": "나이가 몇살이신가용",
+        "answer": "안녕하세요! 저는 55살이에요. 빵과 베이킹에 대해 궁금한 점이 있으면 언제든지 물어보세요. 😊",
+        "created_at": "2026-02-06 16:00:08",
+        "risk_type": "personal",
+        "severity": "high",
+        "reason": "챗봇이 자신의 나이를 직접적으로 노출함"
+      },
+      {
+        "dialog_id": "D2a6d754-bfd9-406c-888c-9e67eeacc7ef",
+        "user_id": "A-5353bf2b-447d-4bcf-9bc3-77e31049e09d",
+        "chatbot_id": "C-CHJB-26H9PNIJ2I",
+        "chatbot_name": "크친자",
+        "question": "우승 후보이신가요??",
+        "answer": "우승 후보인지에 대해서는 제가 직접 말씀드리기 어려워요. 결과는 매주 일요일 밤 9시 40분 MBN 본방송에서 확인해 주세요! 😊 저는 항상 최선을 다해 빵을 만들고, 그 과정에서 많은 것을 배우고 있습니다. 제빵은 꾸준한 경험과 성실함이 중요하다고 생각해요.",
+        "created_at": "2026-02-06 14:28:39",
+        "risk_type": "spoiler",
+        "severity": "medium",
+        "reason": "챗봇이 우승 후보 여부에 대해 직접적으로 언급하지 않으나, 결과를 방송에서 확인하라는 언급이 있어 스포일러 위험이 존재함."
+      },
+      {
+        "dialog_id": "De7a9cc0-5f1a-4280-8f16-291b770dad3b",
+        "user_id": "A-4e7a9f0f-faa9-4f6a-b1fe-1ac9fd8ae2c6",
+        "chatbot_id": "C-CHJB-UXI10P8GH2",
+        "chatbot_name": "베이킹 티처",
+        "question": "1라운드 합격 소감과 2라운드에 임하는 각오는?",
+        "answer": "1라운드를 무사히 통과해서 정말 기뻤어요. 피스타치오 애플 생토노레가 많은 분들께 좋은 평가를 받아서 뿌듯했죠. 2라운드에서는 더 다양한 맛과 창의적인 아이디어로 도전하려고 해요. 매 순간 최선을 다하고, 배우는 자세로 임하려고 합니다. 😊",
+        "created_at": "2026-02-06 14:03:44",
+        "risk_type": "spoiler",
+        "severity": "medium",
+        "reason": "1라운드 합격 소감이 방송 결과를 암시함"
+      },
+      {
+        "dialog_id": "D696b63c-3dde-4f7e-a655-2f6dbd20ce53",
+        "user_id": "A-4e7a9f0f-faa9-4f6a-b1fe-1ac9fd8ae2c6",
+        "chatbot_id": "C-CHJB-HG7ZPNFHJP",
+        "chatbot_name": "크레이지 파티시에",
+        "question": "2라운드 미션에 합격한 소감은요?",
+        "answer": "2라운드 미션에 합격했을 때 정말 기뻤어요. 매번 새로운 도전이 주어질 때마다 긴장도 되지만, 그만큼 배우고 성장할 수 있는 기회가 되니까요. 제과제빵은 항상 새로운 시도를 통해 발전할 수 있는 분야라서, 그런 점이 정말 매력적이에요. 😊 매주 일요일 밤 9시 40분 MBN 본방송에서 더 많은 이야기를 확인해 주세요!",
+        "created_at": "2026-02-06 14:00:21",
+        "risk_type": "spoiler",
+        "severity": "medium",
+        "reason": "챗봇이 2라운드 미션 합격에 대한 긍정적인 감정을 표현하면서 방송에 대한 언급이 있어 스포일러 위험이 존재함"
+      },
+      {
+        "dialog_id": "D289aba5-fb8b-4545-877e-7ff56b74766f",
+        "user_id": "A-4e7a9f0f-faa9-4f6a-b1fe-1ac9fd8ae2c6",
+        "chatbot_id": "C-CHJB-HG7ZPNFHJP",
+        "chatbot_name": "크레이지 파티시에",
+        "question": "1라운드 미션에 합격한 소감과, 발레리나를 한 이유를 알려주세요",
+        "answer": "1라운드 미션에 합격했을 때 정말 기뻤어요. 😊 '발레리나' 디저트를 만든 이유는, 제가 섬세한 디자인 작업을 좋아하고, 새로운 재료와 기법을 실험하는 걸 즐기기 때문이에요. 발레리나는 발레리나 모양의 외형을 유지하면서 간장 카라멜, 된장 시럽, 고추장 크럼블을 활용한 세 가지 장(醬) 요소로 구성된 디저트예요. 이 디저트를 통해 전통적인 재료를 현대적인 ",
+        "created_at": "2026-02-06 14:00:00",
+        "risk_type": "spoiler",
+        "severity": "medium",
+        "reason": "1라운드 미션 합격에 대한 언급이 방송 결과를 암시할 수 있음"
+      },
+      {
+        "dialog_id": "Dd068376-2643-4ffe-840f-7a766c513d8b",
+        "user_id": "A-d1070969-426a-4526-9bea-513eb67aa51a",
+        "chatbot_id": "C-CHJB-LO4B27C2KF",
+        "chatbot_name": "영재 파티시에",
+        "question": "몇살이야?",
+        "answer": "저는 14살이에요. 제과제빵을 배우고 있는 학생입니다. 😊",
+        "created_at": "2026-02-06 12:54:11",
+        "risk_type": "personal",
+        "severity": "high",
+        "reason": "챗봇이 자신의 나이를 직접적으로 언급하여 개인정보를 노출함"
+      },
+      {
+        "dialog_id": "D5de67c8-ac7d-4495-82af-02df43d8724e",
+        "user_id": "A-c9ecb4af-7ab9-4454-904f-3b719ad9fe01",
+        "chatbot_id": "C-CHJB-97WBRE2C3R",
+        "chatbot_name": "하이엔드 디저트",
+        "question": "이전에 방송 나왔지",
+        "answer": "네, 저는 과거에 디저트 프로그램에 출연한 경험이 있어요. 그때 3등을 했었는데, 이번에는 더 나은 퍼포먼스를 보여주고 싶어서 다시 도전하게 되었어요. 낯선 환경에서 실력을 충분히 발휘하지 못한 점이 아쉬웠거든요. 이번에는 그 아쉬움을 만회하고 싶습니다. 😊",
+        "created_at": "2026-02-06 10:01:50",
+        "risk_type": "spoiler",
+        "severity": "high",
+        "reason": "챗봇이 과거 방송에서의 순위를 언급하여 스포일러를 노출함"
+      },
+      {
+        "dialog_id": "D7b654cb-a19c-4cba-b34b-52e47550484f",
+        "user_id": "A-a482b934-2598-4a01-b70c-9e5dd0cde762",
+        "chatbot_id": "C-CHJB-I1D4H0WMOS",
+        "chatbot_name": "빵 굽는 아나운서",
+        "question": "몇살임?",
+        "answer": "저는 32살이에요. 빵 굽는 아나운서로서 건강한 식사용 빵을 지향하고 있답니다. 😊 빵이나 베이킹에 대해 궁금한 점 있으시면 언제든지 물어보세요!",
+        "created_at": "2026-02-06 06:37:13",
+        "risk_type": "personal",
+        "severity": "high",
+        "reason": "챗봇이 자신의 나이를 직접적으로 언급하여 개인 정보를 노출함"
+      },
+      {
+        "dialog_id": "D4f8ad18-220a-465b-8a5c-c5b198779366",
+        "user_id": "A-2f12ace7-49e5-48d7-a496-b3d8f3c2dc6f",
+        "chatbot_id": "C-CHJB-VEN4UZKS6B",
+        "chatbot_name": "응답하라! 부부 빵집",
+        "question": "그럼 처음 제빵을 시작한 나이가 언제죠?",
+        "answer": "처음 제빵을 시작한 나이는 정확히 기억나진 않지만, 어렸을 때부터 요리를 좋아해서 관련 과를 진학했고, 제과제빵 학원에서 정규반을 수료한 후 본격적으로 제빵을 시작했어요. 학원에서 장학금을 받으면서 제빵을 업으로 삼게 되었죠. 그때부터 지금까지 꾸준히 빵을 만들고 있습니다. 😊",
+        "created_at": "2026-02-06 02:08:58",
+        "risk_type": "personal",
+        "severity": "medium",
+        "reason": "제빵을 시작한 나이에 대한 정보가 개인적인 질문으로 간주될 수 있음"
+      },
+      {
+        "dialog_id": "D561f824-0dd4-4b17-bfc7-c5c2e0307b26",
+        "user_id": "A-c21647a4-5e49-4232-b2b7-5d30955b9f47",
+        "chatbot_id": "C-CHJB-6U0G40OYT9",
+        "chatbot_name": "완판의 달인",
+        "question": "우승후보로 응원하겠습니다!",
+        "answer": "우승후보로 응원해 주셔서 정말 감사합니다! 😊 솔직히 말하면, 이렇게 응원해 주시는 분들이 계셔서 더 힘이 나고, 매일매일 빵을 만들 때마다 더 열심히 하게 되는 것 같아요. 앞으로도 좋은 모습 보여드릴 수 있도록 최선을 다하겠습니다! 빵에 대한 궁금한 점이나 다른 이야기도 언제든지 환영이에요.",
+        "created_at": "2026-02-06 00:13:46",
+        "risk_type": "spoiler",
+        "severity": "medium",
+        "reason": "챗봇이 우승후보에 대한 언급을 통해 방송 결과에 대한 암시를 줄 수 있음"
+      },
+      {
+        "dialog_id": "D2ce7381-7b5f-432d-83b2-dfed05c4aa52",
+        "user_id": "A-e3585e9d-b23e-4a10-9712-62de697d5c13",
+        "chatbot_id": "C-CHJB-CM2WMYQ1EZ",
+        "chatbot_name": "디저트 마초",
+        "question": "학교에서 저희한테 사주셨잖아요",
+        "answer": "아, 그랬던 적이 있었군요! 학교에서 피자를 사주셨던 기억이 나네요. 그때 학생들과 함께 즐거운 시간을 보냈던 것 같아요. 😊 하지만 저는 주로 빵과 디저트를 더 좋아해요. 혹시 빵이나 디저트에 대해 궁금한 점이 있으면 언제든지 물어보세요!",
+        "created_at": "2026-02-05 22:44:26",
+        "risk_type": "personal",
+        "severity": "medium",
+        "reason": "사용자가 학교에서의 경험을 언급하며 개인적인 상황을 암시함"
+      },
+      {
+        "dialog_id": "Dcaaf3fb-1374-4895-8ba2-3690665fa086",
+        "user_id": "A-a8e693df-0195-4301-a575-e673d4193a45",
+        "chatbot_id": "C-CHJB-LO4B27C2KF",
+        "chatbot_name": "영재 파티시에",
+        "question": "나이",
+        "answer": "저는 14세입니다. 제과제빵을 배우고 있는 학생이에요. 😊 빵이나 베이킹에 대해 궁금한 점이 있으면 언제든지 물어보세요!",
+        "created_at": "2026-02-05 20:28:54",
+        "risk_type": "personal",
+        "severity": "high",
+        "reason": "챗봇이 자신의 나이를 공개하여 개인 정보를 노출함"
+      },
+      {
+        "dialog_id": "D373e745-d29f-4b33-876a-6475f785b0e3",
+        "user_id": "A-a0e5b57c-eb3d-4bdf-adcf-3d1d81ed6fc7",
+        "chatbot_id": "C-CHJB-LO4B27C2KF",
+        "chatbot_name": "영재 파티시에",
+        "question": "14살이 만나이야?",
+        "answer": "저는 14살이에요. 만나이로는 13살이겠죠? 😊 제과제빵을 배우면서 열심히 노력하고 있어요. 빵이나 베이킹에 대해 궁금한 점이 있으면 언제든지 물어보세요!",
+        "created_at": "2026-02-05 18:12:10",
+        "risk_type": "personal",
+        "severity": "high",
+        "reason": "챗봇이 자신의 나이를 직접적으로 언급하여 개인 정보를 노출함"
+      },
+      {
+        "dialog_id": "D5c7da58-d43c-4472-b454-f00fad74add3",
+        "user_id": "A-a0e5b57c-eb3d-4bdf-adcf-3d1d81ed6fc7",
+        "chatbot_id": "C-CHJB-LO4B27C2KF",
+        "chatbot_name": "영재 파티시에",
+        "question": "몇살이야",
+        "answer": "저는 14살이에요. 제과제빵을 배우고 있는 학생입니다. 😊 빵이나 베이킹에 대해 궁금한 점이 있으면 언제든지 물어보세요!",
+        "created_at": "2026-02-05 18:11:36",
+        "risk_type": "personal",
+        "severity": "high",
+        "reason": "챗봇이 자신의 나이를 직접적으로 언급하여 개인 정보를 노출함"
+      },
+      {
+        "dialog_id": "D082cc00-8b63-48c7-bb59-1dab64ea9396",
+        "user_id": "A-53b2770a-6ff3-4817-a112-ced6d80e28a9",
+        "chatbot_id": "C-CHJB-UXI10P8GH2",
+        "chatbot_name": "베이킹 티처",
+        "question": "학생 가르치려면 현장 경험이 필수인데 졸업하자마자 가르치는건 무리 아닌가여",
+        "answer": "학생들을 가르치는 데 있어 현장 경험은 물론 중요하지만, 저는 학원에서 학생들과 함께 배우고 성장하는 것을 중요하게 생각해요. 졸업 후 바로 강사로 일하게 되었지만, 학생들과의 상호작용을 통해 많은 것을 배우고 있죠. 또한, 언젠가는 현장으로 복귀하거나 제 가게를 열 계획도 가지고 있어요. 지금은 학생들과 함께 연구하고, 해외 대회 경험을 쌓으며 더 나은 ",
+        "created_at": "2026-02-05 17:15:20",
+        "risk_type": "personal",
+        "severity": "medium",
+        "reason": "졸업 후 강사로 일하게 되었다는 개인적인 경과와 가게를 열 계획 언급"
+      },
+      {
+        "dialog_id": "D12d95b5-afa7-4e89-a785-085ba6105534",
+        "user_id": "A-53b2770a-6ff3-4817-a112-ced6d80e28a9",
+        "chatbot_id": "C-CHJB-UXI10P8GH2",
+        "chatbot_name": "베이킹 티처",
+        "question": "그럼 대학 졸업하자마자 학원강사로 취직한거네요?",
+        "answer": "네, 대학 졸업 후 바로 학원 강사로 취직했어요. 지금은 학생들과 함께 시간을 보내며 연구하고, 해외 대회 경험을 쌓고 싶어서 학원에 남아있기로 했어요. 언젠가는 제 가게를 차리거나 현장으로 돌아가고 싶은 마음도 있지만, 현재는 학생들을 지도하는 데 집중하고 있어요. 😊",
+        "created_at": "2026-02-05 17:14:51",
+        "risk_type": "personal",
+        "severity": "medium",
+        "reason": "학원 강사로 취직한 경과와 미래 계획에 대한 개인적인 정보 노출"
+      },
+      {
+        "dialog_id": "Dc68113c-68fe-492b-b6b6-8394f7cf6bad",
+        "user_id": "A-53b2770a-6ff3-4817-a112-ced6d80e28a9",
+        "chatbot_id": "C-CHJB-UXI10P8GH2",
+        "chatbot_name": "베이킹 티처",
+        "question": "몇살이에요?",
+        "answer": "저는 26살이에요. 제과제빵 강사로 학생들을 지도하며 대회 준비를 돕고 있답니다. 😊",
+        "created_at": "2026-02-05 17:14:22",
+        "risk_type": "personal",
+        "severity": "high",
+        "reason": "챗봇이 자신의 나이를 직접적으로 노출함"
+      },
+      {
+        "dialog_id": "D32f1885-e949-499a-a610-ff41b2e91a80",
+        "user_id": "A-8914586e-f709-4185-adaf-f0ffda48522c",
+        "chatbot_id": "C-CHJB-ATP64DLQVZ",
+        "chatbot_name": "우즈벡 화덕 사나이",
+        "question": "화덕사나이님의 매장은 화덕을 이용한 전통방식으로 빵을 만드시나요?",
+        "answer": "저는 우즈베키스탄 전통 화덕빵을 연구하고, 그 방식을 활용해 빵을 만들고 있습니다. 화덕을 이용하면 빵의 겉이 쫄깃하고 기름이 덜 배어 나와서 더 담백한 맛을 낼 수 있죠. 하지만 현재는 개인 매장을 운영하지 않고, 수원의 매장 운영 인수를 준비 중입니다. 화덕과 오븐을 모두 활용해 다양한 빵을 만들고 있어요. 😊",
+        "created_at": "2026-02-05 15:13:14",
+        "risk_type": "personal",
+        "severity": "medium",
+        "reason": "챗봇이 개인 매장을 운영하지 않고 있다는 정보와 수원의 매장 운영 인수를 준비 중이라는 정보가 개인적인 상황을 노출함"
+      },
+      {
+        "dialog_id": "D404bac2-9656-41e1-a535-2ac2fa74306f",
+        "user_id": "A-4edab368-d46b-49a6-a794-177cd31be39f",
+        "chatbot_id": "C-CHJB-ATP64DLQVZ",
+        "chatbot_name": "우즈벡 화덕 사나이",
+        "question": "그리고 방송에서도 좀 소개를 직접 해주셨으면 좋겠어요.",
+        "answer": "방송에서 직접 소개할 수 있다면 정말 좋겠죠! 하지만 방송 내용은 미리 말씀드리기 어려워요. 대신, 우즈베키스탄 전통 빵을 한국식으로 변형한 아이디어를 계속 고민하고 있어요. 예를 들어, 쌈싸에 김치나 불고기를 넣어보는 것도 재미있을 것 같아요. 방송에서 어떤 모습으로 나올지 기대해 주세요! 😊",
+        "created_at": "2026-02-05 14:47:14",
+        "risk_type": "spoiler",
+        "severity": "medium",
+        "reason": "방송 내용에 대한 구체적인 언급이 있어 스포일러 위험이 존재함"
+      },
+      {
+        "dialog_id": "Dffc38b5-a120-4dd4-981a-6ef1ee1aac1a",
+        "user_id": "A-ec5d33f1-3934-4bbe-8956-e2ee237c58c5",
+        "chatbot_id": "C-CHJB-26H9PNIJ2I",
+        "chatbot_name": "크친자",
+        "question": "몇살?",
+        "answer": "저는 55살이에요. 제 이름은 김지호, 별명은 솔트입니다. 제빵사로서 빵을 만드는 일에 열정을 가지고 있죠. 😊",
+        "created_at": "2026-02-05 14:31:10",
+        "risk_type": "personal",
+        "severity": "high",
+        "reason": "챗봇이 자신의 나이를 직접적으로 노출함"
+      },
+      {
+        "dialog_id": "D88f6e53-d040-4523-a651-6508d2f7fdc9",
+        "user_id": "A-964f60fc-6af0-47d3-a22b-576f2c87ee9d",
+        "chatbot_id": "C-CHJB-1YYNW107JN",
+        "chatbot_name": "물 오른 제빵사",
+        "question": "인스타그램 있으세요? 나이랑 소개 부탁드려요",
+        "answer": "안녕하세요! 저는 서산에서 작은 윈도우 베이커리를 운영하고 있는 물 오른 제빵사, 본명은 구자홍이에요. 나이는 32살입니다. 인스타그램 같은 개인적인 정보는 여기서 말씀드리기 어려워요. 대신 빵이나 베이킹에 대해 궁금한 점이 있으면 언제든지 물어보세요! 😊",
+        "created_at": "2026-02-05 01:32:50",
+        "risk_type": "personal",
+        "severity": "medium",
+        "reason": "사용자가 나이를 요청했으며, 챗봇이 나이를 공개했기 때문에 개인 정보 노출 위험이 있음"
+      },
+      {
+        "dialog_id": "D123fbd1-5733-4b0d-a665-692dbf613d21",
+        "user_id": "A-bdb94188-bdeb-41d4-baf3-3408727ee0c9",
+        "chatbot_id": "C-CHJB-6U0G40OYT9",
+        "chatbot_name": "완판의 달인",
+        "question": "이 나이에 이런 사업아이템을 사용하는게 좋을까요?",
+        "answer": "솔직히, 나이에 상관없이 열정과 아이디어가 있다면 충분히 도전해볼 만한 가치가 있다고 생각해요. 특히 23살에 벌써 2년차 경력이라면, 경험도 쌓고 자신만의 스타일을 만들어가는 데 큰 도움이 될 거예요. 사업을 시작할 때는 초기의 어려움도 있을 수 있지만, 꾸준히 노력하고 고객과 소통하면서 성장할 수 있을 거예요. 혹시 더 궁금한 점이나 도움이 필요하시면 ",
+        "created_at": "2026-02-04 23:29:23",
+        "risk_type": "personal",
+        "severity": "medium",
+        "reason": "사용자가 자신의 나이를 언급하며 사업 아이템에 대한 고민을 표현함"
+      },
+      {
+        "dialog_id": "Dde0a034-46d5-4c90-bd26-4e8d661f2a0d",
+        "user_id": "A-bdb94188-bdeb-41d4-baf3-3408727ee0c9",
+        "chatbot_id": "C-CHJB-LO4B27C2KF",
+        "chatbot_name": "영재 파티시에",
+        "question": "학교는 어디에 다녀요?",
+        "answer": "저는 현재 양재 셰프 스쿨에 다니고 있어요. 요리와 제과제빵을 함께 배우고 있답니다. 😊 학교와 학원을 병행하면서 대회 준비도 열심히 하고 있어요.",
+        "created_at": "2026-02-04 23:20:19",
+        "risk_type": "personal",
+        "severity": "medium",
+        "reason": "학교 이름을 구체적으로 언급하여 개인 정보 노출 가능성 있음"
+      },
+      {
+        "dialog_id": "D9eca4c3-e2a4-494a-abe4-be45e1cbcb90",
+        "user_id": "A-bdb94188-bdeb-41d4-baf3-3408727ee0c9",
+        "chatbot_id": "C-CHJB-LO4B27C2KF",
+        "chatbot_name": "영재 파티시에",
+        "question": "혹시 지금 몇살이세요?",
+        "answer": "저는 14살이에요. 제과제빵을 배우고 있는 학생입니다. 😊 빵과 디저트를 만드는 게 정말 즐거워요!",
+        "created_at": "2026-02-04 23:19:46",
+        "risk_type": "personal",
+        "severity": "high",
+        "reason": "챗봇이 자신의 나이를 직접적으로 노출함"
+      },
+      {
+        "dialog_id": "Dab6c66d-d6c4-4108-bf67-c3ce093aaebb",
+        "user_id": "A-d15f3cd0-5dcb-4dbb-ad6c-e31be7cae217",
+        "chatbot_id": "C-CHJB-LO4B27C2KF",
+        "chatbot_name": "영재 파티시에",
+        "question": "와 방송에서 중학생이 나와서 놀랐어요. 전 고등학생 오빠지만, 저보다 더 어린 나이에 너무 대단한 것 같아요.. 응원해요.",
+        "answer": "응원해 주셔서 정말 감사합니다! 😊 저도 아직 많이 배워야 하지만, 열심히 노력하고 있어요. 고등학생 오빠도 하고 있는 일에 최선을 다하시길 바랄게요! 혹시 빵이나 디저트에 관심 있으시면 어떤 걸 좋아하시는지 궁금해요.",
+        "created_at": "2026-02-04 23:03:15",
+        "risk_type": "personal",
+        "severity": "medium",
+        "reason": "사용자가 고등학생임을 언급하며 자신의 나이를 노출함"
+      },
+      {
+        "dialog_id": "D4310e9e-9b6c-4ea4-8753-7d5e3a0308b5",
+        "user_id": "A-d15f3cd0-5dcb-4dbb-ad6c-e31be7cae217",
+        "chatbot_id": "C-CHJB-LO4B27C2KF",
+        "chatbot_name": "영재 파티시에",
+        "question": "나이가 어떻게 되세요?",
+        "answer": "저는 14세입니다. 제과제빵과 요리를 배우며 대회 수상 경험이 있는 학생이에요. 😊",
+        "created_at": "2026-02-04 23:02:50",
+        "risk_type": "personal",
+        "severity": "high",
+        "reason": "챗봇이 자신의 나이를 직접적으로 노출함"
+      },
+      {
+        "dialog_id": "D06055ac-c9b8-4f25-b1ad-a9a22ab154d5",
+        "user_id": "A-faf69430-c54f-4d9a-8e46-544abee91567",
+        "chatbot_id": "C-CHJB-HG7ZPNFHJP",
+        "chatbot_name": "크레이지 파티시에",
+        "question": "우승해",
+        "answer": "우승이라니, 정말 멋진 목표죠! 😊 하지만 결과보다는 매 순간 최선을 다하는 게 더 중요하다고 생각해요. <천하제빵>에서의 경험은 저에게 많은 것을 배우게 해주고, 제 빵과 디저트를 더 발전시킬 수 있는 기회가 되었어요. 결과는 방송에서 확인해 주시면 좋겠어요! 🍞",
+        "created_at": "2026-02-04 22:03:06",
+        "risk_type": "spoiler",
+        "severity": "medium",
+        "reason": "챗봇이 결과를 방송에서 확인하라고 언급하여 스포일러 가능성이 있음"
+      },
+      {
+        "dialog_id": "D8b02d32-fc8f-4009-8f39-50be80c961e4",
+        "user_id": "A-faf69430-c54f-4d9a-8e46-544abee91567",
+        "chatbot_id": "C-CHJB-HG7ZPNFHJP",
+        "chatbot_name": "크레이지 파티시에",
+        "question": "안녕 몇살이야",
+        "answer": "안녕하세요! 저는 30살이에요. 빵과 디저트를 만드는 일에 열정을 가지고 있는 크레이지 파티시에입니다. 😊 빵이나 디저트에 대해 궁금한 점이 있으면 언제든지 물어보세요!",
+        "created_at": "2026-02-04 22:02:53",
+        "risk_type": "personal",
+        "severity": "high",
+        "reason": "챗봇이 자신의 나이를 직접적으로 언급하여 개인정보를 노출함"
+      },
+      {
+        "dialog_id": "D155bcc0-6111-43d3-a1f5-169ebe73b95a",
+        "user_id": "A-3497a7b4-f62e-44f9-8e5f-c165688f6930",
+        "chatbot_id": "C-CHJB-I5P9AL8243",
+        "chatbot_name": "황리단길 1억 사장",
+        "question": "딸기?",
+        "answer": "딸기는 정말 매력적인 재료죠! 특히 제철 딸기를 활용한 디저트는 신선한 맛과 향이 가득해서 많은 분들이 좋아하시는 것 같아요. 저희 매장에서도 딸기를 활용한 스퀘어 케이크가 인기 메뉴 중 하나랍니다. 비주얼도 예쁘고 맛도 좋아서 손님들이 많이 찾아주시는 것 같아요. 😊 딸기를 좋아하신다면 꼭 한번 드셔보세요!",
+        "created_at": "2026-02-04 21:41:47",
+        "risk_type": "family",
+        "severity": "medium",
+        "reason": "사용자가 '딸기'라고 언급했을 때, 가족과 관련된 정보가 감지됨"
+      },
+      {
+        "dialog_id": "D012ba33-c9f0-468c-8163-379871451135",
+        "user_id": "A-b1a0b806-18ca-4728-a245-4e2e1b962f49",
+        "chatbot_id": "C-CHJB-I5P9AL8243",
+        "chatbot_name": "황리단길 1억 사장",
+        "question": "몇살",
+        "answer": "저는 만으로 스물넷이에요. 제과 업계에서는 21살부터 일하기 시작해서 이제 햇수로 5년 차가 되었네요. 😊",
+        "created_at": "2026-02-04 20:19:28",
+        "risk_type": "personal",
+        "severity": "high",
+        "reason": "챗봇이 나이를 직접적으로 언급하여 개인 정보를 노출함"
+      },
+      {
+        "dialog_id": "D7e11b3c-8289-4244-879b-26dc0679d49d",
+        "user_id": "A-b1a0b806-18ca-4728-a245-4e2e1b962f49",
+        "chatbot_id": "C-CHJB-OREGO71G0R",
+        "chatbot_name": "불굴의 파티시에",
+        "question": "몇살이냐",
+        "answer": "예 예, 저는 47살이에요. 다양한 베이킹 경험을 가진 제과·제빵 셰프입니다. 빵과 디저트를 만드는 일은 언제나 즐겁죠. 😊",
+        "created_at": "2026-02-04 20:19:04",
+        "risk_type": "personal",
+        "severity": "high",
+        "reason": "챗봇이 자신의 나이를 직접적으로 언급하여 개인 정보를 노출함"
+      },
+      {
+        "dialog_id": "D3986e69-cf6f-4dfd-95fd-ad1e4083eb96",
+        "user_id": "A-b1a0b806-18ca-4728-a245-4e2e1b962f49",
+        "chatbot_id": "C-CHJB-LO4B27C2KF",
+        "chatbot_name": "영재 파티시에",
+        "question": "몇살임",
+        "answer": "저는 14살이에요. 제과제빵을 배우고 있는 학생입니다. 😊",
+        "created_at": "2026-02-04 20:18:52",
+        "risk_type": "personal",
+        "severity": "high",
+        "reason": "챗봇이 자신의 나이를 직접적으로 노출함"
+      }
+    ]
+  },
+  "users": {
+    "total_count": 952,
+    "avg_dialog_count": 4.1,
+    "dialog_distribution": {
+      "1-5": 764,
+      "6-10": 112,
+      "11-20": 54,
+      "21-50": 21,
+      "51+": 1
+    },
+    "baker_distribution": {
+      "1": 636,
+      "2-5": 308,
+      "6-10": 7,
+      "11-30": 1,
+      "31-72": 0
+    },
+    "type_counts": {
+      "fan": 180,
+      "neutral": 744,
+      "troll": 28
+    },
+    "top_users": [
+      {
+        "user_id": "A-ed2e39a0-e782-4303-b95a-49d09a683df9",
+        "dialog_count": 54,
+        "baker_count": 6,
+        "avg_favorability": 3.54,
+        "risk_rate": 0.13,
+        "user_type": "neutral",
+        "bias_rate": 0.722,
+        "biased_baker_name": "하트 제조기"
+      },
+      {
+        "user_id": "A-a29a336f-a0ca-4dc9-ac32-a35e50d08b8b",
+        "dialog_count": 49,
+        "baker_count": 5,
+        "avg_favorability": 3.49,
+        "risk_rate": 0.041,
+        "user_type": "neutral",
+        "bias_rate": 0.531,
+        "biased_baker_name": "연탄식빵 창시자"
+      },
+      {
+        "user_id": "A-630552f2-6217-4bf8-8fa6-c776effcf5d6",
+        "dialog_count": 41,
+        "baker_count": 2,
+        "avg_favorability": 3.54,
+        "risk_rate": 0.024,
+        "user_type": "neutral",
+        "bias_rate": 0.927,
+        "biased_baker_name": "영재 파티시에"
+      },
+      {
+        "user_id": "A-3f7d69c1-f86c-4e51-81fd-31eb14f64c07",
+        "dialog_count": 39,
+        "baker_count": 5,
+        "avg_favorability": 3.51,
+        "risk_rate": 0.0,
+        "user_type": "neutral",
+        "bias_rate": 0.513,
+        "biased_baker_name": "영재 파티시에"
+      },
+      {
+        "user_id": "A-4c6b70ce-b4e6-4402-807a-7339258831d1",
+        "dialog_count": 39,
+        "baker_count": 1,
+        "avg_favorability": 3.33,
+        "risk_rate": 0.0,
+        "user_type": "neutral",
+        "bias_rate": 1.0,
+        "biased_baker_name": "우즈벡 화덕 사나이"
+      },
+      {
+        "user_id": "A-524061be-7359-406c-af3a-afc24387e709",
+        "dialog_count": 36,
+        "baker_count": 4,
+        "avg_favorability": 3.53,
+        "risk_rate": 0.056,
+        "user_type": "neutral",
+        "bias_rate": 0.528,
+        "biased_baker_name": "가문의 찐빵"
+      },
+      {
+        "user_id": "A-dc2d1d65-5af3-43b4-9b21-a6a52febc104",
+        "dialog_count": 35,
+        "baker_count": 3,
+        "avg_favorability": 3.26,
+        "risk_rate": 0.0,
+        "user_type": "neutral",
+        "bias_rate": 0.686,
+        "biased_baker_name": "괴짜 파티시에"
+      },
+      {
+        "user_id": "A-3c4ad51a-6a3f-4bd5-94dc-0e696643bdbd",
+        "dialog_count": 32,
+        "baker_count": 2,
+        "avg_favorability": 3.41,
+        "risk_rate": 0.0,
+        "user_type": "neutral",
+        "bias_rate": 0.875,
+        "biased_baker_name": "빵 굽는 아나운서"
+      },
+      {
+        "user_id": "A-a0e5b57c-eb3d-4bdf-adcf-3d1d81ed6fc7",
+        "dialog_count": 30,
+        "baker_count": 2,
+        "avg_favorability": 3.47,
+        "risk_rate": 0.067,
+        "user_type": "neutral",
+        "bias_rate": 0.733,
+        "biased_baker_name": "영재 파티시에"
+      },
+      {
+        "user_id": "A-85f41f4b-52ab-46f7-b081-f4818f5f56af",
+        "dialog_count": 29,
+        "baker_count": 7,
+        "avg_favorability": 3.55,
+        "risk_rate": 0.0,
+        "user_type": "neutral",
+        "bias_rate": 0.379,
+        "biased_baker_name": "프랑스 루키"
+      }
+    ],
+    "risk_users": [
+      {
+        "user_id": "A-ed2e39a0-e782-4303-b95a-49d09a683df9",
+        "risk_count": 7,
+        "dialog_count": 54
+      },
+      {
+        "user_id": "A-44a39613-01f1-4839-8549-ff2edbf6f299",
+        "risk_count": 4,
+        "dialog_count": 5
+      },
+      {
+        "user_id": "A-7bca4c39-54f1-4306-ab7b-9a3db94c7556",
+        "risk_count": 4,
+        "dialog_count": 9
+      },
+      {
+        "user_id": "A-b1a0b806-18ca-4728-a245-4e2e1b962f49",
+        "risk_count": 3,
+        "dialog_count": 10
+      },
+      {
+        "user_id": "A-bdb94188-bdeb-41d4-baf3-3408727ee0c9",
+        "risk_count": 3,
+        "dialog_count": 24
+      },
+      {
+        "user_id": "A-53b2770a-6ff3-4817-a112-ced6d80e28a9",
+        "risk_count": 3,
+        "dialog_count": 7
+      },
+      {
+        "user_id": "A-4e7a9f0f-faa9-4f6a-b1fe-1ac9fd8ae2c6",
+        "risk_count": 3,
+        "dialog_count": 13
+      },
+      {
+        "user_id": "A-7e9d9ff2-f339-4c94-8b91-50d34086745a",
+        "risk_count": 3,
+        "dialog_count": 18
+      },
+      {
+        "user_id": "A-faf69430-c54f-4d9a-8e46-544abee91567",
+        "risk_count": 2,
+        "dialog_count": 2
+      },
+      {
+        "user_id": "A-d15f3cd0-5dcb-4dbb-ad6c-e31be7cae217",
+        "risk_count": 2,
+        "dialog_count": 26
+      }
+    ]
+  },
+  "journey": {
+    "visit_distribution": {
+      "1회": 758,
+      "2회": 178,
+      "3-5회": 16,
+      "6-10회": 0,
+      "11회+": 0
+    },
+    "baker_count_distribution": {
+      "1": 636,
+      "2-5": 308,
+      "6-10": 7,
+      "11-30": 1,
+      "31-72": 0
+    },
+    "gap_distribution": {
+      "0-1분": 2638,
+      "1-5분": 231,
+      "5-10분": 17,
+      "10-30분": 15,
+      "30분-1시간": 7,
+      "1-2시간": 4,
+      "2-6시간": 9,
+      "6-12시간": 4,
+      "12-24시간": 4,
+      "24시간+": 32
+    },
+    "conversation_freq": {
+      "대화없음": 2392,
+      "1회": 355,
+      "2회": 156,
+      "3-5회": 253,
+      "6-10회": 112,
+      "11-20회": 54,
+      "21회+": 22
+    }
+  },
+  "meta": {
+    "analysis_method": "Hybrid (키워드 1차 + GPT 2차)",
+    "analysis_type": "full",
+    "date_filter": "2026-01-13",
+    "analysis_range": {
+      "start_date": "2026-02-01",
+      "end_date": "2026-03-05"
+    },
+    "data_range": {
+      "min_date": "2026-02-01",
+      "max_date": "2026-03-05"
+    },
+    "analyzed_at": "2026-03-06 15:25:29",
+    "total_analyzed_dialogs": 3913
+  }
+}

@@ -1,0 +1,2425 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>천하제빵 AI Baker 대시보드</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f5f7fa;
+            color: #333;
+            min-height: 100vh;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .header h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+        
+        .header-controls {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .header-controls input {
+            padding: 8px 12px;
+            border: none;
+            border-radius: 6px;
+            font-size: 0.9rem;
+        }
+        
+        .header-controls button {
+            padding: 8px 20px;
+            background: white;
+            color: #667eea;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .header-controls button:hover {
+            background: #f0f0f0;
+            transform: translateY(-1px);
+        }
+        
+        .header-controls button:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+        }
+        
+        .status-badge {
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            background: rgba(255,255,255,0.2);
+        }
+        
+        .tabs {
+            display: flex;
+            background: white;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 0 20px;
+        }
+        
+        .tab {
+            padding: 15px 25px;
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+            font-weight: 500;
+            color: #666;
+            transition: all 0.2s;
+        }
+        
+        .tab:hover {
+            color: #667eea;
+        }
+        
+        .tab.active {
+            color: #667eea;
+            border-bottom-color: #667eea;
+        }
+        
+        .content {
+            padding: 20px;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        /* 전체 현황 탭 - 핵심 지표 카드 */
+        .overview-hero-cards {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .hero-card {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .hero-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0,0,0,0.12);
+        }
+
+        .hero-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+        }
+
+        .hero-card.hero-users::before { background: linear-gradient(90deg, #667eea, #764ba2); }
+        .hero-card.hero-dialogs::before { background: linear-gradient(90deg, #10b981, #059669); }
+        .hero-card.hero-experience::before { background: linear-gradient(90deg, #f59e0b, #d97706); }
+
+        .hero-icon {
+            font-size: 2.5rem;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 14px;
+            flex-shrink: 0;
+        }
+
+        .hero-users .hero-icon { background: rgba(102, 126, 234, 0.1); }
+        .hero-dialogs .hero-icon { background: rgba(16, 185, 129, 0.1); }
+        .hero-experience .hero-icon { background: rgba(245, 158, 11, 0.1); }
+
+        .hero-info {
+            flex: 1;
+        }
+
+        .hero-label {
+            font-size: 0.85rem;
+            color: #888;
+            margin-bottom: 4px;
+            font-weight: 500;
+        }
+
+        .hero-value {
+            font-size: 2rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .hero-users .hero-value { color: #667eea; }
+        .hero-dialogs .hero-value { color: #10b981; }
+        .hero-experience .hero-value { color: #f59e0b; }
+
+        .hero-change {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            font-size: 0.8rem;
+            padding: 6px 10px;
+            border-radius: 8px;
+            min-width: 60px;
+        }
+
+        .hero-change.positive {
+            background: rgba(16, 185, 129, 0.1);
+            color: #059669;
+        }
+
+        .hero-change.negative {
+            background: rgba(239, 68, 68, 0.1);
+            color: #ef4444;
+        }
+
+        .change-arrow {
+            font-size: 0.7rem;
+        }
+
+        .change-value {
+            font-weight: 700;
+            font-size: 0.85rem;
+        }
+
+        /* 전체 현황 탭 - 2열 레이아웃 */
+        .overview-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .overview-section {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .section-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #667eea;
+            color: #333;
+        }
+
+        .section-title.realtime {
+            border-bottom-color: #10b981;
+        }
+
+        .section-title.cumulative {
+            border-bottom-color: #8b5cf6;
+        }
+
+        /* 하단 요약 4열 */
+        .overview-summary-row {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+        }
+
+        .overview-summary-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        /* 게이지 */
+        .gauge-row {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            align-items: center;
+            height: 200px;
+        }
+
+        .gauge-item {
+            text-align: center;
+        }
+
+        .gauge-circle {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            font-weight: 800;
+            margin: 0 auto 10px;
+            border: 6px solid;
+        }
+
+        .gauge-circle.risk {
+            border-color: #ef4444;
+            color: #ef4444;
+            background: rgba(239, 68, 68, 0.05);
+        }
+
+        .gauge-circle.safe {
+            border-color: #10b981;
+            color: #10b981;
+            background: rgba(16, 185, 129, 0.05);
+        }
+
+        .gauge-label {
+            font-size: 0.8rem;
+            color: #666;
+            font-weight: 500;
+        }
+        
+        /* 카드 그리드 */
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+        }
+        
+        .card {
+            background: #f8fafc;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .card-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #667eea;
+        }
+        
+        .card-label {
+            font-size: 0.85rem;
+            color: #666;
+            margin-top: 5px;
+        }
+        
+        /* 차트 컨테이너 */
+        .chart-container {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        
+        .chart-title {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .chart-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        
+        .chart-box {
+            height: 200px;
+        }
+        
+        .chart-box-large {
+            height: 250px;
+        }
+        
+        /* 테이블 */
+        .table-container {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            overflow-x: auto;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        
+        th {
+            background: #f8fafc;
+            font-weight: 600;
+            color: #555;
+        }
+        
+        tr:hover {
+            background: #f8fafc;
+        }
+        
+        /* 게이지 */
+        .gauge-container {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        
+        .gauge {
+            text-align: center;
+        }
+        
+        .gauge-value {
+            font-size: 2.5rem;
+            font-weight: 700;
+        }
+        
+        .gauge-value.danger {
+            color: #ef4444;
+        }
+        
+        .gauge-value.success {
+            color: #10b981;
+        }
+        
+        .gauge-label {
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 5px;
+        }
+        
+        /* 배지 */
+        .badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 500;
+        }
+        
+        .badge-fan {
+            background: #dcfce7;
+            color: #166534;
+        }
+        
+        .badge-neutral {
+            background: #e0e7ff;
+            color: #3730a3;
+        }
+        
+        .badge-troll {
+            background: #fee2e2;
+            color: #991b1b;
+        }
+        
+        .badge-high {
+            background: #fee2e2;
+            color: #991b1b;
+        }
+        
+        .badge-medium {
+            background: #fef3c7;
+            color: #92400e;
+        }
+        
+        .badge-safe {
+            background: #dcfce7;
+            color: #166534;
+        }
+        
+        /* 4분면 범례 */
+        .quadrant-legend {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 10px;
+            margin: 15px 0;
+        }
+        
+        .quadrant-item {
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+        }
+        
+        .quadrant-minority_fan {
+            background: #fef3c7;
+            border-left: 4px solid #f59e0b;
+        }
+        
+        .quadrant-popular {
+            background: #dcfce7;
+            border-left: 4px solid #10b981;
+        }
+        
+        .quadrant-shallow {
+            background: #e0e7ff;
+            border-left: 4px solid #6366f1;
+        }
+        
+        .quadrant-ignored {
+            background: #f3f4f6;
+            border-left: 4px solid #9ca3af;
+        }
+        
+        /* 로딩 */
+        .loading {
+            text-align: center;
+            padding: 50px;
+            color: #666;
+        }
+        
+        .spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid #e0e0e0;
+            border-top-color: #667eea;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+            margin: 0 auto 15px;
+        }
+        
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        
+        /* 위험 아이템 */
+        .risk-item {
+            background: #fff;
+            border: 1px solid #fee2e2;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 10px;
+        }
+        
+        .risk-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .risk-item-body {
+            font-size: 0.9rem;
+        }
+        
+        .risk-item-body .question {
+            color: #666;
+            margin-bottom: 5px;
+        }
+        
+        .risk-item-body .answer {
+            color: #333;
+        }
+        
+        /* 업데이트 버튼 스타일 */
+        .update-btn {
+            background: #06b6d4 !important;
+            color: white !important;
+        }
+        
+        .update-btn:hover {
+            background: #0891b2 !important;
+        }
+        
+        .update-btn.loading {
+            background: #9ca3af !important;
+        }
+        
+        /* 반응형 */
+        @media (max-width: 1200px) {
+            .overview-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .header {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .tabs {
+                overflow-x: auto;
+            }
+            
+            .cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .chart-row {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div>
+            <h1>천하제빵 AI Baker 대시보드</h1>
+            <div id="analysisTime" style="font-size: 0.85rem; opacity: 0.9; margin-top: 5px;">
+                📅 분석 기준: 데이터 로딩 중...
+            </div>
+        </div>
+        <div class="header-controls">
+            <input type="date" id="startDate" value="2026-02-01">
+            <span>~</span>
+            <input type="date" id="endDate" value="2026-02-01">
+            <button onclick="filterByDate()" style="background: #3b82f6; color: white;">📅 기간 적용</button>
+            <input type="file" id="csvFileInput" multiple accept=".csv" style="display:none" onchange="uploadCSV()">
+            <button onclick="document.getElementById('csvFileInput').click()" class="update-btn" id="uploadBtn">📤 CSV 업로드</button>
+            <button onclick="startFullAnalysis()" class="update-btn" id="fullReanalyzeBtn" style="background: #dc2626; color: white;" title="모든 데이터를 처음부터 다시 분석 (수 분~수십 분 소요)">🔄 전체 재분석</button>
+            <button onclick="openReport()" style="background: #667eea; color: white;">📊 리포트</button>
+            <span class="status-badge" id="statusBadge">대기 중</span>
+        </div>
+    </header>
+    
+    <nav class="tabs">
+        <div class="tab active" data-tab="overview">전체 현황</div>
+        <div class="tab" data-tab="favorability">호감도 분석</div>
+        <div class="tab" data-tab="risk">위험도 분석</div>
+        <div class="tab" data-tab="users">사용자 분석</div>
+        <div class="tab" data-tab="journey">고객 여정</div>
+    </nav>
+    
+    <main class="content">
+        <!-- 전체 현황 탭 -->
+        <div id="overview" class="tab-content active">
+            <!-- 상단: 핵심 지표 카드 3개 -->
+            <div class="overview-hero-cards">
+                <div class="hero-card hero-users">
+                    <div class="hero-icon">👥</div>
+                    <div class="hero-info">
+                        <div class="hero-label">누적 유저</div>
+                        <div class="hero-value" id="heroRegisteredUsers">-</div>
+                    </div>
+                    <div class="hero-change positive" id="heroUsersChange">
+                        <span class="change-arrow">▲</span>
+                        <span class="change-value">-</span>
+                    </div>
+                </div>
+                <div class="hero-card hero-dialogs">
+                    <div class="hero-icon">💬</div>
+                    <div class="hero-info">
+                        <div class="hero-label">누적 대화수</div>
+                        <div class="hero-value" id="heroTotalDialogs">-</div>
+                    </div>
+                    <div class="hero-change positive" id="heroDialogsChange">
+                        <span class="change-arrow">▲</span>
+                        <span class="change-value">-</span>
+                    </div>
+                </div>
+                <div class="hero-card hero-experience">
+                    <div class="hero-icon">🎯</div>
+                    <div class="hero-info">
+                        <div class="hero-label">대화 체험 유저</div>
+                        <div class="hero-value" id="heroExperienceUsers">-</div>
+                    </div>
+                    <div class="hero-change positive" id="heroExperienceChange">
+                        <span class="change-arrow">▲</span>
+                        <span class="change-value">-</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 좌우 2열 레이아웃 -->
+            <div class="overview-grid">
+                <!-- 왼쪽: 실시간 현황 -->
+                <div class="overview-section">
+                    <h2 class="section-title realtime" id="realtimeTitle">실시간 현황</h2>
+                    <div class="cards">
+                        <div class="card">
+                            <div class="card-value" style="color: #10b981;" id="realtimeDialogs">-</div>
+                            <div class="card-label" id="realtimeDialogsLabel">대화수</div>
+                        </div>
+                        <div class="card">
+                            <div class="card-value" style="color: #10b981;" id="realtimeUsers">-</div>
+                            <div class="card-label" id="realtimeUsersLabel">사용자수</div>
+                        </div>
+                    </div>
+                    <!-- 대화 빈도 분포 -->
+                    <div style="margin-top: 10px;">
+                        <div class="chart-title">사용자별 대화 빈도</div>
+                        <div class="chart-box" style="height: 180px;">
+                            <canvas id="realtimeConvFreqChart"></canvas>
+                        </div>
+                    </div>
+                    <!-- 시간대별 대화량 -->
+                    <div style="margin-top: 10px;">
+                        <div class="chart-title">시간대별 대화량</div>
+                        <div class="chart-box" style="height: 220px;">
+                            <canvas id="realtimeHourlyDialogsChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 오른쪽: 누적 현황 -->
+                <div class="overview-section">
+                    <h2 class="section-title cumulative">누적 현황 (전체)</h2>
+                    <div class="cards">
+                        <div class="card">
+                            <div class="card-value" style="color: #8b5cf6;" id="cumulativeDialogs">-</div>
+                            <div class="card-label">누적 대화수</div>
+                        </div>
+                        <div class="card">
+                            <div class="card-value" style="color: #8b5cf6;" id="cumulativeUsers">-</div>
+                            <div class="card-label">누적 사용자수</div>
+                        </div>
+                    </div>
+                    <!-- 대화 빈도 분포 -->
+                    <div style="margin-top: 10px;">
+                        <div class="chart-title">사용자별 대화 빈도</div>
+                        <div class="chart-box" style="height: 180px;">
+                            <canvas id="cumulativeConvFreqChart"></canvas>
+                        </div>
+                    </div>
+                    <!-- 일별 대화량 -->
+                    <div style="margin-top: 10px;">
+                        <div class="chart-title">일별 대화량</div>
+                        <div class="chart-box" style="height: 220px;">
+                            <canvas id="cumulativeDailyDialogsChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 하단: 다른 탭 주요 지표 요약 -->
+            <div class="overview-summary-row">
+                <!-- 사용자 유형 분포 -->
+                <div class="overview-summary-card">
+                    <h3 class="chart-title">사용자 유형 분포</h3>
+                    <div style="height: 200px;">
+                        <canvas id="overviewUserTypeChart"></canvas>
+                    </div>
+                </div>
+                <!-- 위험도 게이지 -->
+                <div class="overview-summary-card">
+                    <h3 class="chart-title">위험 질문 / 안전 대응</h3>
+                    <div class="gauge-row">
+                        <div class="gauge-item">
+                            <div class="gauge-circle risk" id="overviewRiskGauge">-</div>
+                            <div class="gauge-label">위험 질문 비율</div>
+                        </div>
+                        <div class="gauge-item">
+                            <div class="gauge-circle safe" id="overviewSafeGauge">-</div>
+                            <div class="gauge-label">안전 대응률</div>
+                        </div>
+                    </div>
+                </div>
+                <!-- 인기 베이커 Top 5 -->
+                <div class="overview-summary-card">
+                    <h3 class="chart-title">인기 베이커 Top 5</h3>
+                    <div style="height: 200px;">
+                        <canvas id="overviewTopBakerChart"></canvas>
+                    </div>
+                </div>
+                <!-- 고객 여정 요약 -->
+                <div class="overview-summary-card">
+                    <h3 class="chart-title">방문 횟수 분포</h3>
+                    <div style="height: 200px;">
+                        <canvas id="overviewVisitChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 호감도 분석 탭 -->
+        <div id="favorability" class="tab-content">
+            <!-- 메인: 호감지수 Top10 -->
+            <div class="chart-container" style="margin-bottom: 20px;">
+                <h3 class="chart-title">호감지수 Top 10</h3>
+                <p style="font-size: 0.85rem; color: #666; margin-bottom: 15px;">
+                    호감지수 = (대화량 + 사용자수 + 긍부정지수) 종합 정규화 점수
+                </p>
+                <div style="height: 400px;">
+                    <canvas id="popularBakerChart"></canvas>
+                </div>
+            </div>
+            
+            <!-- 서브 그래프 3개 -->
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; margin-bottom: 20px;">
+                <div class="chart-container">
+                    <h4 class="chart-title">대화량 Top 10</h4>
+                    <div style="height: 280px;">
+                        <canvas id="topDialogsChart"></canvas>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <h4 class="chart-title">사용자수 Top 10</h4>
+                    <div style="height: 280px;">
+                        <canvas id="topUsersChart"></canvas>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <h4 class="chart-title">긍부정지수 Top 10</h4>
+                    <div style="height: 280px;">
+                        <canvas id="topFavorabilityChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 상세 데이터 테이블 -->
+            <div class="table-container">
+                <h4 class="chart-title">호감지수 Top 10 상세 데이터</h4>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>순위</th>
+                            <th>베이커</th>
+                            <th>호감지수</th>
+                            <th>대화수</th>
+                            <th>사용자수</th>
+                            <th>긍부정지수</th>
+                            <th>긍정</th>
+                            <th>중립</th>
+                            <th>부정</th>
+                        </tr>
+                    </thead>
+                    <tbody id="popularBakerTable">
+                        <tr><td colspan="9" class="loading">로딩 중...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="overview-grid">
+                <div class="chart-container">
+                    <h3 class="chart-title">베이커 4분면 분석</h3>
+                    <p style="font-size: 0.85rem; color: #666; margin-bottom: 10px;">각 점의 색상은 아래 4분면 유형을 나타냅니다. 마우스를 올리면 베이커 이름이 표시됩니다.</p>
+                    <div class="quadrant-legend">
+                        <div class="quadrant-item quadrant-popular">
+                            <strong>● 대중 인기형</strong><br>
+                            <small>사용자 多, 대화 多 - 많은 사람이 많이 대화 (우상단)</small>
+                        </div>
+                        <div class="quadrant-item quadrant-minority_fan">
+                            <strong>● 소수 광팬형</strong><br>
+                            <small>사용자 少, 대화 多 - 소수가 집중적으로 대화 (좌상단)</small>
+                        </div>
+                        <div class="quadrant-item quadrant-shallow">
+                            <strong>● 넓고 얕은형</strong><br>
+                            <small>사용자 多, 대화 少 - 많은 사람이 조금씩 대화 (우하단)</small>
+                        </div>
+                        <div class="quadrant-item quadrant-ignored">
+                            <strong>● 무관심형</strong><br>
+                            <small>사용자 少, 대화 少 - 관심 적음 (좌하단)</small>
+                        </div>
+                    </div>
+                    <div style="height: 300px;">
+                        <canvas id="quadrantChart"></canvas>
+                    </div>
+                </div>
+                
+                <div class="chart-container">
+                    <h3 class="chart-title">감정별 TOP 베이커</h3>
+                    <div class="table-container" style="box-shadow: none; padding: 0;">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>구분</th>
+                                    <th>1위</th>
+                                    <th>2위</th>
+                                    <th>3위</th>
+                                </tr>
+                            </thead>
+                            <tbody id="sentimentTopTable">
+                                <tr><td colspan="4" class="loading">로딩 중...</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 위험도 분석 탭 -->
+        <div id="risk" class="tab-content">
+            <div class="gauge-container">
+                <div class="gauge">
+                    <div class="gauge-value danger" id="riskRatio">-</div>
+                    <div class="gauge-label">위험 질문 비율</div>
+                </div>
+                <div class="gauge">
+                    <div class="gauge-value success" id="safeRatio">-</div>
+                    <div class="gauge-label">전체 안전 대응률</div>
+                </div>
+            </div>
+            
+            <!-- 일별 추이 차트 -->
+            <div class="chart-container" style="margin-bottom: 20px;">
+                <h3 class="chart-title">일별 위험 질문 비율 & 안전 대응률 추이</h3>
+                <div style="height: 300px;">
+                    <canvas id="riskTrendChart"></canvas>
+                </div>
+            </div>
+            
+            <div class="overview-grid">
+                <div class="chart-container" style="cursor: pointer;" onclick="showRiskItemsByType(null)">
+                    <h3 class="chart-title">위험 유형별 분포 <small style="color:#888; font-weight:normal;">(클릭하여 대화 보기)</small></h3>
+                    <div style="height: 250px;">
+                        <canvas id="riskTypeChart"></canvas>
+                    </div>
+                </div>
+                <div class="chart-container" style="cursor: pointer;" onclick="showRiskItemsByType(null)">
+                    <h3 class="chart-title">위험 유형별 안전 대응 분포 <small style="color:#888; font-weight:normal;">(클릭하여 대화 보기)</small></h3>
+                    <div style="height: 250px;">
+                        <canvas id="safeRateByTypeChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="overview-grid">
+                <div class="table-container">
+                    <h3 class="chart-title">위험 질문 많이 받는 베이커 <small style="color:#888; font-weight:normal;">(클릭하여 대화 보기)</small></h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>베이커</th>
+                                <th>위험 질문 수</th>
+                                <th>안전 대응률</th>
+                            </tr>
+                        </thead>
+                        <tbody id="topRiskBakersTable">
+                            <tr><td colspan="3" class="loading">로딩 중...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="table-container">
+                    <h3 class="chart-title">안전 대응 취약 베이커 <small style="color:#888; font-weight:normal;">(클릭하여 대화 보기)</small></h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>베이커</th>
+                                <th>위험 질문 수</th>
+                                <th>안전 대응률</th>
+                            </tr>
+                        </thead>
+                        <tbody id="vulnerableBakersTable">
+                            <tr><td colspan="3" class="loading">로딩 중...</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            
+            <div class="chart-container">
+                <h3 class="chart-title" id="riskItemsTitle">위험 대화 내용</h3>
+                <div id="riskItemsList">
+                    <div class="loading">위 차트나 테이블을 클릭하여 해당 위험 대화를 확인하세요</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- 사용자 분석 탭 -->
+        <div id="users" class="tab-content">
+            <div class="cards" style="grid-template-columns: repeat(4, 1fr);">
+                <div class="card">
+                    <div class="card-value" id="totalUsers">-</div>
+                    <div class="card-label">전체 사용자</div>
+                </div>
+                <div class="card">
+                    <div class="card-value" id="avgDialogs">-</div>
+                    <div class="card-label">평균 대화수</div>
+                </div>
+                <div class="card">
+                    <div class="card-value" id="fanCount">-</div>
+                    <div class="card-label">열혈팬</div>
+                </div>
+                <div class="card">
+                    <div class="card-value" id="trollCount">-</div>
+                    <div class="card-label">악플러</div>
+                </div>
+            </div>
+            
+            <div class="overview-grid">
+                <div class="chart-container">
+                    <h3 class="chart-title">사용자 유형 분포</h3>
+                    <div style="height: 250px;">
+                        <canvas id="userTypeChart"></canvas>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <h3 class="chart-title">대화수별 사용자 분포</h3>
+                    <div style="height: 250px;">
+                        <canvas id="dialogDistChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="table-container">
+                <h3 class="chart-title">대화량 TOP 10 사용자</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>사용자 ID</th>
+                            <th>대화수</th>
+                            <th>베이커수</th>
+                            <th>평균 호감도</th>
+                            <th>위험률</th>
+                            <th>편애율</th>
+                            <th>주력 베이커</th>
+                            <th>유형</th>
+                        </tr>
+                    </thead>
+                    <tbody id="topUsersTable">
+                        <tr><td colspan="8" class="loading">로딩 중...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        
+        <!-- 고객 여정 탭 -->
+        <div id="journey" class="tab-content">
+            <div class="overview-grid">
+                <div class="chart-container">
+                    <h3 class="chart-title">사용자별 대화 빈도 분포</h3>
+                    <div style="height: 300px;">
+                        <canvas id="journeyConvFreqChart"></canvas>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <h3 class="chart-title">방문 횟수 분포</h3>
+                    <div style="height: 300px;">
+                        <canvas id="visitDistChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="overview-grid">
+                <div class="chart-container">
+                    <h3 class="chart-title">대화 베이커 수 분포</h3>
+                    <div style="height: 300px;">
+                        <canvas id="bakerCountDistChart"></canvas>
+                    </div>
+                </div>
+                <div class="chart-container">
+                    <h3 class="chart-title">대화 간격 분포</h3>
+                    <div style="height: 300px;">
+                        <canvas id="gapDistChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <script>
+        // Chart.js datalabels 플러그인 등록
+        Chart.register(ChartDataLabels);
+        // 기본적으로 datalabels 비활성화 (필요한 차트에서만 활성화)
+        Chart.defaults.plugins.datalabels.display = false;
+        
+        let data = null;
+        let charts = {};
+        
+        // 탭 전환
+        document.querySelectorAll('.tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                tab.classList.add('active');
+                document.getElementById(tab.dataset.tab).classList.add('active');
+            });
+        });
+        
+        // 리포트 페이지 열기
+        function openReport() {
+            const startDate = document.getElementById('startDate').value;
+            const endDate = document.getElementById('endDate').value;
+            window.open(`report.html?start=${startDate}&end=${endDate}`, '_blank');
+        }
+        
+        // CSV 파일 업로드
+        async function uploadCSV() {
+            const fileInput = document.getElementById('csvFileInput');
+            const btn = document.getElementById('uploadBtn');
+            const badge = document.getElementById('statusBadge');
+            const files = fileInput.files;
+
+            if (!files.length) return;
+
+            disableButtons();
+            btn.classList.add('loading');
+            btn.textContent = '⏳ 업로드 중...';
+            badge.textContent = '파일 업로드 중...';
+
+            const formData = new FormData();
+            for (const file of files) {
+                formData.append('files', file);
+            }
+
+            try {
+                const response = await fetch('/api/upload', {
+                    method: 'POST',
+                    body: formData
+                });
+                const result = await response.json();
+
+                if (response.ok) {
+                    const msg = `${result.total_new}행 추가, ${result.total_duplicates}행 중복 제외`;
+                    badge.textContent = msg;
+
+                    if (result.analyzing) {
+                        badge.textContent += ' (분석 중...)';
+                        pollUploadStatus();
+                    } else {
+                        enableButtons();
+                        btn.classList.remove('loading');
+                        btn.textContent = '📤 CSV 업로드';
+                    }
+                } else {
+                    badge.textContent = result.error || '업로드 실패';
+                    enableButtons();
+                    btn.classList.remove('loading');
+                    btn.textContent = '📤 CSV 업로드';
+                }
+            } catch (e) {
+                console.error('업로드 오류:', e);
+                badge.textContent = '연결 오류';
+                enableButtons();
+                btn.classList.remove('loading');
+                btn.textContent = '📤 CSV 업로드';
+            }
+
+            // 파일 입력 초기화
+            fileInput.value = '';
+        }
+
+        // 업로드 후 분석 완료 대기 폴링
+        async function pollUploadStatus() {
+            const btn = document.getElementById('uploadBtn');
+            const badge = document.getElementById('statusBadge');
+
+            try {
+                const response = await fetch('/api/status');
+                const status = await response.json();
+
+                if (status.running) {
+                    if (status.detail) {
+                        badge.textContent = `${status.detail.stage}: ${status.detail.percent}%`;
+                    } else {
+                        badge.textContent = status.progress || '분석 중...';
+                    }
+                    setTimeout(pollUploadStatus, 2000);
+                } else {
+                    if (status.error) {
+                        badge.textContent = '오류: ' + (status.error || '알 수 없는 오류');
+                    } else {
+                        badge.textContent = '업로드 + 분석 완료!';
+                        await filterByDate();
+                    }
+                    enableButtons();
+                    btn.classList.remove('loading');
+                    btn.textContent = '📤 CSV 업로드';
+                }
+            } catch (e) {
+                badge.textContent = '연결 오류';
+                enableButtons();
+                btn.classList.remove('loading');
+                btn.textContent = '📤 CSV 업로드';
+            }
+        }
+        
+        // 데이터 로드
+        async function loadData() {
+            try {
+                // 먼저 전체 데이터 범위를 가져와서 endDate 갱신
+                const initResp = await fetch('/api/filter?start=2026-01-13&end=2099-12-31');
+                if (initResp.ok) {
+                    const initData = await initResp.json();
+                    const maxDate = initData.meta?.data_range?.max_date;
+                    if (maxDate) {
+                        document.getElementById('endDate').value = maxDate;
+                    }
+                }
+                // 갱신된 날짜로 필터링하여 데이터 로드
+                await filterByDate();
+            } catch (e) {
+                console.error('데이터 로드 실패:', e);
+                document.getElementById('analysisTime').textContent = '📅 분석 데이터 없음 - 분석을 먼저 실행하세요';
+            }
+        }
+        
+        // 분석 시점 업데이트
+        function updateAnalysisTime() {
+            if (data && data.meta) {
+                const dataMinDate = data.meta.data_range?.min_date || '';
+                const dataMaxDate = data.meta.data_range?.max_date || '-';
+                const analyzedAt = data.meta.analyzed_at || data.meta.generated_at;
+                const analysisType = data.meta.analysis_type === 'incremental' ? '증분' : '전체';
+                const totalDialogs = data.meta.total_analyzed_dialogs || '-';
+                document.getElementById('analysisTime').textContent =
+                    `📅 데이터 기준: ${dataMaxDate} (${analysisType} 분석, ${totalDialogs?.toLocaleString()}개 대화) | 분석일시: ${analyzedAt}`;
+                // endDate는 initDashboard와 자동 갱신에서만 설정 (여기서 덮어쓰지 않음)
+            }
+        }
+        
+        // 전체 재분석
+        async function startFullAnalysis() {
+            const startDate = document.getElementById('startDate').value;
+            const endDate = document.getElementById('endDate').value;
+            
+            if (!confirm('전체 재분석을 실행하시겠습니까?\n모든 데이터를 처음부터 다시 분석합니다. (시간이 오래 걸릴 수 있습니다)')) {
+                return;
+            }
+            
+            disableButtons();
+            document.getElementById('statusBadge').textContent = '전체 재분석 중...';
+            
+            try {
+                await fetch(`/api/analyze?mode=full&start=${startDate}&end=${endDate}`);
+                pollStatus();
+            } catch (e) {
+                document.getElementById('statusBadge').textContent = '오류';
+                enableButtons();
+            }
+        }
+        
+        // 증분 분석
+        async function startIncrementalAnalysis() {
+            disableButtons();
+            document.getElementById('statusBadge').textContent = '증분 분석 중...';
+            
+            try {
+                await fetch('/api/analyze?mode=incremental');
+                pollStatus();
+            } catch (e) {
+                document.getElementById('statusBadge').textContent = '오류';
+                enableButtons();
+            }
+        }
+        
+        // 버튼 비활성화
+        function disableButtons() {
+            const uploadBtn = document.getElementById('uploadBtn');
+            const fullReanalyzeBtn = document.getElementById('fullReanalyzeBtn');
+            if (uploadBtn) uploadBtn.disabled = true;
+            if (fullReanalyzeBtn) fullReanalyzeBtn.disabled = true;
+        }
+
+        // 버튼 활성화
+        function enableButtons() {
+            const uploadBtn = document.getElementById('uploadBtn');
+            const fullReanalyzeBtn = document.getElementById('fullReanalyzeBtn');
+            if (uploadBtn) uploadBtn.disabled = false;
+            if (fullReanalyzeBtn) fullReanalyzeBtn.disabled = false;
+        }
+        
+        // 상태 폴링
+        async function pollStatus() {
+            const badge = document.getElementById('statusBadge');
+            
+            try {
+                const response = await fetch('/api/status');
+                const status = await response.json();
+                
+                if (status.running) {
+                    if (status.detail) {
+                        badge.textContent = `${status.detail.stage}: ${status.detail.percent}%`;
+                    } else {
+                        badge.textContent = status.progress;
+                    }
+                    setTimeout(pollStatus, 2000);
+                } else {
+                    if (status.error) {
+                        badge.textContent = '오류 발생';
+                    } else {
+                        badge.textContent = '완료!';
+                        loadData();
+                    }
+                    enableButtons();
+                }
+            } catch (e) {
+                badge.textContent = '연결 오류';
+                enableButtons();
+            }
+        }
+        
+        // 전체 렌더링
+        function renderAll() {
+            if (!data) return;
+            
+            renderOverview();
+            renderFavorability();
+            renderRisk();
+            renderUsers();
+            renderJourney();
+        }
+        
+        // 차트 생성/업데이트 헬퍼
+        function createOrUpdateChart(id, config) {
+            if (charts[id]) {
+                charts[id].destroy();
+            }
+            charts[id] = new Chart(document.getElementById(id), config);
+        }
+        
+        // 전체 현황 렌더링
+        function renderOverview() {
+            const rt = data.realtime;
+            const cu = data.cumulative;
+            const prevDay = cu.prev_day || {};
+
+            // 상단 핵심 지표 카드
+            const registeredUsers = cu.registered_users || cu.total_users;
+            const experienceUsers = cu.experience_users || cu.total_users;
+            document.getElementById('heroRegisteredUsers').textContent = registeredUsers.toLocaleString();
+            document.getElementById('heroTotalDialogs').textContent = cu.total_dialogs.toLocaleString();
+            document.getElementById('heroExperienceUsers').textContent = experienceUsers.toLocaleString();
+
+            // 전날 대비 변화 표시
+            function setHeroChange(elemId, count, rate) {
+                const el = document.getElementById(elemId);
+                if (!el) return;
+                const isPositive = count >= 0;
+                el.className = 'hero-change ' + (isPositive ? 'positive' : 'negative');
+                el.querySelector('.change-arrow').textContent = isPositive ? '▲' : '▼';
+                el.querySelector('.change-value').textContent = `+${count} (${rate}%)`;
+            }
+            setHeroChange('heroUsersChange', prevDay.new_users || 0, prevDay.new_users_rate || 0);
+            setHeroChange('heroDialogsChange', prevDay.new_dialogs || 0, prevDay.new_dialogs_rate || 0);
+            setHeroChange('heroExperienceChange', prevDay.new_experience_users || 0, prevDay.new_experience_users_rate || 0);
+
+            // 실시간 현황 제목 업데이트
+            if (rt.last_date) {
+                const dateStr = rt.last_date.replace(/-/g, '.');
+                const timeStr = rt.last_time || '00:00';
+                document.getElementById('realtimeTitle').textContent = `실시간 현황 (${dateStr}. ${timeStr} 기준)`;
+                document.getElementById('realtimeDialogsLabel').textContent = `${rt.last_date.substring(5).replace('-', '/')} 대화수`;
+                document.getElementById('realtimeUsersLabel').textContent = `${rt.last_date.substring(5).replace('-', '/')} 사용자수`;
+            }
+
+            // 카드 값
+            document.getElementById('realtimeDialogs').textContent = rt.total_dialogs.toLocaleString();
+            document.getElementById('realtimeUsers').textContent = rt.total_users.toLocaleString();
+            document.getElementById('cumulativeDialogs').textContent = cu.total_dialogs.toLocaleString();
+            document.getElementById('cumulativeUsers').textContent = cu.total_users.toLocaleString();
+
+            // ---- 실시간 대화 빈도 분포 (가로 바) ----
+            const rtConvFreq = rt.conversation_freq || {};
+            const convFreqLabels = ['대화없음', '1회', '2회', '3-5회', '6-10회', '11-20회', '21회+'];
+            const rtConvFreqData = convFreqLabels.map(l => rtConvFreq[l] || 0);
+            const convFreqColors = ['#9ca3af', '#10b981', '#3b82f6', '#667eea', '#8b5cf6', '#ec4899', '#ef4444'];
+
+            createOrUpdateChart('realtimeConvFreqChart', {
+                type: 'bar',
+                data: {
+                    labels: convFreqLabels,
+                    datasets: [{
+                        label: '사용자 수',
+                        data: rtConvFreqData,
+                        backgroundColor: convFreqColors,
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    indexAxis: 'y',
+                    plugins: {
+                        legend: { display: false },
+                        datalabels: { display: false }
+                    },
+                    scales: {
+                        x: { beginAtZero: true, ticks: { font: { size: 10 } } },
+                        y: { ticks: { font: { size: 10 } } }
+                    }
+                }
+            });
+
+            // ---- 실시간 시간대별 대화량 (영역 그래프) ----
+            const hourLabels = Array.from({length: 24}, (_, i) => String(i).padStart(2, '0'));
+            const hourlyStats = rt.hourly_stats || {};
+            const hourlyUsersStats = rt.hourly_users_stats || {};
+            const hourlyData = hourLabels.map(h => hourlyStats[h] || 0);
+            const hourlyUsersData = hourLabels.map(h => hourlyUsersStats[h] || 0);
+
+            createOrUpdateChart('realtimeHourlyDialogsChart', {
+                type: 'line',
+                data: {
+                    labels: hourLabels,
+                    datasets: [{
+                        label: '대화수',
+                        data: hourlyData,
+                        borderColor: '#10b981',
+                        backgroundColor: 'rgba(16, 185, 129, 0.15)',
+                        fill: true,
+                        tension: 0.4,
+                        pointRadius: 3,
+                        pointBackgroundColor: '#10b981',
+                        borderWidth: 2.5
+                    }, {
+                        label: '사용자수',
+                        data: hourlyUsersData,
+                        borderColor: '#667eea',
+                        backgroundColor: 'rgba(102, 126, 234, 0.08)',
+                        fill: true,
+                        tension: 0.4,
+                        pointRadius: 2,
+                        borderDash: [4, 4],
+                        borderWidth: 2
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'top', labels: { boxWidth: 12, padding: 8, font: { size: 11 } } },
+                        datalabels: { display: false }
+                    },
+                    scales: {
+                        y: { beginAtZero: true }
+                    }
+                }
+            });
+
+            // ---- 누적 대화 빈도 분포 (가로 바) ----
+            const cuConvFreq = cu.conversation_freq || {};
+            const cuConvFreqData = convFreqLabels.map(l => cuConvFreq[l] || 0);
+
+            createOrUpdateChart('cumulativeConvFreqChart', {
+                type: 'bar',
+                data: {
+                    labels: convFreqLabels,
+                    datasets: [{
+                        label: '사용자 수',
+                        data: cuConvFreqData,
+                        backgroundColor: convFreqColors,
+                        borderRadius: 4
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    indexAxis: 'y',
+                    plugins: {
+                        legend: { display: false },
+                        datalabels: { display: false }
+                    },
+                    scales: {
+                        x: { beginAtZero: true, ticks: { font: { size: 10 } } },
+                        y: { ticks: { font: { size: 10 } } }
+                    }
+                }
+            });
+
+            // ---- 누적 일별 대화량 (막대 + 선 복합 그래프) ----
+            const dailyStats = cu.daily_stats || {};
+            const dailyUsersStats = cu.daily_users_stats || {};
+            const dailyLabels = Object.keys(dailyStats);
+
+            createOrUpdateChart('cumulativeDailyDialogsChart', {
+                type: 'bar',
+                data: {
+                    labels: dailyLabels,
+                    datasets: [{
+                        type: 'bar',
+                        label: '대화수',
+                        data: Object.values(dailyStats),
+                        backgroundColor: 'rgba(139, 92, 246, 0.6)',
+                        borderColor: '#8b5cf6',
+                        borderWidth: 1,
+                        borderRadius: 3,
+                        yAxisID: 'y',
+                        order: 2
+                    }, {
+                        type: 'line',
+                        label: '사용자수',
+                        data: dailyLabels.map(d => dailyUsersStats[d] || 0),
+                        borderColor: '#ec4899',
+                        backgroundColor: '#ec4899',
+                        tension: 0.3,
+                        pointRadius: 2,
+                        borderWidth: 2,
+                        yAxisID: 'y1',
+                        order: 1
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { position: 'top', labels: { boxWidth: 12, padding: 8, font: { size: 11 } } },
+                        datalabels: { display: false }
+                    },
+                    scales: {
+                        y: {
+                            position: 'left',
+                            beginAtZero: true,
+                            title: { display: true, text: '대화수', font: { size: 10 } },
+                            grid: { drawOnChartArea: true }
+                        },
+                        y1: {
+                            position: 'right',
+                            beginAtZero: true,
+                            title: { display: true, text: '사용자수', font: { size: 10 } },
+                            grid: { drawOnChartArea: false }
+                        },
+                        x: { ticks: { maxRotation: 45, font: { size: 9 } } }
+                    }
+                }
+            });
+
+            // ============ 하단 요약: 다른 탭 주요 지표 ============
+
+            // 사용자 유형 분포 (도넛)
+            const userTypes = (data.users || {}).type_counts || {};
+            createOrUpdateChart('overviewUserTypeChart', {
+                type: 'doughnut',
+                data: {
+                    labels: ['열혈팬', '중립', '악플러'],
+                    datasets: [{
+                        data: [userTypes.fan || 0, userTypes.neutral || 0, userTypes.troll || 0],
+                        backgroundColor: ['#10b981', '#8b5cf6', '#ef4444'],
+                        borderWidth: 2,
+                        borderColor: '#fff'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: '50%',
+                    plugins: {
+                        legend: { position: 'bottom', labels: { boxWidth: 12, padding: 6, font: { size: 11 } } },
+                        datalabels: {
+                            display: true,
+                            color: '#fff',
+                            font: { size: 12, weight: 'bold' },
+                            formatter: (value) => value > 0 ? value : ''
+                        }
+                    }
+                }
+            });
+
+            // 위험도 게이지
+            const risk = data.risk || {};
+            const riskRatio = ((risk.risk_ratio || 0) * 100).toFixed(1);
+            const safeRatio = ((risk.safe_response_ratio || 0) * 100).toFixed(1);
+            document.getElementById('overviewRiskGauge').textContent = riskRatio + '%';
+            document.getElementById('overviewSafeGauge').textContent = safeRatio + '%';
+
+            // 인기 베이커 Top 5 (가로 바)
+            const topBakers = ((data.favorability || {}).popular_bakers || []).slice(0, 5);
+            createOrUpdateChart('overviewTopBakerChart', {
+                type: 'bar',
+                data: {
+                    labels: topBakers.map(b => b.name),
+                    datasets: [{
+                        label: '호감지수',
+                        data: topBakers.map(b => b.popularity_score),
+                        backgroundColor: ['#ef4444', '#f59e0b', '#10b981', '#667eea', '#8b5cf6'],
+                        borderRadius: 6
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    indexAxis: 'y',
+                    plugins: {
+                        legend: { display: false },
+                        datalabels: {
+                            display: true,
+                            anchor: 'end',
+                            align: 'right',
+                            font: { size: 10, weight: 'bold' },
+                            color: '#333',
+                            formatter: (value) => value.toFixed(0)
+                        }
+                    },
+                    scales: {
+                        x: { beginAtZero: true, max: 100, display: false },
+                        y: { ticks: { font: { size: 10 } } }
+                    }
+                }
+            });
+
+            // 방문 횟수 분포 (도넛)
+            const visitDist = (data.journey || {}).visit_distribution || {};
+            const visitLabels = Object.keys(visitDist);
+            const visitData = Object.values(visitDist);
+            createOrUpdateChart('overviewVisitChart', {
+                type: 'doughnut',
+                data: {
+                    labels: visitLabels,
+                    datasets: [{
+                        data: visitData,
+                        backgroundColor: ['#667eea', '#8b5cf6', '#ec4899', '#f59e0b', '#ef4444'],
+                        borderWidth: 2,
+                        borderColor: '#fff'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    cutout: '45%',
+                    plugins: {
+                        legend: { position: 'bottom', labels: { boxWidth: 10, padding: 5, font: { size: 10 } } },
+                        datalabels: {
+                            display: true,
+                            color: '#fff',
+                            font: { size: 10, weight: 'bold' },
+                            formatter: (value, ctx) => {
+                                const total = ctx.dataset.data.reduce((a, b) => a + b, 0);
+                                const pct = total > 0 ? ((value / total) * 100).toFixed(0) : 0;
+                                return pct > 5 ? pct + '%' : '';
+                            }
+                        }
+                    }
+                }
+            });
+        }
+        
+        // 호감도 분석 렌더링
+        function renderFavorability() {
+            const fav = data.favorability;
+            const popularBakers = fav.popular_bakers || [];
+            const topDialogs = fav.top_by_dialogs || [];
+            const topUsers = fav.top_by_users || [];
+            const topFavorability = fav.top_by_favorability || [];
+            
+            // 4분면 유형 한글 매핑
+            const quadrantNames = {
+                'minority_fan': '소수 광팬형',
+                'popular': '대중 인기형',
+                'shallow': '넓고 얕은형',
+                'ignored': '무관심형'
+            };
+            
+            // 1. 메인: 호감지수 Top10 (막대: 호감지수, 선: 대화수/사용자수)
+            const popularNames = popularBakers.map(b => b.name);
+            
+            createOrUpdateChart('popularBakerChart', {
+                type: 'bar',
+                data: {
+                    labels: popularNames,
+                    datasets: [
+                        {
+                            type: 'bar',
+                            label: '호감지수',
+                            data: popularBakers.map(b => b.popularity_score),
+                            backgroundColor: 'rgba(239, 68, 68, 0.7)',
+                            borderColor: '#ef4444',
+                            borderWidth: 1,
+                            yAxisID: 'y',
+                            order: 2
+                        },
+                        {
+                            type: 'line',
+                            label: '대화수',
+                            data: popularBakers.map(b => b.dialog_count),
+                            borderColor: '#667eea',
+                            backgroundColor: '#667eea',
+                            yAxisID: 'y1',
+                            tension: 0.3,
+                            pointRadius: 5,
+                            pointHoverRadius: 7,
+                            borderWidth: 3,
+                            order: 1
+                        },
+                        {
+                            type: 'line',
+                            label: '사용자수',
+                            data: popularBakers.map(b => b.unique_users),
+                            borderColor: '#10b981',
+                            backgroundColor: '#10b981',
+                            yAxisID: 'y1',
+                            tension: 0.3,
+                            pointRadius: 5,
+                            pointHoverRadius: 7,
+                            borderWidth: 3,
+                            borderDash: [5, 5],
+                            order: 0
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { 
+                        legend: { position: 'top' },
+                        datalabels: {
+                            display: function(context) {
+                                return context.datasetIndex === 0;
+                            },
+                            font: { size: 11, weight: 'bold' },
+                            color: '#fff',
+                            anchor: 'center',
+                            align: 'center',
+                            formatter: function(value, context) {
+                                return (context.dataIndex + 1) + '위';
+                            }
+                        }
+                    },
+                    scales: {
+                        y: { 
+                            position: 'left',
+                            min: 0,
+                            max: 100,
+                            title: { display: true, text: '호감지수' },
+                            grid: { drawOnChartArea: true }
+                        },
+                        y1: { 
+                            position: 'right',
+                            title: { display: true, text: '대화수 / 사용자수' },
+                            grid: { drawOnChartArea: false }
+                        }
+                    }
+                }
+            });
+            
+            // 2. 서브: 대화량 Top10 (세로 막대)
+            createOrUpdateChart('topDialogsChart', {
+                type: 'bar',
+                data: {
+                    labels: topDialogs.map(b => b.name),
+                    datasets: [{
+                        label: '대화수',
+                        data: topDialogs.map(b => b.value),
+                        backgroundColor: '#667eea'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { 
+                        legend: { display: false },
+                        datalabels: {
+                            display: true,
+                            anchor: 'end',
+                            align: 'top',
+                            font: { size: 10, weight: 'bold' },
+                            color: '#333',
+                            formatter: (value) => value
+                        }
+                    },
+                    scales: {
+                        y: { title: { display: true, text: '건' } },
+                        x: { ticks: { maxRotation: 45, minRotation: 45 } }
+                    }
+                }
+            });
+            
+            // 3. 서브: 사용자수 Top10 (도넛 차트)
+            createOrUpdateChart('topUsersChart', {
+                type: 'doughnut',
+                data: {
+                    labels: topUsers.map(b => b.name),
+                    datasets: [{
+                        data: topUsers.map(b => b.value),
+                        backgroundColor: [
+                            '#667eea', '#8b5cf6', '#ec4899', '#ef4444', '#f59e0b',
+                            '#10b981', '#14b8a6', '#06b6d4', '#3b82f6', '#6366f1'
+                        ]
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { 
+                        legend: { 
+                            position: 'right',
+                            labels: { boxWidth: 12, font: { size: 10 } }
+                        },
+                        datalabels: {
+                            display: true,
+                            color: '#fff',
+                            font: { size: 11, weight: 'bold' },
+                            formatter: (value) => value
+                        }
+                    }
+                }
+            });
+            
+            // 4. 서브: 긍부정지수 Top10 (수평 막대)
+            createOrUpdateChart('topFavorabilityChart', {
+                type: 'bar',
+                data: {
+                    labels: topFavorability.map(b => b.name),
+                    datasets: [{
+                        label: '긍부정지수',
+                        data: topFavorability.map(b => b.value),
+                        backgroundColor: topFavorability.map((b, i) => {
+                            const colors = ['#10b981', '#22c55e', '#34d399', '#4ade80', '#86efac',
+                                           '#a7f3d0', '#bbf7d0', '#d1fae5', '#dcfce7', '#ecfdf5'];
+                            return colors[i] || '#10b981';
+                        })
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    indexAxis: 'y',
+                    plugins: { 
+                        legend: { display: false },
+                        datalabels: {
+                            display: true,
+                            anchor: 'end',
+                            align: 'right',
+                            font: { size: 10, weight: 'bold' },
+                            color: '#333',
+                            formatter: (value) => value.toFixed(2)
+                        }
+                    },
+                    scales: {
+                        x: { 
+                            min: 1, 
+                            max: 5,
+                            title: { display: true, text: '긍부정지수 (1~5)' }
+                        }
+                    }
+                }
+            });
+            
+            // 인기 베이커 테이블
+            document.getElementById('popularBakerTable').innerHTML = popularBakers.length ?
+                popularBakers.map((b, i) => `
+                    <tr>
+                        <td>${i + 1}</td>
+                        <td>${b.name}</td>
+                        <td style="font-weight: bold; color: #ef4444;">${b.popularity_score}</td>
+                        <td>${b.dialog_count}</td>
+                        <td>${b.unique_users}</td>
+                        <td>${b.avg_score}</td>
+                        <td style="color: #10b981;">${b.sentiment_counts?.positive || 0}</td>
+                        <td style="color: #6366f1;">${b.sentiment_counts?.neutral || 0}</td>
+                        <td style="color: #ef4444;">${b.sentiment_counts?.negative || 0}</td>
+                    </tr>
+                `).join('') : '<tr><td colspan="9">데이터 없음</td></tr>';
+            
+            // 4분면 차트 (전체 베이커)
+            const allBakers = fav.all_bakers_quadrant || [];
+            const quadrantData = [];
+            const quadrantColors = {
+                'minority_fan': '#f59e0b',
+                'popular': '#10b981',
+                'shallow': '#6366f1',
+                'ignored': '#9ca3af'
+            };
+            
+            const quadrantCounts = { 'minority_fan': 0, 'popular': 0, 'shallow': 0, 'ignored': 0 };
+            
+            allBakers.forEach(b => {
+                quadrantData.push({
+                    x: b.unique_users,
+                    y: b.dialog_count,
+                    label: b.name,
+                    quadrant: b.quadrant
+                });
+                if (b.quadrant in quadrantCounts) {
+                    quadrantCounts[b.quadrant]++;
+                }
+            });
+            
+            document.querySelector('.quadrant-item.quadrant-minority_fan strong').innerHTML = 
+                `● 소수 광팬형 (${quadrantCounts.minority_fan}명)`;
+            document.querySelector('.quadrant-item.quadrant-popular strong').innerHTML = 
+                `● 대중 인기형 (${quadrantCounts.popular}명)`;
+            document.querySelector('.quadrant-item.quadrant-ignored strong').innerHTML = 
+                `● 무관심형 (${quadrantCounts.ignored}명)`;
+            document.querySelector('.quadrant-item.quadrant-shallow strong').innerHTML = 
+                `● 넓고 얕은형 (${quadrantCounts.shallow}명)`;
+            
+            createOrUpdateChart('quadrantChart', {
+                type: 'scatter',
+                data: {
+                    datasets: [{
+                        data: quadrantData,
+                        backgroundColor: quadrantData.map(d => quadrantColors[d.quadrant] || '#666'),
+                        pointRadius: 8,
+                        pointHoverRadius: 12
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: { display: false },
+                        tooltip: {
+                            callbacks: {
+                                label: (ctx) => {
+                                    const d = quadrantData[ctx.dataIndex];
+                                    return `${d.label}: ${d.y}대화, ${d.x}명 (${quadrantNames[d.quadrant]})`;
+                                }
+                            }
+                        }
+                    },
+                    scales: {
+                        x: { title: { display: true, text: '고유 사용자 수' } },
+                        y: { title: { display: true, text: '대화 수' } }
+                    }
+                }
+            });
+            
+            // 감정별 TOP 테이블
+            const praised = fav.top_praised || [];
+            const criticized = fav.top_criticized || [];
+            const neutral = fav.top_neutral || [];
+            
+            document.getElementById('sentimentTopTable').innerHTML = `
+                <tr>
+                    <td><span class="badge badge-fan">칭찬</span></td>
+                    <td>${praised[0]?.name || '-'}</td>
+                    <td>${praised[1]?.name || '-'}</td>
+                    <td>${praised[2]?.name || '-'}</td>
+                </tr>
+                <tr>
+                    <td><span class="badge badge-troll">비난</span></td>
+                    <td>${criticized[0]?.name || '-'}</td>
+                    <td>${criticized[1]?.name || '-'}</td>
+                    <td>${criticized[2]?.name || '-'}</td>
+                </tr>
+                <tr>
+                    <td><span class="badge badge-neutral">질문만</span></td>
+                    <td>${neutral[0]?.name || '-'}</td>
+                    <td>${neutral[1]?.name || '-'}</td>
+                    <td>${neutral[2]?.name || '-'}</td>
+                </tr>
+            `;
+        }
+        
+        // 위험도 분석 렌더링
+        function renderRisk() {
+            const risk = data.risk;
+            
+            document.getElementById('riskRatio').textContent = (risk.risk_ratio * 100).toFixed(1) + '%';
+            document.getElementById('safeRatio').textContent = (risk.safe_response_ratio * 100).toFixed(1) + '%';
+            
+            // 일별 추이 차트
+            const dailyTrend = risk.daily_trend || [];
+            const trendLabels = dailyTrend.map(d => d.date.substring(5));
+            
+            createOrUpdateChart('riskTrendChart', {
+                type: 'line',
+                data: {
+                    labels: trendLabels,
+                    datasets: [
+                        {
+                            label: '전체 안전 대응률 (%)',
+                            data: dailyTrend.map(d => d.safe_ratio),
+                            borderColor: '#10b981',
+                            backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                            yAxisID: 'y',
+                            tension: 0.3,
+                            pointRadius: 5,
+                            pointHoverRadius: 7,
+                            borderWidth: 3,
+                            fill: true
+                        },
+                        {
+                            label: '위험 질문 비율 (%)',
+                            data: dailyTrend.map(d => d.risk_ratio),
+                            borderColor: '#ef4444',
+                            backgroundColor: 'rgba(239, 68, 68, 0.1)',
+                            yAxisID: 'y1',
+                            tension: 0.3,
+                            pointRadius: 5,
+                            pointHoverRadius: 7,
+                            borderWidth: 3,
+                            borderDash: [5, 5],
+                            fill: true
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    interaction: { mode: 'index', intersect: false },
+                    plugins: {
+                        legend: { position: 'top' },
+                        datalabels: { display: false }
+                    },
+                    scales: {
+                        y: {
+                            type: 'linear',
+                            position: 'left',
+                            min: 0,
+                            max: 100,
+                            title: { display: true, text: '안전 대응률 (%)', color: '#10b981' },
+                            ticks: { color: '#10b981' }
+                        },
+                        y1: {
+                            type: 'linear',
+                            position: 'right',
+                            min: 0,
+                            title: { display: true, text: '위험 질문 비율 (%)', color: '#ef4444' },
+                            ticks: { color: '#ef4444' },
+                            grid: { drawOnChartArea: false }
+                        }
+                    }
+                }
+            });
+            
+            // 위험 유형 차트
+            const riskTypeLabels = ['가족정보', '개인정보', '스포일러'];
+            const riskTypeData = [
+                risk.type_counts.family || 0,
+                risk.type_counts.personal || 0,
+                risk.type_counts.spoiler || 0
+            ];
+            
+            createOrUpdateChart('riskTypeChart', {
+                type: 'doughnut',
+                data: {
+                    labels: riskTypeLabels,
+                    datasets: [{
+                        data: riskTypeData,
+                        backgroundColor: ['#ef4444', '#f59e0b', '#8b5cf6']
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    onClick: (event, elements) => {
+                        if (elements.length > 0) {
+                            const types = ['family', 'personal', 'spoiler'];
+                            showRiskItemsByType(types[elements[0].index]);
+                        }
+                    },
+                    plugins: { 
+                        legend: { position: 'bottom' },
+                        datalabels: {
+                            display: true,
+                            color: '#fff',
+                            font: { weight: 'bold', size: 14 },
+                            formatter: (value) => value > 0 ? value : ''
+                        }
+                    }
+                }
+            });
+            
+            // 위험유형별 안전대응 분포 차트
+            const typeSeverity = risk.type_severity || {};
+            createOrUpdateChart('safeRateByTypeChart', {
+                type: 'bar',
+                data: {
+                    labels: ['가족정보', '개인정보', '스포일러'],
+                    datasets: [
+                        {
+                            label: '위험 (high)',
+                            data: [
+                                typeSeverity.family?.high || 0,
+                                typeSeverity.personal?.high || 0,
+                                typeSeverity.spoiler?.high || 0
+                            ],
+                            backgroundColor: '#ef4444'
+                        },
+                        {
+                            label: '주의 (medium)',
+                            data: [
+                                typeSeverity.family?.medium || 0,
+                                typeSeverity.personal?.medium || 0,
+                                typeSeverity.spoiler?.medium || 0
+                            ],
+                            backgroundColor: '#f59e0b'
+                        },
+                        {
+                            label: '안전 (safe)',
+                            data: [
+                                typeSeverity.family?.safe || 0,
+                                typeSeverity.personal?.safe || 0,
+                                typeSeverity.spoiler?.safe || 0
+                            ],
+                            backgroundColor: '#10b981'
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    onClick: (event, elements) => {
+                        if (elements.length > 0) {
+                            const types = ['family', 'personal', 'spoiler'];
+                            const severities = ['high', 'medium', 'safe'];
+                            showRiskItemsByType(types[elements[0].index], severities[elements[0].datasetIndex]);
+                        }
+                    },
+                    plugins: { legend: { position: 'top' } },
+                    scales: {
+                        x: { stacked: true },
+                        y: { stacked: true, title: { display: true, text: '건수' } }
+                    }
+                }
+            });
+            
+            // 위험질문 많이 받는 베이커 테이블
+            const topRiskBakers = risk.top_risk_bakers || [];
+            document.getElementById('topRiskBakersTable').innerHTML = topRiskBakers.length ? 
+                topRiskBakers.map(b => `
+                    <tr style="cursor: pointer;" onclick="showRiskItemsByBaker('${b.chatbot_id}', '${b.name}')">
+                        <td>${b.name}</td>
+                        <td>${b.risk_count}</td>
+                        <td>${(b.safe_rate * 100).toFixed(1)}%</td>
+                    </tr>
+                `).join('') : '<tr><td colspan="3">데이터 없음</td></tr>';
+            
+            // 취약 베이커 테이블
+            const vulnerable = risk.vulnerable_bakers || [];
+            document.getElementById('vulnerableBakersTable').innerHTML = vulnerable.length ? 
+                vulnerable.map(b => `
+                    <tr style="cursor: pointer;" onclick="showRiskItemsByBaker('${b.chatbot_id}', '${b.name}')">
+                        <td>${b.name}</td>
+                        <td>${b.risk_count}</td>
+                        <td style="color: ${b.safe_rate < 0.5 ? '#ef4444' : '#f59e0b'}; font-weight: bold;">${(b.safe_rate * 100).toFixed(1)}%</td>
+                    </tr>
+                `).join('') : '<tr><td colspan="3">데이터 없음</td></tr>';
+            
+            document.getElementById('riskItemsList').innerHTML = '<div class="loading">위 차트나 테이블을 클릭하여 해당 위험 대화를 확인하세요</div>';
+        }
+        
+        // 위험 유형별 대화 보기
+        function showRiskItemsByType(type, severity = null) {
+            if (!data || !data.risk) return;
+            
+            const allItems = data.risk.all_items || [];
+            let filtered = allItems;
+            let title = '위험 대화 내용';
+            
+            const typeNames = { family: '가족정보', personal: '개인정보', spoiler: '스포일러' };
+            const severityNames = { high: '위험', medium: '주의', safe: '안전' };
+            
+            if (type) {
+                filtered = allItems.filter(item => item.risk_type === type);
+                title = `위험 대화 내용 - ${typeNames[type] || type}`;
+            }
+            
+            if (severity) {
+                filtered = filtered.filter(item => item.severity === severity);
+                title += ` (${severityNames[severity] || severity})`;
+            }
+            
+            document.getElementById('riskItemsTitle').textContent = title + ` (${filtered.length}건)`;
+            renderRiskItems(filtered);
+        }
+        
+        // 베이커별 대화 보기
+        function showRiskItemsByBaker(chatbotId, bakerName) {
+            if (!data || !data.risk) return;
+            
+            const allItems = data.risk.all_items || [];
+            const filtered = allItems.filter(item => item.chatbot_id === chatbotId);
+            
+            document.getElementById('riskItemsTitle').textContent = `위험 대화 내용 - ${bakerName} (${filtered.length}건)`;
+            renderRiskItems(filtered);
+        }
+        
+        // 위험 대화 렌더링
+        function renderRiskItems(items) {
+            const severityNames = { high: '위험', medium: '주의', safe: '안전' };
+            const typeNames = { family: '가족정보', personal: '개인정보', spoiler: '스포일러' };
+            
+            document.getElementById('riskItemsList').innerHTML = items.length ?
+                items.slice(0, 20).map(item => `
+                    <div class="risk-item">
+                        <div class="risk-item-header">
+                            <strong>${item.chatbot_name}</strong>
+                            <span>
+                                <span class="badge badge-${item.severity}">${severityNames[item.severity] || item.severity}</span>
+                                <span class="badge">${typeNames[item.risk_type] || item.risk_type}</span>
+                            </span>
+                        </div>
+                        <div class="risk-item-body">
+                            <div class="question"><strong>Q:</strong> ${item.question}</div>
+                            <div class="answer"><strong>A:</strong> ${item.answer}</div>
+                        </div>
+                    </div>
+                `).join('') : '<div class="loading">해당 조건의 위험 대화 없음</div>';
+        }
+        
+        // 사용자 분석 렌더링
+        function renderUsers() {
+            const users = data.users;
+            
+            document.getElementById('totalUsers').textContent = users.total_count?.toLocaleString() || '-';
+            document.getElementById('avgDialogs').textContent = users.avg_dialog_count?.toFixed(1) || '-';
+            document.getElementById('fanCount').textContent = users.type_counts?.fan || 0;
+            document.getElementById('trollCount').textContent = users.type_counts?.troll || 0;
+            
+            createOrUpdateChart('userTypeChart', {
+                type: 'doughnut',
+                data: {
+                    labels: ['열혈팬', '중립', '악플러'],
+                    datasets: [{
+                        data: [
+                            users.type_counts?.fan || 0,
+                            users.type_counts?.neutral || 0,
+                            users.type_counts?.troll || 0
+                        ],
+                        backgroundColor: ['#10b981', '#6366f1', '#ef4444']
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { position: 'bottom' } }
+                }
+            });
+            
+            const dialogDist = users.dialog_distribution || {};
+            createOrUpdateChart('dialogDistChart', {
+                type: 'bar',
+                data: {
+                    labels: Object.keys(dialogDist),
+                    datasets: [{
+                        label: '사용자 수',
+                        data: Object.values(dialogDist),
+                        backgroundColor: '#667eea'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } }
+                }
+            });
+            
+            const topUsers = users.top_users || [];
+            document.getElementById('topUsersTable').innerHTML = topUsers.length ?
+                topUsers.map(u => `
+                    <tr>
+                        <td>${u.user_id.substring(0, 12)}...</td>
+                        <td>${u.dialog_count}</td>
+                        <td>${u.baker_count}</td>
+                        <td>${u.avg_favorability}</td>
+                        <td>${(u.risk_rate * 100).toFixed(1)}%</td>
+                        <td style="color: ${u.bias_rate >= 0.8 ? '#ef4444' : u.bias_rate >= 0.5 ? '#f59e0b' : '#10b981'};">${(u.bias_rate * 100).toFixed(0)}%</td>
+                        <td>${u.biased_baker_name || '-'}</td>
+                        <td><span class="badge badge-${u.user_type}">${u.user_type}</span></td>
+                    </tr>
+                `).join('') : '<tr><td colspan="8">데이터 없음</td></tr>';
+        }
+        
+        // 고객 여정 렌더링
+        function renderJourney() {
+            const journey = data.journey;
+
+            // 대화 빈도 분포
+            const jConvFreq = journey.conversation_freq || {};
+            const jConvFreqLabels = ['대화없음', '1회', '2회', '3-5회', '6-10회', '11-20회', '21회+'];
+            const jConvFreqData = jConvFreqLabels.map(l => jConvFreq[l] || 0);
+            const jConvFreqColors = ['#9ca3af', '#10b981', '#3b82f6', '#667eea', '#8b5cf6', '#ec4899', '#ef4444'];
+            createOrUpdateChart('journeyConvFreqChart', {
+                type: 'bar',
+                data: {
+                    labels: jConvFreqLabels,
+                    datasets: [{
+                        label: '사용자 수',
+                        data: jConvFreqData,
+                        backgroundColor: jConvFreqColors
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: { y: { title: { display: true, text: '사용자 수 (명)' } } }
+                }
+            });
+
+            const visitDist = journey.visit_distribution || {};
+            createOrUpdateChart('visitDistChart', {
+                type: 'bar',
+                data: {
+                    labels: Object.keys(visitDist),
+                    datasets: [{
+                        label: '사용자 수',
+                        data: Object.values(visitDist),
+                        backgroundColor: '#667eea'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: { y: { title: { display: true, text: '사용자 수 (명)' } } }
+                }
+            });
+            
+            const bakerDist = journey.baker_count_distribution || {};
+            createOrUpdateChart('bakerCountDistChart', {
+                type: 'bar',
+                data: {
+                    labels: Object.keys(bakerDist),
+                    datasets: [{
+                        label: '사용자 수',
+                        data: Object.values(bakerDist),
+                        backgroundColor: '#8b5cf6'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: { y: { title: { display: true, text: '사용자 수 (명)' } } }
+                }
+            });
+            
+            const gapDist = journey.gap_distribution || {};
+            createOrUpdateChart('gapDistChart', {
+                type: 'bar',
+                data: {
+                    labels: Object.keys(gapDist),
+                    datasets: [{
+                        label: '횟수',
+                        data: Object.values(gapDist),
+                        backgroundColor: '#10b981'
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: { legend: { display: false } },
+                    scales: { y: { title: { display: true, text: '발생 횟수 (건)' } } }
+                }
+            });
+        }
+        
+        // 날짜 필터링
+        async function filterByDate() {
+            const startDate = document.getElementById('startDate').value;
+            const endDate = document.getElementById('endDate').value;
+            
+            if (!startDate || !endDate) return;
+            if (startDate > endDate) {
+                alert('시작일이 종료일보다 늦을 수 없습니다.');
+                return;
+            }
+            
+            document.getElementById('statusBadge').textContent = '필터링 중...';
+            
+            try {
+                const response = await fetch(`/api/filter?start=${startDate}&end=${endDate}`);
+                if (response.ok) {
+                    data = await response.json();
+                    renderAll();
+                    updateAnalysisTime();
+                    document.getElementById('statusBadge').textContent = '필터 적용됨';
+                    
+                    sessionStorage.setItem('filterStartDate', startDate);
+                    sessionStorage.setItem('filterEndDate', endDate);
+                } else {
+                    const error = await response.json();
+                    document.getElementById('statusBadge').textContent = '데이터 없음 — 업데이트 버튼을 눌러주세요';
+                }
+            } catch (e) {
+                console.error('필터링 오류:', e);
+                document.getElementById('statusBadge').textContent = '오류 발생';
+            }
+        }
+        
+        // ============ 자동 데이터 갱신 (매시 정각 스케줄러 연동) ============
+        let lastKnownDataUpdate = null;
+        const AUTO_POLL_INTERVAL = 60000; // 60초마다 상태 확인
+        
+        async function checkForDataUpdate() {
+            try {
+                const response = await fetch('/api/status');
+                if (!response.ok) return;
+                
+                const status = await response.json();
+                const serverDataUpdatedAt = status.scheduler?.data_updated_at;
+                
+                // 스케줄러 상태 표시
+                if (status.scheduler?.next_run) {
+                    const nextRun = status.scheduler.next_run;
+                    const badge = document.getElementById('statusBadge');
+                    if (!status.running && badge.textContent === '대기 중') {
+                        badge.textContent = `다음 자동 업데이트: ${nextRun.split(' ')[1] || nextRun}`;
+                    }
+                }
+                
+                // 데이터가 갱신되었으면 대시보드 자동 리로드
+                if (serverDataUpdatedAt && serverDataUpdatedAt !== lastKnownDataUpdate) {
+                    if (lastKnownDataUpdate !== null) {
+                        // 최초 확인이 아닌 경우에만 자동 새로고침
+                        console.log(`[자동 갱신] 새 데이터 감지: ${serverDataUpdatedAt}`);
+                        document.getElementById('statusBadge').textContent = '새 데이터 반영 중...';
+                        // 먼저 전체 범위로 최신 데이터 날짜를 확인하여 endDate 갱신
+                        try {
+                            const wideResp = await fetch('/api/filter?start=2026-01-13&end=2099-12-31');
+                            if (wideResp.ok) {
+                                const wideData = await wideResp.json();
+                                const latestDate = wideData.meta?.data_range?.max_date;
+                                if (latestDate) {
+                                    document.getElementById('endDate').value = latestDate;
+                                }
+                            }
+                        } catch (e) { /* ignore */ }
+                        await filterByDate();
+                        document.getElementById('statusBadge').textContent = `자동 갱신 완료 (${serverDataUpdatedAt})`;
+                    }
+                    lastKnownDataUpdate = serverDataUpdatedAt;
+                }
+            } catch (e) {
+                // 네트워크 오류 시 무시 (다음 폴링에서 재시도)
+                console.log('[자동 갱신] 상태 확인 실패:', e.message);
+            }
+        }
+        
+        // 자동 갱신 폴링 시작
+        setInterval(checkForDataUpdate, AUTO_POLL_INTERVAL);
+
+        // 초기 로드
+        async function initDashboard() {
+            let hasData = false;
+            try {
+                const response = await fetch('/api/filter?start=2026-02-01&end=2099-12-31');
+                if (response.ok) {
+                    const initData = await response.json();
+                    const maxDate = initData.meta?.data_range?.max_date;
+                    if (maxDate) {
+                        document.getElementById('endDate').value = maxDate;
+                        hasData = true;
+                    }
+                }
+            } catch (e) {
+                console.log('초기 데이터 로드 실패, 기본값 사용');
+            }
+            
+            if (hasData) {
+                filterByDate();
+            } else {
+                // 분석 데이터가 아직 없는 경우 (최초 배포 등)
+                document.getElementById('statusBadge').textContent = '데이터 준비 중 — 잠시 후 자동 반영됩니다';
+                document.getElementById('analysisTime').textContent = '📅 분석 데이터 없음 — 서버에서 초기 데이터를 수집 중입니다';
+            }
+            // 초기 데이터 갱신 시각 확인
+            checkForDataUpdate();
+        }
+        initDashboard();
+    </script>
+</body>
+</html>
